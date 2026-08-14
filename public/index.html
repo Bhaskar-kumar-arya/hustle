@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLR Leads Finder | Bangalore Business Scraper & Outreach Platform</title>
+  <meta name="description" content="Find Bangalore businesses without websites and pitch high-ticket web development services with 1-click WhatsApp outreach.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Glows -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="brand">
+        <div class="brand-logo">
+          <span class="logo-icon">⚡</span>
+          <span class="pulse-beacon"></span>
+        </div>
+        <div class="brand-text">
+          <h1>BLR Leads Engine</h1>
+          <span class="brand-tagline">Bangalore Business Scraper & Agency Pitch Platform</span>
+        </div>
+      </div>
+      
+      <div class="header-actions">
+        <div class="city-pill">
+          <span class="pulse-dot"></span>
+          <span>Target: <strong>Bengaluru, KA</strong></span>
+        </div>
+        <button id="btnOpenGuide" class="btn btn-secondary">
+          <span>📖</span> Pitch Guide & Pricing
+        </button>
+        <button id="btnExportCsv" class="btn btn-outline">
+          <span>📥</span> Export CSV
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    
+    <!-- Hero / Stats Dashboard -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon icon-blue">📍</div>
+        <div class="stat-info">
+          <span class="stat-label">Total Leads Tracked</span>
+          <h2 id="statTotalLeads" class="stat-value">0</h2>
+          <span class="stat-sub">Across 30+ BLR Localities</span>
+        </div>
+      </div>
+
+      <div class="stat-card stat-highlight-red">
+        <div class="stat-icon icon-red">🔴</div>
+        <div class="stat-info">
+          <span class="stat-label">Zero Website (Hot Leads)</span>
+          <h2 id="statNoWebsite" class="stat-value">0</h2>
+          <span class="stat-sub">100% Need A Website Now</span>
+        </div>
+      </div>
+
+      <div class="stat-card stat-highlight-amber">
+        <div class="stat-icon icon-amber">🟡</div>
+        <div class="stat-info">
+          <span class="stat-label">Social-Only Listed</span>
+          <h2 id="statSocialOnly" class="stat-value">0</h2>
+          <span class="stat-sub">Only Instagram/FB Profile</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon icon-purple">💬</div>
+        <div class="stat-info">
+          <span class="stat-label">Outreached / In Pipeline</span>
+          <h2 id="statContacted" class="stat-value">0</h2>
+          <span id="statContactedRate" class="stat-sub">0% Pipeline Activity</span>
+        </div>
+      </div>
+
+      <div class="stat-card stat-highlight-green">
+        <div class="stat-icon icon-green">💰</div>
+        <div class="stat-info">
+          <span class="stat-label">Est. Pipeline Opportunity</span>
+          <h2 id="statPipelineValue" class="stat-value">₹0</h2>
+          <span class="stat-sub">Avg. ₹30,000 / Web Client</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Auto-Resume Incomplete Job Banner -->
+    <div id="autoResumeBanner" class="resume-banner hidden">
+      <div class="resume-info">
+        <span class="resume-icon">⚡</span>
+        <div>
+          <strong id="resumeBannerTitle">Incomplete Mass Scraping Job Detected</strong>
+          <p id="resumeBannerSub">You can auto-resume exactly where you left off without repeating finished areas.</p>
+        </div>
+      </div>
+      <div class="resume-actions">
+        <button id="btnAutoResume" class="btn btn-primary btn-sm">▶️ Auto-Resume Scraper</button>
+        <button id="btnDismissResume" class="btn btn-secondary btn-sm">Dismiss / Reset</button>
+      </div>
+    </div>
+
+    <!-- Scraper Control Hub & Live Console -->
+    <section class="scraper-section">
+      <div class="section-card scraper-card">
+        <div class="card-header">
+          <div class="header-title">
+            <span class="section-badge">PLAYWRIGHT ENGINE &middot; AUTO-RESUME READY</span>
+            <h3>Google Maps Live Lead Scraper</h3>
+          </div>
+          <div class="card-header-actions">
+            <button id="btnHarvestAll" class="btn btn-outline btn-sm">
+              <span>🚀</span> Scrape All Bangalore (Auto-Queue)
+            </button>
+            <span class="badge-active-city">Targeting: Bengaluru</span>
+          </div>
+        </div>
+
+        <form id="scraperForm" class="scraper-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nicheSelect">🎯 Target Business Niche</label>
+              <select id="nicheSelect" class="form-control" required>
+                <!-- Populated dynamically via JS -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="localitySelect">📍 Bangalore Locality / Area</label>
+              <select id="localitySelect" class="form-control" required>
+                <!-- Populated dynamically via JS -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="maxResultsInput">🔢 Max Results / Batch Size</label>
+              <select id="maxResultsInput" class="form-control">
+                <option value="10">10 Businesses</option>
+                <option value="15" selected>15 Businesses</option>
+                <option value="25">25 Businesses</option>
+                <option value="40">40 Businesses</option>
+                <option value="60">60 Businesses (Deep Scrape)</option>
+              </select>
+            </div>
+
+            <div class="form-group submit-group">
+              <label class="invisible-label">Action</label>
+              <button type="submit" id="btnStartScrape" class="btn btn-primary btn-scrape">
+                <span class="btn-icon">🔍</span>
+                <span class="btn-text">Start Live Scraping</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox" id="filterNoWebCheckbox" checked>
+              <span class="checkmark"></span>
+              Auto-filter and save only businesses with <strong>No Website</strong> or <strong>Social-Only</strong>
+            </label>
+            <div class="custom-query-toggle" id="toggleCustomQuery">
+              <span>Advanced Search Query Override ▾</span>
+            </div>
+          </div>
+
+          <div class="custom-query-container hidden" id="customQueryContainer">
+            <input type="text" id="customQueryInput" class="form-control" placeholder="e.g. Orthopedic Doctors in Jayanagar Bangalore">
+          </div>
+        </form>
+
+        <!-- Live Terminal Stream & Harvester Controls -->
+        <div class="scraper-terminal hidden" id="scraperTerminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title" id="terminalTitle">LIVE SCRAPER STREAM &middot; GOOGLE MAPS AUTOMATION</div>
+            
+            <div class="terminal-ctrls">
+              <button id="btnPauseHarvester" class="btn btn-sm btn-secondary hidden" title="Pause Queue">⏸️ Pause</button>
+              <button id="btnResumeHarvester" class="btn btn-sm btn-primary hidden" title="Resume Queue">▶️ Resume</button>
+              <button id="btnStopHarvester" class="btn btn-sm btn-outline hidden" title="Stop Queue">⏹️ Stop</button>
+              <button id="btnCloseTerminal" class="btn-terminal-close" title="Close Log View">&times;</button>
+            </div>
+          </div>
+          <div class="terminal-body" id="terminalLogs">
+            <div class="log-line text-cyan">[SYSTEM] Ready to scrape Google Maps...</div>
+          </div>
+          <div class="terminal-progress-bar">
+            <div class="progress-fill" id="terminalProgressFill"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leads CRM & Filter Section -->
+    <section class="leads-section">
+      <div class="leads-header-bar">
+        <div class="leads-title-group">
+          <h3>Qualified Bangalore Business Leads</h3>
+          <span class="leads-count-pill" id="leadsCountBadge">0 Leads</span>
+        </div>
+
+        <div class="view-toggle-group">
+          <button class="view-btn active" id="btnViewCards" title="Cards View">
+            <span>⊞ Cards</span>
+          </button>
+          <button class="view-btn" id="btnViewTable" title="Table View">
+            <span>☰ Table</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Controls Bar -->
+      <div class="filter-bar">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search by business name, category, area, phone...">
+          <button id="btnClearSearch" class="btn-clear-search hidden">&times;</button>
+        </div>
+
+        <div class="filter-controls">
+          <select id="filterWebsiteStatus" class="filter-select">
+            <option value="ALL">🌐 All Website Status</option>
+            <option value="NO_WEBSITE" selected>🔴 Zero Website (Hot leads)</option>
+            <option value="SOCIAL_ONLY">🟡 Social Media Only</option>
+            <option value="HAS_WEBSITE">🟢 Has Existing Website</option>
+          </select>
+
+          <select id="filterLocality" class="filter-select">
+            <option value="ALL">📍 All Bangalore Areas</option>
+            <!-- Populated dynamically -->
+          </select>
+
+          <select id="filterNiche" class="filter-select">
+            <option value="ALL">🎯 All Niches</option>
+            <!-- Populated dynamically -->
+          </select>
+
+          <select id="filterCrmStatus" class="filter-select">
+            <option value="ALL">📋 All CRM Stages</option>
+            <option value="NEW">New Lead</option>
+            <option value="CONTACTED">Contacted</option>
+            <option value="PITCH_SENT">Pitch Sent</option>
+            <option value="MEETING_BOOKED">Meeting Booked</option>
+            <option value="CLOSED_WON">Closed / Won 🏆</option>
+            <option value="REJECTED">Not Interested</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Leads Grid (Cards View) -->
+      <div id="leadsCardsContainer" class="leads-grid">
+        <!-- Injected dynamically via JS -->
+      </div>
+
+      <!-- Leads Table View (Hidden by default) -->
+      <div id="leadsTableContainer" class="leads-table-wrapper hidden">
+        <table class="leads-table">
+          <thead>
+            <tr>
+              <th>Opportunity</th>
+              <th>Business Name</th>
+              <th>Category & Area</th>
+              <th>Rating & Reviews</th>
+              <th>Website Status</th>
+              <th>Contact / Phone</th>
+              <th>CRM Stage</th>
+              <th>Outreach Actions</th>
+            </tr>
+          </thead>
+          <tbody id="leadsTableBody">
+            <!-- Injected dynamically via JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="empty-state hidden">
+        <div class="empty-icon">🔎</div>
+        <h4>No Matching Leads Found</h4>
+        <p>Try adjusting your search filters or run a live Google Maps scrape for a new Bangalore area above!</p>
+        <button id="btnResetFilters" class="btn btn-secondary">Reset Filters</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pitch Modal -->
+  <div id="pitchModal" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge">1-CLICK OUTREACH TOOLKIT</span>
+          <h3 id="modalBusinessName">Business Name</h3>
+          <span id="modalLocalityCategory" class="modal-sub">Dental Clinic &middot; Koramangala, Bangalore</span>
+        </div>
+        <button id="btnCloseModal" class="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="modal-tabs">
+        <button class="modal-tab active" data-tab="tabWhatsApp">📱 WhatsApp Pitch (Standard)</button>
+        <button class="modal-tab" data-tab="tabJustdial">⚔️ Justdial / Directory Hook (High-Converting)</button>
+        <button class="modal-tab" data-tab="tabColdCall">📞 60s Call Script</button>
+        <button class="modal-tab" data-tab="tabEmail">✉️ Email Template</button>
+        <button class="modal-tab" data-tab="tabPitchAngles">💡 Website Ideas to Pitch</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- WhatsApp Standard Tab -->
+        <div id="tabWhatsApp" class="tab-content active">
+          <div class="pitch-box">
+            <div class="pitch-box-header">
+              <span class="pitch-box-label">Standard WhatsApp Pitch (Pre-formatted)</span>
+              <button class="btn btn-sm btn-copy" id="btnCopyWhatsApp">📋 Copy Text</button>
+            </div>
+            <textarea id="pitchWhatsAppText" class="pitch-textarea" readonly rows="10"></textarea>
+          </div>
+          <div class="modal-action-row">
+            <a href="#" id="btnDirectWhatsApp" target="_blank" class="btn btn-whatsapp-large">
+              <span>💬</span> Send Directly via WhatsApp Web / Mobile
+            </a>
+          </div>
+        </div>
+
+        <!-- Justdial / Directory Comparison Tab -->
+        <div id="tabJustdial" class="tab-content">
+          <div class="justdial-explainer-banner">
+            <span class="banner-icon">🎯</span>
+            <div>
+              <strong>Why This Hook Converts:</strong>
+              <p>Justdial/Magicpin sends their leads to 5–10 competing businesses at once, causing price wars. This pitch offers them <strong>100% exclusive client bookings</strong> on their own domain.</p>
+            </div>
+          </div>
+          <div class="pitch-box">
+            <div class="pitch-box-header">
+              <span class="pitch-box-label">Justdial vs Own Website Pitch Copy</span>
+              <button class="btn btn-sm btn-copy" id="btnCopyJustdial">📋 Copy Text</button>
+            </div>
+            <textarea id="pitchJustdialText" class="pitch-textarea" readonly rows="11"></textarea>
+          </div>
+          <div class="modal-action-row">
+            <a href="#" id="btnDirectJustdialWA" target="_blank" class="btn btn-whatsapp-large">
+              <span>💬</span> Send Justdial Hook via WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Cold Call Tab -->
+        <div id="tabColdCall" class="tab-content">
+          <div class="script-flow">
+            <div class="script-step">
+              <span class="step-num">1</span>
+              <div class="step-content">
+                <strong>Opening & Gatekeeper Bypass:</strong>
+                <p id="scriptIntro"></p>
+              </div>
+            </div>
+            <div class="script-step">
+              <span class="step-num">2</span>
+              <div class="step-content">
+                <strong>Compliment & Social Proof Hook:</strong>
+                <p id="scriptHook"></p>
+              </div>
+            </div>
+            <div class="script-step">
+              <span class="step-num">3</span>
+              <div class="step-content">
+                <strong>The Opportunity Gap (Missing Website):</strong>
+                <p id="scriptProblem"></p>
+              </div>
+            </div>
+            <div class="script-step">
+              <span class="step-num">4</span>
+              <div class="step-content">
+                <strong>Low-Friction Call-To-Action:</strong>
+                <p id="scriptCta"></p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-action-row">
+            <a href="#" id="btnDialPhone" class="btn btn-primary">
+              <span>📞</span> Call Phone Number Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Email Tab -->
+        <div id="tabEmail" class="tab-content">
+          <div class="form-group">
+            <label>Subject Line:</label>
+            <input type="text" id="pitchEmailSubject" class="form-control" readonly>
+          </div>
+          <div class="form-group">
+            <label>Email Body:</label>
+            <textarea id="pitchEmailBody" class="pitch-textarea" readonly rows="8"></textarea>
+          </div>
+          <div class="modal-action-row">
+            <button class="btn btn-sm btn-copy" id="btnCopyEmail">📋 Copy Subject & Body</button>
+          </div>
+        </div>
+
+        <!-- Pitch Angles Tab -->
+        <div id="tabPitchAngles" class="tab-content">
+          <div class="angles-grid">
+            <div class="angle-card">
+              <div class="angle-icon">🎯</div>
+              <h4>Direct Customer Booking</h4>
+              <p>Show them how a 1-click WhatsApp or Calendar booking widget captures patients/clients directly from Google search.</p>
+            </div>
+            <div class="angle-card">
+              <div class="angle-icon">🌟</div>
+              <h4>Showcase Google Reviews & Portfolio</h4>
+              <p>Embed their 4.8★ Google reviews and visual photo gallery so high-ticket clients trust them over competitors.</p>
+            </div>
+            <div class="angle-card">
+              <div class="angle-icon">💰</div>
+              <h4>Pricing Strategy for Bangalore</h4>
+              <p>Offer a modern 1-page landing page for <strong>₹15,000 - ₹25,000</strong> or full 5-page business website for <strong>₹35,000 - ₹60,000</strong>.</p>
+            </div>
+            <div class="angle-card">
+              <div class="angle-icon">🚀</div>
+              <h4>Fast Delivery Hook</h4>
+              <p>Offer "Ready in 48-72 Hours" with free domain & hosting setup to eliminate friction and close deals instantly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agency Guide & Strategy Modal -->
+  <div id="guideModal" class="modal-backdrop hidden">
+    <div class="modal-card modal-large">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge">BLUEPRINT</span>
+          <h3>How to Make Money Selling Websites to Bangalore Businesses</h3>
+        </div>
+        <button id="btnCloseGuideModal" class="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="modal-body guide-content">
+        <div class="guide-section">
+          <h4>💡 The Bangalore Opportunity</h4>
+          <p>Bangalore has over 200,000 registered SMEs. Thousands of thriving clinics, salons, interior design studios, and cafes have hundreds of 5-star Google reviews but <strong>zero website</strong> or only an unmaintained Facebook page. When potential customers search on Google, they bounce to competitors who have a professional site.</p>
+        </div>
+
+        <div class="guide-grid">
+          <div class="guide-box">
+            <h5>1. Recommended Packages & Pricing (INR)</h5>
+            <ul>
+              <li><strong>Starter Landing Page:</strong> ₹15,000 - ₹22,000 (1 Page, Mobile-Optimized, WhatsApp Booking, Google Maps embed).</li>
+              <li><strong>Professional Business Website:</strong> ₹28,000 - ₹45,000 (4-5 Pages, Portfolio gallery, Review widget, SEO tags).</li>
+              <li><strong>Premium / Multi-Service Site:</strong> ₹50,000 - ₹85,000 (Online appointment scheduling, payment integration, multilingual).</li>
+              <li><strong>Recurring Maintenance / AMC:</strong> ₹2,500 - ₹5,000 / month (Domain, hosting, content updates, Google profile management).</li>
+            </ul>
+          </div>
+
+          <div class="guide-box">
+            <h5>2. The 3-Step Closing Workflow</h5>
+            <ol>
+              <li><strong>Step 1 (Scrape & Filter):</strong> Use this tool to find 20-30 businesses in Koramangala, Indiranagar, or HSR Layout with 50+ reviews and 🔴 No Website.</li>
+              <li><strong>Step 2 (Personalized Outreach):</strong> Click the 💬 WhatsApp button to send the pre-crafted pitch praising their rating and offering a 2-minute preview.</li>
+              <li><strong>Step 3 (The Demo Close):</strong> When they reply, show a pre-made modern template customized with their business name & logo. 8 out of 10 times, seeing their brand on a live website demo closes the deal!</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="guide-section">
+          <h4>🔥 Top 5 Bangalore Localities with Highest Conversion Rates</h4>
+          <div class="hotspots-pills">
+            <span class="hotspot-pill"><strong>Koramangala:</strong> Cafes, Dental Studios, Fitness Gyms</span>
+            <span class="hotspot-pill"><strong>Indiranagar:</strong> Salons, Luxury Spas, Boutiques, Designers</span>
+            <span class="hotspot-pill"><strong>HSR Layout:</strong> Interior Designers, Modular Kitchens, Clinics</span>
+            <span class="hotspot-pill"><strong>Whitefield:</strong> Techie-focused clinics, Daycares, Car Detailing</span>
+            <span class="hotspot-pill"><strong>Jayanagar:</strong> Traditional Ayurvedic Centers, Caterers, Legal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>BLR Business Leads Engine &middot; Bangalore Local Web Agency System &middot; Built for High-Converting Outreach</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

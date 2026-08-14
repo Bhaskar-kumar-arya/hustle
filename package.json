@@ -1,0 +1,24 @@
+{
+  "name": "bangalore-business-lead-scraper",
+  "version": "1.0.0",
+  "description": "Scrape and find Bangalore businesses without websites to pitch web development services and generate revenue.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "lead-generation",
+    "bangalore",
+    "google-maps-scraper",
+    "web-agency",
+    "freelance-leads"
+  ],
+  "author": "Antigravity",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "playwright": "^1.50.0"
+  }
+}

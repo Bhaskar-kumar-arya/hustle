@@ -1,0 +1,290 @@
+{
+  "queue": [
+    {
+      "locality": "Koramangala",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Koramangala Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 6
+    },
+    {
+      "locality": "HSR Layout",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in HSR Layout Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 0
+    },
+    {
+      "locality": "Jayanagar",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Jayanagar Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 3
+    },
+    {
+      "locality": "JP Nagar",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in JP Nagar Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 3
+    },
+    {
+      "locality": "BTM Layout",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in BTM Layout Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 2
+    },
+    {
+      "locality": "Bannerghatta Road",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Bannerghatta Road Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 2
+    },
+    {
+      "locality": "Electronic City",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Electronic City Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 5
+    },
+    {
+      "locality": "Sarjapur Road",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Sarjapur Road Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 1
+    },
+    {
+      "locality": "Bellandur",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Bellandur Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 1
+    },
+    {
+      "locality": "Banashankari",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Banashankari Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 3
+    },
+    {
+      "locality": "Basavanagudi",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Basavanagudi Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 4
+    },
+    {
+      "locality": "Indiranagar",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Indiranagar Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 1
+    },
+    {
+      "locality": "Whitefield",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Whitefield Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 3
+    },
+    {
+      "locality": "Marathahalli",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Marathahalli Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 4
+    },
+    {
+      "locality": "Domlur",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Domlur Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 4
+    },
+    {
+      "locality": "Kalyan Nagar / Kammanahalli",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Kalyan Nagar / Kammanahalli Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 0
+    },
+    {
+      "locality": "Brookefield",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Brookefield Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 1
+    },
+    {
+      "locality": "Mahadevapura",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Mahadevapura Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 6
+    },
+    {
+      "locality": "MG Road / Brigade Road",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in MG Road / Brigade Road Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 6
+    },
+    {
+      "locality": "Richmond Town / Lavelle Road",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Richmond Town / Lavelle Road Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 8
+    },
+    {
+      "locality": "Malleshwaram",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Malleshwaram Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 2
+    },
+    {
+      "locality": "Vasanth Nagar / Cunningham Road",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Vasanth Nagar / Cunningham Road Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 5
+    },
+    {
+      "locality": "Frazer Town / Cox Town",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Frazer Town / Cox Town Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 8
+    },
+    {
+      "locality": "Hebbal",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Hebbal Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 6
+    },
+    {
+      "locality": "Yelahanka",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Yelahanka Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 8
+    },
+    {
+      "locality": "Sahakara Nagar",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Sahakara Nagar Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 3
+    },
+    {
+      "locality": "RT Nagar",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in RT Nagar Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 6
+    },
+    {
+      "locality": "Hennur Road",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Hennur Road Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 5
+    },
+    {
+      "locality": "Rajajinagar",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Rajajinagar Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 4
+    },
+    {
+      "locality": "Vijayanagar",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Vijayanagar Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 0
+    },
+    {
+      "locality": "Nagarbhavi",
+      "nicheId": "dental-clinics",
+      "nicheName": "Dental Clinics & Orthodontists",
+      "query": "Dental Clinic in Nagarbhavi Bangalore",
+      "status": "COMPLETED",
+      "leadsFound": 15,
+      "qualifiedSaved": 5
+    }
+  ],
+  "currentIndex": 31,
+  "options": {
+    "maxResults": 15,
+    "filterNoWebsiteOnly": true
+  },
+  "isPaused": false,
+  "updatedAt": "2026-08-14T10:10:38.031Z"
+}

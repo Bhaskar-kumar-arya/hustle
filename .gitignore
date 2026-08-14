@@ -1,0 +1,78 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Environment variables & secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+!.env.example
+
+# Logs & debugging
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Playwright & Browser automation artifacts
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.playwright/
+downloads/
+screenshots/
+videos/
+
+# Data directory (tracked in commits)
+!data/
+!data/**
+
+# Temporary / Cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.cache/
+.parcel-cache/
+.eslintcache
+tmp/
+temp/
+*.tmp
+
+# Client / Generated website output (if generated dynamically)
+websites/*
+!websites/.gitkeep
+
+# Production / Build outputs
+dist/
+build/
+out/
+
+# OS metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE & Editor settings
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
