@@ -148,7 +148,49 @@
     countEls.forEach(runCount);
   }
 
-  /* ---------- 6. sticky mobile CTA reveal after hero ---------- */
+  /* ---------- 6. before/after comparison slider ---------- */
+  const baSlider = document.getElementById("baSlider");
+  if (baSlider) {
+    const setPos = (pct) => {
+      const clamped = Math.min(100, Math.max(0, pct));
+      baSlider.style.setProperty("--pos", `${clamped}%`);
+      baSlider.setAttribute("aria-valuenow", Math.round(clamped));
+    };
+
+    const posFromClientX = (clientX) => {
+      const rect = baSlider.getBoundingClientRect();
+      return ((clientX - rect.left) / rect.width) * 100;
+    };
+
+    let dragging = false;
+
+    const onPointerMove = (e) => {
+      if (!dragging) return;
+      setPos(posFromClientX(e.clientX));
+    };
+    const stopDrag = () => {
+      dragging = false;
+      window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("pointerup", stopDrag);
+    };
+
+    baSlider.addEventListener("pointerdown", (e) => {
+      dragging = true;
+      setPos(posFromClientX(e.clientX));
+      window.addEventListener("pointermove", onPointerMove);
+      window.addEventListener("pointerup", stopDrag);
+    });
+
+    baSlider.addEventListener("keydown", (e) => {
+      const current = Number(baSlider.getAttribute("aria-valuenow") || 50);
+      if (e.key === "ArrowLeft") { setPos(current - 5); e.preventDefault(); }
+      if (e.key === "ArrowRight") { setPos(current + 5); e.preventDefault(); }
+      if (e.key === "Home") { setPos(0); e.preventDefault(); }
+      if (e.key === "End") { setPos(100); e.preventDefault(); }
+    });
+  }
+
+  /* ---------- 7. sticky mobile CTA reveal after hero ---------- */
   const stickyCta = document.getElementById("stickyCta");
   const hero = document.querySelector(".hero");
   if (stickyCta && hero && "IntersectionObserver" in window) {
