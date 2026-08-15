@@ -24,6 +24,15 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+  if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
+    return res.status(400).json({ error: 'Invalid JSON payload' });
+  }
+  console.error('Unhandled server error:', err);
+  res.status(500).json({ error: 'Internal Server Error' });
+});
+
 // Start Server
 app.listen(PORT, () => {
   console.log(`=======================================================`);

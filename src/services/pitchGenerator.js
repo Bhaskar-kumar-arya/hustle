@@ -37,18 +37,19 @@ function generateWhatsAppPitch(lead) {
   const areaText = locality ? ` in ${locality}, Bangalore` : ' in Bangalore';
 
   // Tailored hook based on category
+  const cat = (category || '').toLowerCase();
   let specificBenefit = 'showcase your services and accept direct customer bookings/inquiries 24/7';
-  if (category && category.toLowerCase().includes('dental')) {
+  if (cat.includes('dental')) {
     specificBenefit = 'allow patients to book dental appointments and view smile transformation results online';
-  } else if (category && category.toLowerCase().includes('interior') || category.toLowerCase().includes('architect')) {
+  } else if (cat.includes('interior') || cat.includes('architect')) {
     specificBenefit = 'showcase your stunning 3D design portfolio and get high-ticket interior design inquiries directly';
-  } else if (category && category.toLowerCase().includes('salon')) {
+  } else if (cat.includes('salon')) {
     specificBenefit = 'display your service rate card, bridal packages, and let clients book salon appointments on WhatsApp';
-  } else if (category && category.toLowerCase().includes('pet')) {
+  } else if (cat.includes('pet')) {
     specificBenefit = 'offer online vet appointment booking, emergency contact, and pet care service details';
-  } else if (category && category.toLowerCase().includes('car')) {
+  } else if (cat.includes('car')) {
     specificBenefit = 'showcase before/after ceramic coating gloss results and let car owners get instant detailing estimates';
-  } else if (category && category.toLowerCase().includes('ayurved')) {
+  } else if (cat.includes('ayurved')) {
     specificBenefit = 'explain Panchakarma treatment packages and allow patients to book doctor consultations';
   }
 

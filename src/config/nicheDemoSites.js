@@ -10,7 +10,7 @@
 
 const NICHE_DEMO_SITES = {
   'dental-clinics': {
-    baseUrl: process.env.DEMO_BASE_URL_DENTAL || '',
+    baseUrl: process.env.DEMO_BASE_URL_DENTAL || 'https://dental-h.netlify.app',
     path: '/'
   }
 };
