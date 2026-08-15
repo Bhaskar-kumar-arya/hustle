@@ -205,7 +205,7 @@
   <section class="results">
     <div class="section-head">
       <p class="eyebrow">Real results</p>
-      <h2 class="section-title">Smiles we've treated <em data-bind="localityName">in Koramangala.</em></h2>
+      <h2 class="section-title">Smiles we've <em>treated.</em></h2>
     </div>
     <div class="gallery">
       <div class="gallery-tile reveal-up">
@@ -225,6 +225,39 @@
         <span class="gallery-tag">Implants</span>
       </div>
     </div>
+  </section>
+
+  <!-- ============ BEFORE / AFTER SLIDER ============ -->
+  <section class="transform">
+    <div class="section-head">
+      <p class="eyebrow">See the difference</p>
+      <h2 class="section-title">Drag to compare, <em>before &amp; after.</em></h2>
+    </div>
+
+    <div class="ba-slider reveal-up"
+         id="baSlider"
+         role="slider"
+         tabindex="0"
+         aria-label="Drag to compare before and after treatment photos"
+         aria-valuemin="0"
+         aria-valuemax="100"
+         aria-valuenow="50"
+         style="--pos: 50%">
+      <div class="ba-frame">
+        <img class="ba-img ba-img-after" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=900&q=80&auto=format&fit=crop" alt="After treatment: bright, aligned smile" loading="lazy" draggable="false">
+        <div class="ba-before-wrap">
+          <img class="ba-img ba-img-before" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=900&q=80&auto=format&fit=crop" alt="Before treatment: stained, uneven smile" loading="lazy" draggable="false">
+        </div>
+        <div class="ba-divider">
+          <span class="ba-handle" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 6L2 12L8 18M16 6L22 12L16 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+        <span class="ba-tag ba-tag-before">Before</span>
+        <span class="ba-tag ba-tag-after">After</span>
+      </div>
+    </div>
+    <p class="ba-hint">Drag the handle, or tap anywhere on the photo — works with touch, mouse, or arrow keys.</p>
   </section>
 
   <!-- ============ TESTIMONIALS ============ -->
@@ -252,19 +285,6 @@
     </div>
   </section>
 
-  <!-- ============ BOOKING BAND ============ -->
-  <section class="booking">
-    <div class="booking-inner reveal-up">
-      <h2 class="section-title booking-title">Your smile shouldn't wait.</h2>
-      <p class="booking-sub">Message us directly — no call centres, no hold music. A real reply, usually within two hours.</p>
-      <div class="booking-actions">
-        <a class="btn btn-gold btn-lg" data-cta="whatsapp" href="#" target="_blank" rel="noopener">Book on WhatsApp</a>
-        <a class="btn btn-outline btn-lg" data-cta="call" href="#">Call the Clinic</a>
-      </div>
-      <p class="booking-hours">Mon–Sat, 10:00 AM – 8:00 PM &nbsp;·&nbsp; Emergency line available</p>
-    </div>
-  </section>
-
   <!-- ============ LOCATION ============ -->
   <section class="location">
     <div class="location-grid">
@@ -273,9 +293,10 @@
         <h2 class="section-title" data-bind="localityLine2">Serving Koramangala, Bengaluru</h2>
         <p class="location-address">4th Block, 80 Feet Road, Koramangala, Bengaluru 560034</p>
         <a class="link-directions" href="#" data-cta="directions">Get directions →</a>
+        <p class="location-hours">Mon–Sat, 10:00 AM – 8:00 PM &nbsp;·&nbsp; Emergency line available</p>
       </div>
       <div class="location-map reveal-up" style="--delay:.1s" aria-hidden="true">
-        <svg viewBox="0 0 400 260"><rect width="400" height="260" fill="var(--enamel)"/><g stroke="var(--gold)" stroke-opacity=".35" stroke-width="1"><path d="M0 60h400M0 130h400M0 200h400M80 0v260M200 0v260M320 0v260"/></g><circle cx="200" cy="130" r="8" fill="var(--gold)"/><circle cx="200" cy="130" r="18" fill="none" stroke="var(--gold)" stroke-opacity=".5"/></svg>
+        <svg viewBox="0 0 400 260"><rect width="400" height="260" fill="var(--enamel-soft)"/><g stroke="var(--gold)" stroke-opacity=".35" stroke-width="1"><path d="M0 60h400M0 130h400M0 200h400M80 0v260M200 0v260M320 0v260"/></g><circle cx="200" cy="130" r="8" fill="var(--gold)"/><circle cx="200" cy="130" r="18" fill="none" stroke="var(--gold)" stroke-opacity=".5"/></svg>
       </div>
     </div>
   </section>
@@ -285,11 +306,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <span class="footer-name" data-bind="name">Smile Studio Dental Care</span>
-    <div class="footer-links">
-      <a data-cta="whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
-      <a data-cta="call" href="#">Call</a>
-      <span data-bind="localityLine">Serving Koramangala, Bengaluru</span>
-    </div>
+    <span class="footer-locality" data-bind="localityLine">Serving Koramangala, Bengaluru</span>
   </div>
 </footer>
 

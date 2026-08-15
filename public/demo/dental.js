@@ -36,7 +36,6 @@
     name: data.name,
     localityLine: `Serving ${data.locality}, Bengaluru`,
     localityLine2: `Serving ${data.locality}, Bengaluru`,
-    localityName: `in ${data.locality}.`,
     rating: data.rating,
     reviews: Number(digitsOnly(data.reviews)).toLocaleString("en-IN"),
     phoneDisplay,
@@ -95,7 +94,7 @@
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px 120px 0px" }
     );
     revealTargets.forEach((el) => io.observe(el));
   } else {
@@ -142,7 +141,7 @@
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.3, rootMargin: "0px 0px 80px 0px" }
     );
     countEls.forEach((el) => countIo.observe(el));
   } else {
