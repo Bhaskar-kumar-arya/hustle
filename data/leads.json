@@ -55,10 +55,11 @@
     "website": null,
     "websiteStatus": "NO_WEBSITE",
     "googleMapsUrl": "https://www.google.com/maps/place/Perfect+Smiles+Family+Dental/data=!4m7!3m6!1s0x3bae3e7df1765311:0xef69876a8e8e46db!8m2!3d12.9567615!4d77.516604!16s%2Fg%2F11f2xjmtqk!19sChIJEVN28X0-rjsR20aOjmqHae8?authuser=0&hl=en&rclk=1",
-    "crmStatus": "NEW",
+    "crmStatus": "PITCH_SENT",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:10:19.376Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "updatedAt": "2026-08-15T12:27:00.571Z"
   },
   {
     "id": "blr-1786702207905-255",

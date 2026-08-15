@@ -866,9 +866,11 @@ window.sendDirectWhatsApp = async function(leadId, pitchType = 'whatsapp') {
     }
 
     const pitchObj = pitchType === 'justdial' ? pitches.justdialHook : pitches.whatsapp;
-    if (pitchObj && pitchObj.whatsappUrl) {
-      // 1-Click direct WhatsApp launch
-      window.open(pitchObj.whatsappUrl, '_blank', 'noopener,noreferrer');
+    if (pitchObj && pitchObj.text) {
+      let digits = lead.phone.replace(/[^0-9]/g, '');
+      if (digits.length === 10) digits = '91' + digits;
+      const url = `https://api.whatsapp.com/send?phone=${digits}&text=${encodeURIComponent(pitchObj.text)}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
 
       // Automatically move lead to PITCH_SENT stage if NEW
       if (lead.crmStatus === 'NEW') {

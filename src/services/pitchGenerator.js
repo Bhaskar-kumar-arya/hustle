@@ -26,6 +26,13 @@ function buildDemoUrl(lead) {
   return `${site.baseUrl}${site.path}?${params.toString()}`;
 }
 
+function formatWhatsAppUrl(phone, message) {
+  if (!phone) return null;
+  let digits = phone.replace(/[^0-9]/g, '');
+  if (digits.length === 10) digits = '91' + digits;
+  return `https://api.whatsapp.com/send?phone=${digits}&text=${encodeURIComponent(message)}`;
+}
+
 /**
  * Generate a WhatsApp sales pitch for a business lacking a website
  */
@@ -55,11 +62,11 @@ function generateWhatsAppPitch(lead) {
 
   const previewLine = demoUrl
     ? `Here's a live 1-minute preview, built specifically for ${name}:\n${demoUrl}`
-    : `Would you be open to a quick 2-minute preview link on WhatsApp? No obligations at all! 😊`;
+    : `Would you be open to a quick 2-minute preview link on WhatsApp? No obligations at all! :)`;
 
   const message = `Hello ${name} Team! 👋
 
-I came across your profile on Google Maps with an impressive ${ratingText} rating${reviewsText}${areaText} — congratulations on the fantastic customer reputation! 🌟
+I came across your profile on Google Maps with an impressive ${ratingText} rating${reviewsText}${areaText} -- congratulations on the fantastic customer reputation! 🌟
 
 While searching for ${category || 'your services'} in ${locality || 'Bangalore'}, I noticed that your business *does not yet have an official website* linked on Google.
 
@@ -76,7 +83,7 @@ Best regards!`;
     text: message,
     encodedText: encodeURIComponent(message),
     demoUrl,
-    whatsappUrl: phone ? `https://wa.me/${phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}` : null
+    whatsappUrl: formatWhatsAppUrl(phone, message)
   };
 }
 
@@ -99,25 +106,25 @@ function generateJustdialPitch(lead) {
 
   const message = `Hi ${name} Team! 👋
 
-I was looking at your top-rated profile${areaText} (${ratingText}${reviewsText}) — your work in ${category || 'your field'} is truly top tier! 🌟
+I was looking at your top-rated profile${areaText} (${ratingText}${reviewsText}) -- your work in ${category || 'your field'} is truly top tier! 🌟
 
 I noticed your online presence currently relies on *${directoryName}* rather than your own official website.
 
 Here is the biggest issue with directory listings:
-1️⃣ *Shared Leads Trap:* When customers search on directories, they broadcast that same customer inquiry to 5–10 other competitors at the exact same second, causing price wars.
-2️⃣ *Competitor Ads:* Directory platforms place ads for other nearby businesses right on your listing page!
+1) *Shared Leads Trap:* When customers search on directories, they broadcast that same customer inquiry to 5-10 other competitors at the exact same second, causing price wars.
+2) *Competitor Ads:* Directory platforms place ads for other nearby businesses right on your listing page!
 
-With your own *official custom website*, **100% of customer inquiries and WhatsApp bookings come exclusively to YOU** — zero competitors, zero shared leads, and total brand authority. 🚀
+With your own *official custom website*, 100% of customer inquiries and WhatsApp bookings come exclusively to YOU -- zero competitors, zero shared leads, and total brand authority. 🚀
 
 I've already built a clean, fast 1-page website concept customized for ${name}.
 
-${demoUrl ? `Here's a live 1-minute preview, built specifically for ${name}:\n${demoUrl}` : 'Would you like a 1-minute WhatsApp preview link? No pressure or obligation at all! 😊'}`;
+${demoUrl ? `Here's a live 1-minute preview, built specifically for ${name}:\n${demoUrl}` : 'Would you like a 1-minute WhatsApp preview link? No pressure or obligation at all! :)'}`;
 
   return {
     text: message,
     encodedText: encodeURIComponent(message),
     demoUrl,
-    whatsappUrl: phone ? `https://wa.me/${phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}` : null
+    whatsappUrl: formatWhatsAppUrl(phone, message)
   };
 }
 
@@ -130,11 +137,11 @@ function generateColdCallScript(lead) {
   
   return {
     introduction: `Hi, good morning! Am I speaking with the founder or manager of ${name}?`,
-    hook: `I was admiring your top-rated Google profile in ${locality || 'Bangalore'} (${rating || '4.5'}★ with ${reviewsCount || 'many'} reviews), and saw you have fantastic customer feedback.`,
+    hook: `I was admiring your top-rated Google profile in ${locality || 'Bangalore'} (${rating || '4.5'} stars with ${reviewsCount || 'many'} reviews), and saw you have fantastic customer feedback.`,
     theProblem: hasDirectory 
       ? `I noticed you're mainly listed on third-party directories like Justdial/Magicpin. The problem is when clients search on those platforms, your leads get shared with 5 other nearby competitors at the same time.`
       : `When high-ticket clients search on Google for ${category || 'your services'} in ${locality || 'Bangalore'}, you don't have an official direct website linked. You're losing 20-30 direct bookings every month to competitors.`,
-    theOffer: `I build high-converting, modern websites for Bangalore businesses that deliver 100% exclusive customer leads directly to your WhatsApp with zero shared competitors. I’ve already designed a sample mobile preview for ${name}.`,
+    theOffer: `I build high-converting, modern websites for Bangalore businesses that deliver 100% exclusive customer leads directly to your WhatsApp with zero shared competitors. I've already designed a sample mobile preview for ${name}.`,
     callToAction: `Can I send you a 1-minute preview link on your WhatsApp so you can take a look whenever you're free? What is the best WhatsApp number?`
   };
 }
@@ -147,14 +154,14 @@ function generateEmailPitch(lead) {
   const subject = `Stop losing leads to competitors: Custom website concept for ${name}`;
   const body = `Hi ${name} Team,
 
-I came across ${name} while searching for top-rated ${category || 'businesses'} in ${locality || 'Bangalore'}. Your ${rating || '4.5'}★ rating with ${reviewsCount || 'great'} reviews shows you provide fantastic quality.
+I came across ${name} while searching for top-rated ${category || 'businesses'} in ${locality || 'Bangalore'}. Your ${rating || '4.5'} star rating with ${reviewsCount || 'great'} reviews shows you provide fantastic quality.
 
 However, I noticed that you don't currently have an official website linked to your Google listing. 
 
-In Bangalore's competitive market, relying solely on directory listings (like Justdial/Magicpin) means your customer inquiries get shared with 5–10 other competitors, triggering unnecessary price wars.
+In Bangalore's competitive market, relying solely on directory listings (like Justdial/Magicpin) means your customer inquiries get shared with 5-10 other competitors, triggering unnecessary price wars.
 
 With your own official website:
-- 100% of customer calls and WhatsApp bookings are 100% exclusive to you.
+- 100% of customer calls and WhatsApp bookings are exclusive to you.
 - You build lasting brand equity in Bangalore.
 - High-ticket clients trust you immediately over competitors.
 
