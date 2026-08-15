@@ -14,10 +14,11 @@
     "website": null,
     "websiteStatus": "NO_WEBSITE",
     "googleMapsUrl": "https://www.google.com/maps/place/Sri+Lakshmi%27s+Dental+and+Implant+Clinic/data=!4m7!3m6!1s0x3bae3dd13e0f2c9f:0x8f0300c766ab8d23!8m2!3d12.9707754!4d77.5235817!16s%2Fg%2F1ptycjxtb!19sChIJnywPPtE9rjsRI42rZscAA48?authuser=0&hl=en&rclk=1",
-    "crmStatus": "NEW",
+    "crmStatus": "PITCH_SENT",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:10:33.325Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "updatedAt": "2026-08-15T12:20:43.263Z"
   },
   {
     "id": "blr-1786702230326-444",

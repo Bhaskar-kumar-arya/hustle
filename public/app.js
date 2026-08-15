@@ -284,7 +284,7 @@ function buildDemoUrl(lead) {
 }
 
 function renderCardsView() {
-  DOM.leadsCardsContainer.innerHTML = state.leads.map(lead => {
+  DOM.leadsCardsContainer.innerHTML = state.leads.map((lead, index) => {
     const isNoWeb = lead.websiteStatus === 'NO_WEBSITE';
     const isSocial = lead.websiteStatus === 'SOCIAL_ONLY';
     const cardClass = isNoWeb ? 'card-no-web' : (isSocial ? 'card-social' : '');
@@ -305,7 +305,10 @@ function renderCardsView() {
       <div class="lead-card ${cardClass}" data-id="${lead.id}">
         <div class="lead-header">
           <div class="lead-title-area">
-            <h4 class="lead-name">${escapeHtml(lead.name)}</h4>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span class="lead-serial-pill">#${index + 1}</span>
+              <h4 class="lead-name" style="margin: 0;">${escapeHtml(lead.name)}</h4>
+            </div>
             <div class="lead-tags">
               <span class="tag">${escapeHtml(lead.category)}</span>
               <span class="tag tag-locality">📍 ${escapeHtml(lead.locality || 'Bengaluru')}</span>
@@ -350,18 +353,19 @@ function renderCardsView() {
         </div>
 
         <div class="lead-actions-grid">
-          <button class="btn btn-whatsapp-action" onclick="openPitchModal('${lead.id}', 'whatsapp')">
-            <span>💬</span> 1-Click WhatsApp
+          <button class="btn btn-whatsapp-action" onclick="sendDirectWhatsApp('${lead.id}', 'whatsapp')" title="Launch 1-Click WhatsApp with Standard No-Website Pitch">
+            <span>💬</span> Standard WA
           </button>
-          <button class="btn btn-pitch-action" onclick="openPitchModal('${lead.id}', 'coldCall')">
-            <span>📋</span> Pitch Toolkit
+          <button class="btn btn-justdial-action" onclick="sendDirectWhatsApp('${lead.id}', 'justdial')" title="Launch 1-Click WhatsApp with Justdial / Directory Hook Pitch">
+            <span>⚔️</span> Justdial Hook
           </button>
         </div>
 
         <div class="lead-footer-links">
-          ${demoUrl ? `<a href="${demoUrl}" target="_blank" rel="noopener">🎨 Preview Live Demo</a>` : `<span class="link-disabled" title="Demo site for this niche isn't deployed yet">🎨 Preview Live Demo</span>`}
-          <a href="${lead.googleMapsUrl || '#'}" target="_blank" rel="noopener">🗺️ View on Google Maps</a>
-          ${lead.phone ? `<a href="tel:${lead.phone}">📞 Call Directly</a>` : ''}
+          ${demoUrl ? `<a href="${demoUrl}" target="_blank" rel="noopener">🎨 Live Demo</a>` : `<span class="link-disabled" title="Demo site for this niche isn't deployed yet">🎨 Live Demo</span>`}
+          <a href="javascript:void(0)" onclick="openPitchModal('${lead.id}', 'coldCall')" style="color: #A78BFA;">📋 Pitch Toolkit</a>
+          <a href="${lead.googleMapsUrl || '#'}" target="_blank" rel="noopener">🗺️ Maps</a>
+          ${lead.phone ? `<a href="tel:${lead.phone}">📞 Call</a>` : ''}
         </div>
       </div>
     `;
@@ -369,14 +373,16 @@ function renderCardsView() {
 }
 
 function renderTableView() {
-  DOM.leadsTableBody.innerHTML = state.leads.map(lead => {
+  DOM.leadsTableBody.innerHTML = state.leads.map((lead, index) => {
     const isNoWeb = lead.websiteStatus === 'NO_WEBSITE';
     const isSocial = lead.websiteStatus === 'SOCIAL_ONLY';
-    const demoUrl = buildDemoUrl(lead);
     let statusText = isNoWeb ? '🔴 No Website' : (isSocial ? '🟡 Social Only' : '🟢 Has Website');
 
     return `
       <tr>
+        <td style="color: var(--text-muted); font-family: var(--font-mono); font-size: 12px; font-weight: 700;">
+          #${index + 1}
+        </td>
         <td>
           <span class="score-num" style="font-size: 15px; color: #EF4444; font-weight: 800;">
             🔥 ${lead.opportunityScore || 90}
@@ -412,15 +418,12 @@ function renderTableView() {
         </td>
         <td>
           <div style="display: flex; gap: 6px;">
-            <button class="btn btn-sm btn-whatsapp-action" onclick="openPitchModal('${lead.id}', 'whatsapp')">
-              💬 WhatsApp
+            <button class="btn btn-sm btn-whatsapp-action" onclick="sendDirectWhatsApp('${lead.id}', 'whatsapp')" title="Launch 1-Click WhatsApp with Standard Pitch">
+              💬 Standard WA
             </button>
-            <button class="btn btn-sm btn-secondary" onclick="openPitchModal('${lead.id}', 'coldCall')">
-              📋 Script
+            <button class="btn btn-sm btn-justdial-action" onclick="sendDirectWhatsApp('${lead.id}', 'justdial')" title="Launch 1-Click WhatsApp with Justdial Hook Pitch">
+              ⚔️ Justdial Hook
             </button>
-            ${demoUrl
-              ? `<a class="btn btn-sm btn-secondary" href="${demoUrl}" target="_blank" rel="noopener">🎨 Demo</a>`
-              : `<span class="btn btn-sm btn-secondary link-disabled" title="Demo site for this niche isn't deployed yet">🎨 Demo</span>`}
           </div>
         </td>
       </tr>
@@ -815,8 +818,13 @@ window.openPitchModal = async function(leadId, defaultTab = 'whatsapp') {
     DOM.pitchEmailSubject.value = pitches.email.subject;
     DOM.pitchEmailBody.value = pitches.email.body;
 
+    let targetTab = 'tabWhatsApp';
+    if (defaultTab === 'justdial') targetTab = 'tabJustdial';
+    else if (defaultTab === 'coldCall') targetTab = 'tabColdCall';
+    else if (defaultTab === 'email') targetTab = 'tabEmail';
+
     DOM.modalTabs.forEach(t => {
-      if (t.dataset.tab === (defaultTab === 'coldCall' ? 'tabColdCall' : 'tabWhatsApp')) {
+      if (t.dataset.tab === targetTab) {
         t.click();
       }
     });
@@ -842,6 +850,38 @@ window.updateLeadCrmStatus = async function(leadId, newStatus) {
     }
   } catch (err) {
     console.error('Error updating CRM status:', err);
+  }
+};
+
+window.sendDirectWhatsApp = async function(leadId, pitchType = 'whatsapp') {
+  try {
+    const res = await fetch(`/api/leads/${leadId}/pitch`);
+    if (!res.ok) throw new Error('Failed to load lead pitch data');
+    const data = await res.json();
+    const { lead, pitches } = data;
+
+    if (!lead.phone) {
+      alert(`No phone number available for "${lead.name}".`);
+      return;
+    }
+
+    const pitchObj = pitchType === 'justdial' ? pitches.justdialHook : pitches.whatsapp;
+    if (pitchObj && pitchObj.whatsappUrl) {
+      // 1-Click direct WhatsApp launch
+      window.open(pitchObj.whatsappUrl, '_blank', 'noopener,noreferrer');
+
+      // Automatically move lead to PITCH_SENT stage if NEW
+      if (lead.crmStatus === 'NEW') {
+        await updateLeadCrmStatus(leadId, 'PITCH_SENT');
+        const select = document.querySelector(`.lead-card[data-id="${leadId}"] .crm-select`);
+        if (select) select.value = 'PITCH_SENT';
+      }
+    } else {
+      alert('Unable to format WhatsApp link for this contact.');
+    }
+  } catch (err) {
+    console.error('Error launching WhatsApp:', err);
+    alert('Error launching WhatsApp: ' + err.message);
   }
 };
 
