@@ -2,11 +2,36 @@
  * Pitch & Outreach Generator tailored for Bangalore Local Businesses
  */
 
+const { getDemoSiteConfig } = require('../config/nicheDemoSites');
+
+/**
+ * Build the absolute, lead-specific demo site URL (or null if that niche's
+ * demo site isn't deployed yet), so the WhatsApp pitch always points at the
+ * correct business's own preview on that niche's own domain.
+ */
+function buildDemoUrl(lead) {
+  const site = getDemoSiteConfig(lead.nicheId);
+  if (!site) return null;
+
+  const params = new URLSearchParams({
+    name: lead.name || '',
+    locality: lead.locality || '',
+    rating: lead.rating || '4.8',
+    reviews: lead.reviewsCount || '0',
+    phone: lead.phone || '',
+    address: lead.address || ''
+  });
+  if (lead.googleMapsUrl) params.set('mapsUrl', lead.googleMapsUrl);
+
+  return `${site.baseUrl}${site.path}?${params.toString()}`;
+}
+
 /**
  * Generate a WhatsApp sales pitch for a business lacking a website
  */
 function generateWhatsAppPitch(lead) {
   const { name, rating, reviewsCount, locality, category, phone } = lead;
+  const demoUrl = buildDemoUrl(lead);
   const ratingText = rating ? `${rating}★` : 'great';
   const reviewsText = reviewsCount ? ` (${reviewsCount}+ reviews)` : '';
   const areaText = locality ? ` in ${locality}, Bangalore` : ' in Bangalore';
@@ -27,17 +52,21 @@ function generateWhatsAppPitch(lead) {
     specificBenefit = 'explain Panchakarma treatment packages and allow patients to book doctor consultations';
   }
 
+  const previewLine = demoUrl
+    ? `Here's a live 1-minute preview, built specifically for ${name}:\n${demoUrl}`
+    : `Would you be open to a quick 2-minute preview link on WhatsApp? No obligations at all! 😊`;
+
   const message = `Hello ${name} Team! 👋
 
 I came across your profile on Google Maps with an impressive ${ratingText} rating${reviewsText}${areaText} — congratulations on the fantastic customer reputation! 🌟
 
-While searching for ${category || 'your services'} in ${locality || 'Bangalore'}, I noticed that your business *does not yet have an official website* linked on Google. 
+While searching for ${category || 'your services'} in ${locality || 'Bangalore'}, I noticed that your business *does not yet have an official website* linked on Google.
 
 Every day, dozens of high-value customers searching on Google end up choosing competitors simply because they have a professional website where they can browse instantly.
 
 I am a Bangalore-based web designer, and I have already put together a *modern, mobile-friendly website demo concept* for ${name} to ${specificBenefit}.
 
-Would you be open to a quick 2-minute preview link on WhatsApp? No obligations at all! 😊
+${previewLine}
 
 Looking forward to hearing from you.
 Best regards!`;
@@ -45,6 +74,7 @@ Best regards!`;
   return {
     text: message,
     encodedText: encodeURIComponent(message),
+    demoUrl,
     whatsappUrl: phone ? `https://wa.me/${phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}` : null
   };
 }
@@ -54,6 +84,7 @@ Best regards!`;
  */
 function generateJustdialPitch(lead) {
   const { name, locality, category, phone, rating, reviewsCount, website } = lead;
+  const demoUrl = buildDemoUrl(lead);
   const ratingText = rating ? `${rating}★` : '4.8★';
   const reviewsText = reviewsCount ? ` with ${reviewsCount}+ reviews` : '';
   const areaText = locality ? ` in ${locality}, Bangalore` : ' in Bangalore';
@@ -77,13 +108,14 @@ Here is the biggest issue with directory listings:
 
 With your own *official custom website*, **100% of customer inquiries and WhatsApp bookings come exclusively to YOU** — zero competitors, zero shared leads, and total brand authority. 🚀
 
-I've already built a clean, fast 1-page website concept customized for ${name}. 
+I've already built a clean, fast 1-page website concept customized for ${name}.
 
-Would you like a 1-minute WhatsApp preview link? No pressure or obligation at all! 😊`;
+${demoUrl ? `Here's a live 1-minute preview, built specifically for ${name}:\n${demoUrl}` : 'Would you like a 1-minute WhatsApp preview link? No pressure or obligation at all! 😊'}`;
 
   return {
     text: message,
     encodedText: encodeURIComponent(message),
+    demoUrl,
     whatsappUrl: phone ? `https://wa.me/${phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}` : null
   };
 }

@@ -5,6 +5,7 @@ const scraper = require('../scraper/mapsScraper');
 const queueManager = require('../scraper/queueManager');
 const { BANGALORE_AREAS } = require('../config/bangaloreAreas');
 const { BUSINESS_NICHES } = require('../config/businessNiches');
+const { NICHE_DEMO_SITES } = require('../config/nicheDemoSites');
 const {
   generateWhatsAppPitch,
   generateJustdialPitch,
@@ -36,9 +37,15 @@ queueManager.onProgress((event) => {
 
 // 1. Get Configuration (Bangalore Areas & Business Niches)
 router.get('/config', (req, res) => {
+  const demoSites = {};
+  for (const [nicheId, site] of Object.entries(NICHE_DEMO_SITES)) {
+    if (site.baseUrl) demoSites[nicheId] = { baseUrl: site.baseUrl.replace(/\/$/, ''), path: site.path };
+  }
+
   res.json({
     areas: BANGALORE_AREAS,
-    niches: BUSINESS_NICHES
+    niches: BUSINESS_NICHES,
+    demoSites
   });
 });
 

@@ -18,13 +18,18 @@
     rating: params.get("rating") || "4.8",
     reviews: params.get("reviews") || "214",
     phone: toIndianDialed(params.get("phone")),
+    address: params.get("address") || `${params.get("locality") || "Koramangala"}, Bengaluru`,
+    mapsUrl: params.get("mapsUrl") || "",
   };
 
   const waMessage = `Hi ${data.name}, I found you on Google and would like to book an appointment.`;
   const waLink = `https://wa.me/${data.phone}?text=${encodeURIComponent(waMessage)}`;
   const telLink = `tel:+${data.phone}`;
-  const mapsQuery = encodeURIComponent(`${data.name}, ${data.locality}, Bengaluru`);
-  const directionsLink = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
+  const mapsQuery = encodeURIComponent(`${data.name}, ${data.address}`);
+  // Real scraped Google Maps place link (if we have one) is more precise than a text search.
+  const directionsLink = data.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
+  // No API key needed — the classic "q=...&output=embed" form works for any business name + address.
+  const mapEmbedSrc = `https://www.google.com/maps?q=${mapsQuery}&z=15&output=embed`;
 
   const phoneDisplay = (() => {
     const d = data.phone.startsWith("91") ? data.phone.slice(2) : data.phone;
@@ -40,6 +45,7 @@
     reviews: Number(digitsOnly(data.reviews)).toLocaleString("en-IN"),
     phoneDisplay,
     trustLine: `Gentle, modern dentistry in ${data.locality} — the kind of care your smile actually looks forward to.`,
+    addressLine: data.address,
   };
 
   document.querySelectorAll("[data-bind]").forEach((el) => {
@@ -52,6 +58,9 @@
   document.querySelectorAll('[data-cta="whatsapp"]').forEach((el) => (el.href = waLink));
   document.querySelectorAll('[data-cta="call"]').forEach((el) => (el.href = telLink));
   document.querySelectorAll('[data-cta="directions"]').forEach((el) => (el.href = directionsLink));
+
+  const mapFrame = document.getElementById("locationMapFrame");
+  if (mapFrame) mapFrame.src = mapEmbedSrc;
 
   document
     .querySelector('.stamp')
@@ -94,7 +103,7 @@
           }
         });
       },
-      { threshold: 0.05, rootMargin: "0px 0px 120px 0px" }
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
     );
     revealTargets.forEach((el) => io.observe(el));
   } else {

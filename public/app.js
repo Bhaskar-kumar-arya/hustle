@@ -262,11 +262,33 @@ function renderLeads() {
   }
 }
 
+// Builds a live demo-site preview link for any lead, passing its real
+// scraped data through URL params so that niche's deployed demo site
+// dynamically renders that specific business — no per-lead build step.
+// Each niche is its own separately-deployed site (see /api/config demoSites),
+// so this returns null until that niche's site has a live baseUrl configured.
+function buildDemoUrl(lead) {
+  const site = (state.config.demoSites || {})[lead.nicheId];
+  if (!site) return null;
+
+  const params = new URLSearchParams({
+    name: lead.name || '',
+    locality: lead.locality || '',
+    rating: lead.rating || '4.8',
+    reviews: lead.reviewsCount || '0',
+    phone: lead.phone || '',
+    address: lead.address || '',
+  });
+  if (lead.googleMapsUrl) params.set('mapsUrl', lead.googleMapsUrl);
+  return `${site.baseUrl}${site.path}?${params.toString()}`;
+}
+
 function renderCardsView() {
   DOM.leadsCardsContainer.innerHTML = state.leads.map(lead => {
     const isNoWeb = lead.websiteStatus === 'NO_WEBSITE';
     const isSocial = lead.websiteStatus === 'SOCIAL_ONLY';
     const cardClass = isNoWeb ? 'card-no-web' : (isSocial ? 'card-social' : '');
+    const demoUrl = buildDemoUrl(lead);
 
     let webStatusBadge = '';
     if (isNoWeb) {
@@ -337,6 +359,7 @@ function renderCardsView() {
         </div>
 
         <div class="lead-footer-links">
+          ${demoUrl ? `<a href="${demoUrl}" target="_blank" rel="noopener">🎨 Preview Live Demo</a>` : `<span class="link-disabled" title="Demo site for this niche isn't deployed yet">🎨 Preview Live Demo</span>`}
           <a href="${lead.googleMapsUrl || '#'}" target="_blank" rel="noopener">🗺️ View on Google Maps</a>
           ${lead.phone ? `<a href="tel:${lead.phone}">📞 Call Directly</a>` : ''}
         </div>
@@ -349,6 +372,7 @@ function renderTableView() {
   DOM.leadsTableBody.innerHTML = state.leads.map(lead => {
     const isNoWeb = lead.websiteStatus === 'NO_WEBSITE';
     const isSocial = lead.websiteStatus === 'SOCIAL_ONLY';
+    const demoUrl = buildDemoUrl(lead);
     let statusText = isNoWeb ? '🔴 No Website' : (isSocial ? '🟡 Social Only' : '🟢 Has Website');
 
     return `
@@ -394,6 +418,9 @@ function renderTableView() {
             <button class="btn btn-sm btn-secondary" onclick="openPitchModal('${lead.id}', 'coldCall')">
               📋 Script
             </button>
+            ${demoUrl
+              ? `<a class="btn btn-sm btn-secondary" href="${demoUrl}" target="_blank" rel="noopener">🎨 Demo</a>`
+              : `<span class="btn btn-sm btn-secondary link-disabled" title="Demo site for this niche isn't deployed yet">🎨 Demo</span>`}
           </div>
         </td>
       </tr>
