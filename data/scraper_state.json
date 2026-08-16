@@ -161,9 +161,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dentist",
       "query": "Dentist in BTM Layout Bangalore",
-      "status": "RUNNING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 5
     },
     {
       "locality": "Bannerghatta Road",
@@ -172,9 +172,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dental Clinic",
       "query": "Dental Clinic in Bannerghatta Road Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 7
     },
     {
       "locality": "Bannerghatta Road",
@@ -183,9 +183,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Orthodontist",
       "query": "Orthodontist in Bannerghatta Road Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 5
     },
     {
       "locality": "Bannerghatta Road",
@@ -194,9 +194,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dentist",
       "query": "Dentist in Bannerghatta Road Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 2
     },
     {
       "locality": "Electronic City",
@@ -205,9 +205,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dental Clinic",
       "query": "Dental Clinic in Electronic City Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 54,
+      "qualifiedSaved": 7
     },
     {
       "locality": "Electronic City",
@@ -216,9 +216,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Orthodontist",
       "query": "Orthodontist in Electronic City Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 54,
+      "qualifiedSaved": 3
     },
     {
       "locality": "Electronic City",
@@ -227,9 +227,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dentist",
       "query": "Dentist in Electronic City Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 6
     },
     {
       "locality": "Sarjapur Road",
@@ -238,9 +238,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dental Clinic",
       "query": "Dental Clinic in Sarjapur Road Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 14
     },
     {
       "locality": "Sarjapur Road",
@@ -249,8 +249,8 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Orthodontist",
       "query": "Orthodontist in Sarjapur Road Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
+      "status": "COMPLETED",
+      "leadsFound": 60,
       "qualifiedSaved": 0
     },
     {
@@ -260,8 +260,8 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dentist",
       "query": "Dentist in Sarjapur Road Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
+      "status": "COMPLETED",
+      "leadsFound": 55,
       "qualifiedSaved": 0
     },
     {
@@ -271,9 +271,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dental Clinic",
       "query": "Dental Clinic in Bellandur Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 10
     },
     {
       "locality": "Bellandur",
@@ -282,7 +282,7 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Orthodontist",
       "query": "Orthodontist in Bellandur Bangalore",
-      "status": "PENDING",
+      "status": "RUNNING",
       "leadsFound": 0,
       "qualifiedSaved": 0
     },
@@ -1024,7 +1024,7 @@
       "qualifiedSaved": 0
     }
   ],
-  "currentIndex": 14,
+  "currentIndex": 25,
   "options": {
     "maxResults": 60,
     "filterNoWebsiteOnly": true,
@@ -1032,5 +1032,5 @@
     "microLocalities": false
   },
   "isPaused": true,
-  "updatedAt": "2026-08-16T09:19:26.368Z"
+  "updatedAt": "2026-08-16T09:59:31.701Z"
 }
