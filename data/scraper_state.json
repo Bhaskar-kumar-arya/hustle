@@ -282,9 +282,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Orthodontist",
       "query": "Orthodontist in Bellandur Bangalore",
-      "status": "RUNNING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 1
     },
     {
       "locality": "Bellandur",
@@ -1024,7 +1024,7 @@
       "qualifiedSaved": 0
     }
   ],
-  "currentIndex": 25,
+  "currentIndex": 26,
   "options": {
     "maxResults": 60,
     "filterNoWebsiteOnly": true,
@@ -1032,5 +1032,5 @@
     "microLocalities": false
   },
   "isPaused": true,
-  "updatedAt": "2026-08-16T09:59:31.701Z"
+  "updatedAt": "2026-08-16T09:59:41.683Z"
 }
