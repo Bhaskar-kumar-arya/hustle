@@ -68,11 +68,12 @@ This is the highest-risk session. Everything else in the build is calmer than th
 
 **Scope**
 - Rating monument — `4.9` at `--step-6` in Fraunces, amber arc drawing on scroll-in, `1,465 VERIFIED GOOGLE REVIEWS` in Plex Mono
-- Treatments grid — cards from `content.js`, laser-first ordering, amber beam mark on laser treatments, 1/2/3-up responsive
-- "Why laser" dark section — `[data-ground="drape"]`, ambient amber glow, four factual procedure attributes
+- **Two pillars section** — paired panels for *Dental Implants* and *Gum & Periodontal Treatment*, each linking through. Carries more visual weight than any card in the grid below.
+- Treatments grid — 11 cards from `content.js`, ordered by pillar then demand (**not** laser-first), amber beam mark on laser-delivered treatments, 1/2/3-up responsive
+- "How we work — laser" dark section — `[data-ground="drape"]`, ambient amber glow, four factual procedure attributes, framed as *method* not identity
 - Scroll reveals wired via `motion.js`
 
-**Done when:** three sections render and reveal correctly at all breakpoints; treatment cards are generated from data, not written by hand; exactly one dark section used so far.
+**Done when:** four sections render and reveal correctly at all breakpoints; treatment cards are generated from data, not written by hand; exactly one dark section used so far; laser is never presented as what the clinic *is*.
 
 ---
 
@@ -81,7 +82,7 @@ This is the highest-risk session. Everything else in the build is calmer than th
 **Key refs:** DESIGN-SYSTEM §5 (rows 5–11), §6 (doctor card, credential block, FAQ, review card, location block, CTA band)
 
 **Scope**
-- Meet the dentists (3–4 mock doctors, credential blocks incl. registration number)
+- Meet the dentists — Dr. Sampath's `--principal` card at larger scale, plus 2–3 mock associates in standard cards. Credential blocks incl. registration number. **No years-of-experience figure** (CONVENTIONS §1).
 - Technology & sterilisation
 - Patient stories — Google reviews embed, with a static fallback if the embed can't load
 - Visiting the clinic — map, directions CTA, timings table with today highlighted, landmark/parking/languages
@@ -100,10 +101,11 @@ This is the highest-risk session. Everything else in the build is calmer than th
 - `assets/css/pages.css` + the treatment page template per DESIGN-SYSTEM §7
 - Step process component (01→05 — the only place numbering is allowed)
 - Cost block behind the `showPricing` flag, shipping **hidden**
-- Build the 5 **confirmed** treatments: Laser Dentistry (hub page), Laser RCT, Laser Gingivoplasty, Root Canal, Dental Restoration
-- Laser treatments reuse the comparator from S3
+- Build the **6 pillar + core** treatments (CONTENT-DATA §5, rows 1–6): Dental Implants ⭐, Gum & Periodontal Treatment ⭐, Laser Gingivoplasty, Laser Dentistry (method hub), Root Canal, Laser RCT
+- Rows 1, 2, 3, 4 and 6 reuse the S3 comparator with rows adapted to that procedure. Root Canal (row 5) does not.
+- The two ⭐ pillar pages are the most important pages on the site after the homepage — give them the most care.
 
-**Done when:** 5 treatment pages live and consistent; template is genuinely reusable; every page carries the suitability disclaimer; breadcrumbs work.
+**Done when:** 6 treatment pages live and consistent; template is genuinely reusable; every page carries the suitability disclaimer; breadcrumbs work.
 
 ---
 
@@ -112,11 +114,11 @@ This is the highest-risk session. Everything else in the build is calmer than th
 **Key refs:** DESIGN-SYSTEM §7, CONTENT-DATA (treatments table)
 
 **Scope**
-- 5 **assumed** treatments: Dental Implants, Crowns & Bridges, Braces & Aligners, Teeth Whitening / Smile Design, Kids Dentistry
-- `treatments/index.html` hub — intro, full grid, laser cluster first
+- The remaining 5 treatments (CONTENT-DATA §5, rows 7–11): Crowns & Bridges, Dental Restoration & Fillings, Braces & Invisible Aligners, Teeth Whitening & Smile Design, Kids Dentistry. None use the comparator.
+- `treatments/index.html` hub — intro, full grid grouped by pillar, plus a short list of the also-offered treatments that don't have their own page (CONTENT-DATA §5)
 - Cross-linking: hub ↔ treatment pages, related-treatment links between pages
 
-**Done when:** all 10 treatment pages exist; hub links to every one; each assumed treatment is flagged in `content.js` as unconfirmed.
+**Done when:** all 11 treatment pages exist; hub links to every one and mentions the also-offered list.
 
 ---
 

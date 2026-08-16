@@ -2,15 +2,13 @@
 
 > **This is the living file.** Every session updates it before finishing. If it disagrees with any other doc, trust this one.
 
-**Last updated:** 2026-08-16 — 🚩 S3 Hero + Comparator complete — STOP for human review before S4
+**Last updated:** 2026-08-16 — S4b complete
 
 ---
 
-## ▶ Next session: **S4 — Homepage, part A** (after human review of S3)
+## ▶ Next session: **S5 — Homepage part B**
 
-This was the review-gate session. **Do not start S4 until a human has looked at `index.html` in a browser and signed off.** When they do, read `SESSION-PLAN.md` → S4 for scope and read list.
-
-`index.html` now exists with the header/nav/mobile-menu/rail/action-bar/WhatsApp-float/footer frame plus the hero + Procedure Comparator. Only one section (`Hero`) exists on the page so far — S4 adds the rating monument, treatments grid, and the first `drape` section, each needing its own `data-rail-label`.
+Read `SESSION-PLAN.md` → S5 for scope. `index.html` now has 5 sections (Hero, Rating monument, Two pillars, Treatments, "How we work — laser"). S5 adds the remaining 6 homepage sections (Meet the dentists, Technology & sterilisation, Patient stories, Visiting the clinic, Questions/FAQ, Closing CTA band) and finishes the homepage. Each new section needs its own `data-rail-label`. The closing CTA band is the **second and final** `drape` section allowed on this page ("How we work — laser" is the first) — don't add a third.
 
 ---
 
@@ -21,8 +19,9 @@ This was the review-gate session. **Do not start S4 until a human has looked at 
 | S1 — Foundation | ✅ Done | Folder structure, `tokens.css`, `base.css`, self-hosted subset fonts (Fraunces/Karla/IBM Plex Mono, 98.6KB total), `content.js`, `_kitchen-sink.html` |
 | S2 — The frame | ✅ Done | `components.css` (buttons/pills/chips/header/rail/action bar/WhatsApp float/footer), `main.js` (first `content.js` consumer), header + mobile overlay menu + rail + progress line + sticky action bar + footer added to kitchen sink for verification |
 | 🚩 S3 — Hero + Comparator | ✅ Done — awaiting human review | `index.html` (skeleton + hero), `sections.css` (hero, comparator, load-sequence, scroll-reveal), `comparator.js`, `motion.js`, `.visually-hidden` utility added to `base.css` |
-| S4 — Homepage part A | ⬜ Not started | |
-| S5 — Homepage part B | ⬜ Not started | |
+| S4 — Homepage part A | ✅ Done — superseded by S4b | Rating monument, treatments grid (10 cards, laser-first, generated from `content.js`), "Why laser" `drape` section with ambient glow |
+| S4b — Rebalance rework | ✅ Done | Hero headline → two pillars; two-pillar section added; `gum-treatment` added + `treatments[]` reordered pillar-then-demand (10→11 cards); "Why laser" → "How we work — laser" |
+| **S5 — Homepage part B** | 🔴 **Next** | |
 | S6 — Treatment template + confirmed | ⬜ Not started | |
 | S7 — Remaining treatments + hub | ⬜ Not started | |
 | S8 — About, Team, Technology | ⬜ Not started | |
@@ -39,6 +38,13 @@ This was the review-gate session. **Do not start S4 until a human has looked at 
 
 *Things the next session must know. Out-of-scope issues spotted mid-session go here rather than into the diff.*
 
+- **S4b (2026-08-16) resolved the rebalance** flagged after S4 — `treatments[]` is now ordered pillar-then-demand (`dental-implants` 1, `gum-treatment` 2, `laser-gingivoplasty` 3, `laser-dentistry` 4, `root-canal` 5, `laser-rct` 6, then the 5 non-laser treatments 7–11), not laser-first. Any future session reading `order` should treat this as current — the older "already laser-first" framing no longer applies.
+- **`dental-implants.isLaser` is now `true`**, changed in S4b per DESIGN-SYSTEM §1 ("both pillars... delivered with laser"). This is itself `MOCK:`-adjacent — the summary text flags "laser-assisted technique" as unconfirmed protocol detail to verify with the client. If the client says implant placement is *not* laser-delivered, flip this back to `false` and update the summary — nothing else references it structurally (the treatments-grid beam mark and pillar panels both read this field live).
+- **All 11 treatments now carry `confirmed: true`** (was `false` on 5 of them pre-S4b) — CONTENT-DATA.md §1's verified service list now covers all eleven, so the earlier "assumed" flags were stale. The `confirmed` field itself isn't rendered anywhere yet (no UI reads it) — it's bookkeeping for the eventual real-data swap.
+- **Doctor count stays 3–4 by human decision (2026-08-16)**, despite verification pointing to a single practitioner. Dr. Sampath Kumar Rao K is the verified principal and gets the `--principal` card variant; associates are `MOCK:`. A grid that degrades to one card is cheaper than a single-profile layout that has to grow into a grid.
+- `doctors[]` treatment-slug arrays were **not** updated in S4b to reference the new `gum-treatment` slug (Dr. Vikram Shetty's entry still only lists `laser-gingivoplasty`, not `gum-treatment`) — out of S4b's scope (doctors are S5's "Meet the dentists"). Worth adding `gum-treatment` to his `treatments` array when S5 builds the doctor cards, since periodontics is his stated MDS specialism.
+- **Never render a years-of-experience number** — sources conflict (23+ vs 15). See CONVENTIONS §1.
+
 - Reduced-motion is handled in `base.css` by zeroing the `--duration-*` tokens inside the media query (no `!important`, per CONVENTIONS.md §4 CSS discipline). Component/section CSS should keep reading durations from those tokens rather than hardcoding transition timings, or this override won't reach them.
 - Fraunces was instanced down to two variable axes (`SOFT`, `wght` 400–600) with `opsz` pinned at 48 and `WONK` pinned at 0, rather than shipping all four axes — smaller file, and the design system only specifies fixed SOFT/WONK values plus a wght range anyway. `SOFT` is fixed at 60 via `font-variation-settings` in `base.css` h1/h2 rules. Karla was instanced to a single variable file covering wght 400–700 (one file, not three statics).
 - **Any component with a `--drape`/`--drape-deep` background must also carry `data-ground="drape"` on the same element**, or `--fg`/`--fg-muted` stay at their light-ground (dark green) values and text renders invisibly dark-on-dark. Hit this bug with the footer and action bar in S2 — both fixed by adding the attribute. `.site-footer` and `.action-bar` set their background directly (not via `--bg`, since the drape ground token block doesn't redefine `--bg`), so the `data-ground` attribute is doing fg-only inversion work — don't skip it when reusing these classes on future pages.
@@ -52,6 +58,11 @@ This was the review-gate session. **Do not start S4 until a human has looked at 
 - The WhatsApp float (≥768px) and the sticky action bar (<768px) are fixed-position and will overlap whatever content is currently scrolled beneath them — confirmed this is expected/standard floating-button behavior, not a layout bug, after seeing it in the S3 screenshots.
 - Comparator row copy ("Drill used / Sutures / Typical sittings / Anaesthesia", values incl. "Often none") is copied directly from DESIGN-SYSTEM.md §6's own worked example — treated as pre-vetted DCI-compliant copy, not `MOCK:`-flagged, since it states generic laser-vs-conventional procedure attributes rather than an Akshaya-specific fact. `CONTENT-DATA.md` doesn't model comparator rows in `content.js`; they're hardcoded in `index.html`/`comparator.js` on the reasoning that "never hardcode client data" (CONVENTIONS §3) covers name/phone/address/doctor/timing facts, not this kind of system copy shared by any laser-dentistry clinic. Flag if a future session disagrees.
 - `motion.js` must load after `main.js` in `index.html`'s script order — it reads and re-splits the hero heading's already-bound text into `.load-word` spans for the stagger effect, so it depends on `main.js`'s `data-bind` pass having already run. Module scripts execute in document order, so keep `main.js` → `comparator.js` → `motion.js` on every future page that includes the hero heading pattern.
+- **CONVENTIONS.md §5 vs DESIGN-SYSTEM.md §6 conflict, resolved in favour of CONVENTIONS:** the component inventory describes the treatment card as carrying a "Plex Mono index," but CONVENTIONS.md §5 states numbering (01/02/03) is allowed in exactly one component — the treatment step process — nowhere else. S4 built the treatment card **without** an index number, using only the amber beam mark (laser treatments) + title + description + sittings chip + arrow. Follow this in S6/S7 when building the step process and reusing/extending the card — the step process is the only place `01→05` numbering may appear.
+- Treatment cards are generated entirely in `main.js` (`#treatmentsGrid`), sorted by `content.js`'s `order` field, which is already laser-first (orders 1–3 are the laser treatments). Per-card scroll-reveal stagger is set as an inline `transition-delay` in the generated markup (same reasoning as `motion.js`'s hero word-stagger: card count is data-driven, so a fixed CSS `:nth-child` chain doesn't fit). Static (non-generated) multi-item reveal groups — like `.why-laser__grid`'s 4 items — use CSS `:nth-child` stagger instead; see the rule pattern in `sections.css` if a future session adds another static grid that needs staggered reveal.
+- Added `--duration-ambient: 20s` to `tokens.css` for the "Why laser" section's ambient amber glow drift (DESIGN-SYSTEM §8 specifies 20s). Any future `drape` section that wants the same ambient glow effect should reuse this token, not introduce a new duration literal.
+- The rating monument's arc fill uses a hardcoded `stroke-dashoffset: 0.02` for 4.9-of-5 stars (calculated as `1 - 4.9/5`). This is **not** wired to `clinic.rating` dynamically — if the real rating ever changes from 4.9, this value in `sections.css` (`.rating-monument.is-revealed .rating-monument__arc-fill`) needs a manual update, or a future session should make it computed (e.g. a CSS custom property set inline from `main.js` reading `clinic.rating`). Flagged here since `content.js`-only edits are supposed to be sufficient for data changes (CONVENTIONS §3) and this is a small exception.
+- Confirmed via Playwright: `fullPage: true` screenshots can visually corrupt/duplicate `position: fixed` elements (saw the mobile-menu's logo/hamburger bleed into the middle of a full-page capture at 360px even though it's `hidden` + `opacity: 0`). This is a Chromium/Playwright full-page-screenshot stitching artifact, not a real rendering bug — a normal single-viewport screenshot at the same scroll position renders correctly. Don't chase this if it recurs in future sessions' QA; verify with a viewport-clipped screenshot instead of `fullPage` when a fixed-position element looks wrong.
 
 ---
 
@@ -65,6 +76,11 @@ This was the review-gate session. **Do not start S4 until a human has looked at 
 | 2026-08-16 | Anchor dark is deep surgical green `#12302A`, not navy or black | From the operatory itself; warmer than black; near-complement of amber |
 | 2026-08-16 | No red in the palette | Blood association undercuts a clinic selling bloodless procedures |
 | 2026-08-16 | Signature element is the **Procedure Comparator** in the hero, not a photo or headline | Answers "will this hurt?" in five seconds, built from the real differentiator, needs zero patient imagery (sidesteps DCI) |
+| 2026-08-16 | ⚠️ **Rebalanced to two pillars — Dental Implants + Gum/Periodontal Treatment — with laser as the *method*, not the identity** | Online verification: Dr. Sampath is MDS Oral Implantologist + Periodontist + LASER Specialist. Implants is first in the clinic's name and his qualifications; laser gingivoplasty is itself a periodontal procedure. The earlier laser-as-identity framing weighted a technique over two clinical specialisms. Supersedes any earlier laser-first guidance. |
+| 2026-08-16 | Added `gum-treatment` as a treatment page; removed laser-first ordering | Periodontics is the principal's actual MDS specialism and had no page at all. Grid now orders by pillar, then search demand. |
+| 2026-08-16 | Homepage gains a **two-pillar section** above the treatments grid | Positioning needs to happen before the full 11-card scope, or the two things that matter get lost among nine that don't |
+| 2026-08-16 | Keep 3–4 doctors despite evidence of one | Human decision. Component handles any N; degrading a grid is cheaper than growing a single profile into one. |
+| 2026-08-16 | Never publish a years-of-experience figure | Sources conflict (23+ vs 15; MDS 2010). Unverifiable experience claims are prohibited under the DCI code. Use "in practice since &lt;year&gt;" once confirmed. |
 | 2026-08-16 | Type is Fraunces + Karla + IBM Plex Mono | Deliberately avoids the Playfair/Inter default pairing; Karla holds up at 15px on mid-range Android |
 | 2026-08-16 | Static HTML/CSS/JS, no framework, no build step | Matches the repo's existing per-niche pattern; fast, cheap to host, nothing to patch |
 | 2026-08-16 | Build output at `websites/akshaya/`, separate from `public/demo/dental/` | The demo is the sales asset for all dental leads; the client site is its own thing |
@@ -84,6 +100,13 @@ This was the review-gate session. **Do not start S4 until a human has looked at 
 | 2026-08-16 | S3: comparator hero split is 45/55 only at ≥1024px; 768–1023px stays stacked (single column) rather than also splitting | DESIGN-SYSTEM §9's 768–1023 row explicitly allows "stays stacked" as a fallback "if the comparator has room, else—"; the comparator card plus its illustration needs more than half of a 768px viewport to read cleanly, so stacking was chosen over a cramped split. |
 | 2026-08-16 | S3: comparator toggle state, illustration, and row copy are driven by the component's own markup/JS, not `content.js` | Per CONTENT-DATA.md §4, `content.js`'s shape has no comparator model — the rows are generic laser-vs-conventional procedure facts (see Carried forward), not client-specific data, so CONVENTIONS §3's hardcoding ban doesn't apply to them the way it does to name/phone/address/doctor data. |
 | 2026-08-16 | S3: page-load motion sequence hides its initial (pre-animation) state only inside `@media (prefers-reduced-motion: no-preference)` in `sections.css`, rather than hiding unconditionally and un-hiding via a JS-added class for reduced-motion users | Guarantees reduced-motion users never see a hidden/opacity-0 state at all — no dependency on JS timing or a fallback class to avoid a flash of invisible content, satisfying CONVENTIONS §6's "the page must lose nothing but movement" more robustly than a JS-toggled override. |
+| 2026-08-16 | S4: treatment card has **no** numeric index, despite DESIGN-SYSTEM §6 describing one | CONVENTIONS.md §5 explicitly restricts 01/02/03-style numbering to the treatment step process alone. Treated CONVENTIONS as authoritative over the component-inventory description per its own framing ("the rules you must not break"). |
+| 2026-08-16 | S4: "Why laser" section's four items are written as short attribute headline + one factual sentence each ("Light, not a blade," "Seals as it works," "Anaesthesia, often none," "Single-sitting disinfection") rather than outcome-flavoured headlines like "Reduced bleeding" | First draft used outcome-adjacent headline language; rewritten to name what the laser *does*, per CONVENTIONS §1's does-vs-gets test, before shipping. |
+| 2026-08-16 | S4: rating monument arc fill is a static computed value (`stroke-dashoffset: 0.02`), not derived from `clinic.rating` at runtime | Simplest correct implementation for a single fixed rating; see Carried forward for the manual-update caveat if the real rating changes. |
+| 2026-08-16 | S4b: two-pillar panels are generated in `main.js` from `treatments.find()` on the `dental-implants`/`gum-treatment` slugs, not a separate `content.js` data shape | CONTENT-DATA.md §4 has no pillars model; reusing the treatments entries as the single source keeps the pillar panel copy and the treatments-grid card copy for the same two treatments from drifting apart. |
+| 2026-08-16 | S4b: pillar panels carry a plain-text category label ("Implants" / "Gum & periodontal"), not a 01/02 index | CONVENTIONS.md §5 restricts 01/02/03 numbering to the treatment step process alone; a numbered pillar panel would violate that. |
+| 2026-08-16 | S4b: `dental-implants.isLaser` flipped `false` → `true` | DESIGN-SYSTEM.md §1 states both pillars are laser-delivered. Flagged in Carried forward as unconfirmed protocol detail — revert if the client says otherwise. |
+| 2026-08-16 | S4b: kept the `.why-laser` CSS class name in `sections.css`/`index.html` despite the section's visible heading/label changing to "How we work — laser" | Renaming the CSS class would touch every rule in that block for a purely internal identifier with no user-facing effect; the visible copy (eyebrow, h2, rail label) is what BUILD-STATE's rename instruction was actually about. Flag if a future session wants the class renamed for consistency. |
 
 ---
 
@@ -150,3 +173,39 @@ Verified with Playwright at 360×640 / 768×1024 / 1440×900: zero console error
 **Files created/changed:** `index.html`, `assets/css/sections.css`, `assets/js/comparator.js`, `assets/js/motion.js`, `assets/css/base.css` (added `.visually-hidden`).
 
 **🚩 Stop here for human review before S4.**
+
+### 2026-08-16 — S4 Homepage part A
+
+Added the next three homepage sections to `index.html`, each with its own `data-rail-label`: the rating monument, the treatments grid, and "Why laser" (the first `drape` section on the page).
+
+**Rating monument** (bisque ground): `4.9` in Fraunces at `--step-6`, centered over an SVG ring — a static track circle plus an amber `stroke-dashoffset`-animated fill circle that draws to ~98% (4.9-of-5) on scroll-in, gated by the existing `[data-reveal]`/`initScrollReveal()` system from S3. `1,465 verified Google reviews` beneath in Plex Mono, both values bound from `content.js` via the existing `data-bind` pattern.
+
+**Treatments grid** (porcelain ground): all 10 treatments generated in `main.js` from `content.js`, sorted by the `order` field (already laser-first per CONTENT-DATA.md). Each card: amber beam-mark SVG (laser treatments only), title, one-line (2-line-clamp) summary, sittings chip, arrow. 1/2/3-up responsive at 360/480/1024. No numeric index — see Decision log, this conflicts with DESIGN-SYSTEM §6's stated component but CONVENTIONS §5 is authoritative.
+
+**"Why laser"** (drape ground, first of the page's max-two dark sections): eyebrow + heading + a 4-item grid of procedure-attribute cards (rewritten once during the session to strip outcome-flavoured phrasing — see Decision log) + the suitability disclaimer, all revealing via `[data-reveal]`. A radial-gradient glow div drifts slowly (`--duration-ambient: 20s`, new token) behind the content, entirely inside `@media (prefers-reduced-motion: no-preference)` per the established motion-gating pattern.
+
+Verified with Playwright at 360×640 / 768×1024 / 1440×900: zero console errors, zero failed requests, no horizontal overflow, all 10 cards render from data, rating figure shows "4.9" correctly, reveal system fires correctly on scroll (confirmed directly with `scrollIntoView` after a `fullPage` screenshot showed a scroll-simulation-timing artifact — see Carried forward on `fullPage` + fixed-position elements). Screenshotted all three widths.
+
+**Done-when check:** three sections render and reveal correctly at all breakpoints ✅ · treatment cards generated from data, not hand-written ✅ (grepped `index.html`, confirmed no hardcoded treatment markup) · exactly one dark section used so far ✅ ("Why laser" is the first; hero and the other two S4 sections are light).
+
+**Files created/changed:** `index.html` (3 sections added), `assets/css/sections.css` (rating monument, treatments grid/card, why-laser section, reveal-stagger rules), `assets/js/main.js` (treatments-grid generator), `assets/css/tokens.css` (added `--duration-ambient`).
+
+### 2026-08-16 — S4b Rebalance rework
+
+Corrected S3/S4's laser-as-identity framing to the two-pillar positioning established in the docs after online verification (`CONTENT-DATA.md` §1). No teardown — palette, type, layout, motion, and the comparator itself are untouched.
+
+**Hero:** `clinic.tagline` in `content.js` rewritten to name both pillars ("Dental implants and gum treatment, both delivered with laser") — the hero markup itself didn't change, since the lead paragraph under the h1 was always the right slot for this copy, only its content was laser-only before.
+
+**New "Two pillars" section** (`index.html`, between rating monument and treatments grid, porcelain ground, `data-rail-label="The two pillars"`): two panels generated in `main.js` from the `treatments[]` entries for `dental-implants`/`gum-treatment` (name + summary reused directly, so the panel and the treatments-grid card for the same treatment can't drift apart). New `.pillar-panel` styles in `sections.css` — bisque card, amber left-edge accent revealed on hover, category label instead of numeric index (CONVENTIONS §5 restricts 01/02 numbering to the step process only).
+
+**`content.js`:** added `gum-treatment` (order 2, isLaser true, confirmed true); reordered all 11 treatments pillar-then-demand per CONTENT-DATA.md §5's table (was laser-first); flipped `dental-implants.isLaser` to `true` and `confirmed` to `true`; flipped `confirmed` to `true` on the 4 other treatments CONTENT-DATA now lists as verified (crowns-and-bridges, braces-and-aligners, teeth-whitening, kids-dentistry). Grid went 10 → 11 cards with no markup change — `main.js` regenerates it from `content.js.order`, confirming the "content.js-only" claim in the handoff.
+
+**"Why laser" → "How we work — laser":** visible copy changed (eyebrow "How we work", h2 "How laser fits into your implant and gum treatment", `data-rail-label`) to frame laser as method, not identity. The four attribute items and disclaimer were already factual/procedure-only and needed no rewrite. CSS class name `.why-laser` kept as-is — internal identifier, not visible; see Decision log.
+
+Verified with Playwright at 360×640 / 768×1024 / 1440×900: zero console errors, zero failed requests, no horizontal overflow, 11 treatment cards and 2 pillar panels render from data, both pillar panels reach `.is-revealed` on scroll, rail label correctly reads "How we work — laser" over that section, hero h1/lead text confirmed correct. Screenshotted hero, pillars section, and "how we work" section at 1440 and 360.
+
+**Done-when check (from the handoff, not a formal session-plan entry):** hero names both pillars ✅ · two-pillar section present between rating monument and treatments grid ✅ · `gum-treatment` added and grid reorders pillar-then-demand, content.js-only change ✅ · "Why laser" reframed as method ✅ · re-screenshotted ✅.
+
+**Files created/changed:** `assets/js/content.js` (tagline rewrite; `gum-treatment` added; treatments reordered; `isLaser`/`confirmed` flags updated), `index.html` (two-pillar section added; why-laser section copy + rail label changed; `<title>` updated), `assets/js/main.js` (pillars generator added), `assets/css/sections.css` (`.pillars`/`.pillar-panel` styles added).
+
+**🚩 This was a correction session, not a review gate — flag to the human before S5 if they want to see it, but it doesn't block starting S5.**

@@ -15,6 +15,8 @@ These are legal constraints (Dental Council of India Code of Ethics 2014; DPDP A
 - ❌ Written or scripted testimonials — Google reviews embed only
 - ❌ Discount bait, inducements, limited-time offers
 - ❌ A medical-history field in any web form
+- ❌ **A years-of-experience number.** Public listings give both "23+ years" and "15 years" for Dr. Sampath, and they don't reconcile (`CONTENT-DATA.md` §1a). Render *"in practice since &lt;year&gt;"* once the client confirms the year. An unverifiable experience claim is the misleading-advertising case the DCI code exists for.
+- ❌ **Presenting laser as the clinic's identity.** It's the *method*. The clinic is an implants + gum-treatment practice that uses laser. See DESIGN-SYSTEM §1.
 
 **Always:**
 - ✅ State **procedure attributes**, never outcomes. "Single-sitting root canal under local anaesthesia" ✓ / "Painless root canal" ✗

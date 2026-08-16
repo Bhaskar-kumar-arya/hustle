@@ -8,19 +8,48 @@ The build runs on **mock data** until the client discovery call happens (`PROJEC
 
 ## 1. Confirmed — real, verified
 
+Verified 2026-08-16 against Justdial, Practo, Click4Appointment, Lybrate and magicpin listings. Sources at the foot of this file.
+
 | Field | Value |
 | :--- | :--- |
 | Clinic name | Akshaya Multispeciality Dental Clinic — Dental Implants & LASER |
-| Address | Bhagyalakshmi Avenue, Rukmaiah Layout, Hulimavu, Bengaluru, Karnataka 560114 |
+| Address | Bhagyalakshmi Avenue, Rukmaiah Layout, Hulimavu, Bengaluru, Karnataka |
+| Pincode | ⚠️ **Disputed** — 560114 (client-stated) vs 560076 (most listings). Confirm. |
 | Locality | Hulimavu (South Bangalore — Bannerghatta Road corridor) |
 | Phone / WhatsApp | +91 95388 27905 |
-| Google rating | 4.9 |
-| Review count | 1,465 |
-| Locations | Single |
+| Google rating / reviews | 4.9 · 1,465 |
+| Locations | Single *(⚠️ see §2 — a second Bannerghatta Road address appears in one listing)* |
 
-**Confirmed treatments** (client-stated): Dental Restoration · Laser Gingivoplasty · RCT (Root Canal) · Laser Dentistry · Laser RCT
+### The doctor — the single most important verified fact
 
-Use these exactly. They are the only content on the site that is verified.
+**Dr. Sampath Kumar Rao K, MDS** — *Oral Implantologist · Periodontist · LASER Specialist*
+
+This appears to be a **single-practitioner clinic**, not a 3–4 doctor practice. Every review found names Dr. Sampath. The site's trust story is therefore *one highly credentialed specialist*, not a team.
+
+His clinical identity is **implantology + periodontology**, with laser as the modality he applies within them. Laser gingivoplasty *is* a periodontal procedure — the laser and the gum specialism are the same thing, not two separate offerings.
+
+### Verified service list
+
+Much broader than the five services originally supplied:
+
+Cosmetic/Aesthetic Dentistry · Crowns & Bridges · Complete/Partial Dentures · Tooth Extraction · Dental Fillings · **Dental Implant Fixing** · **Dental Implants** · Scaling & Polishing · Teeth Whitening · Orthodontic Treatment · **Periodontal Surgeries** · Invisible Braces · Minor Surgery · Root Canal Treatment · Wisdom Tooth Extraction · Dental Laminates & Veneers · Pediatric Dentistry
+
+Plus client-stated: Dental Restoration · Laser Gingivoplasty · Laser Dentistry · Laser RCT
+
+---
+
+## 1a. ⚠️ Discrepancies — resolve with the client before launch
+
+| Field | Conflict | Why it matters |
+| :--- | :--- | :--- |
+| **Years of experience** | **23+ years** (Justdial, Click4Appointment) vs **15 years** (Lybrate; MDS from SDM College 2010 ⇒ ~16 yrs to 2026) | **Do not publish either number until confirmed.** An unverifiable experience claim is exactly the kind of misleading statement the DCI code prohibits. If it's BDS-inclusive, say "in practice since <year>" instead. |
+| Pincode | 560114 vs 560076 | Wrong pincode breaks NAP consistency and hurts local SEO |
+| Second address | "Avani Sringeri Nagar, near Sai Baba Temple, Bannerghatta Road, Hulimavu" (Lybrate) | Could be an old location, a second clinic, or a stale listing. Changes IA if there are two locations. |
+| Phone | magicpin lists 9217002598 | Almost certainly a magicpin lead-tracking number, not the clinic's. Use +91 95388 27905. |
+| Ratings across platforms | Google 4.9/1,465 · Justdial 4.9/1,352 · Lybrate 4.3 | Cite **Google only**, and label it "Google reviews". Never blend platforms into one figure. |
+| Registration number | Not published anywhere | Must be obtained from the client. See §3. |
+
+**Sources:** [Justdial](https://www.justdial.com/Bangalore/Akshaya-Multispeciality-Dental-Clinic-Hulimavu/080PXX80-XX80-220929211507-P6U3_BZDET) · [Practo](https://www.practo.com/bangalore/clinic/akshaya-multispeciality-dental-clinic-dental-implants-laser-hulimavu) · [Click4Appointment](https://click4appointment.com/clinic-details/akshayamultispecialitydentalclinic-3014) · [Lybrate](https://www.lybrate.com/bangalore/doctor/dr-sampath-rao-dentist) · [magicpin](https://magicpin.in/Bangalore/Hulimavu/Restaurant/Akshaya-Multispeciality-Dental-Clinic,-Dental-Implants-&-Laser/store/8247a5/)
 
 ---
 
@@ -28,9 +57,9 @@ Use these exactly. They are the only content on the site that is verified.
 
 | Assumption | Basis | Risk if wrong |
 | :--- | :--- | :--- |
-| 3–4 doctors | Client's rough estimate | Low — doctor component is built for any N |
-| Dental Implants offered | It's in the clinic's own name | Very low |
-| Crowns & Bridges, Braces & Aligners, Whitening / Smile Design, Kids Dentistry | Standard multispecialty scope | Low — pages are cut or swapped, template unaffected |
+| **3–4 doctors — Dr. Sampath as principal + 2–3 mock associates** | Client's estimate. ⚠️ Online listings and every review found name **only** Dr. Sampath, so a single-practitioner clinic is the likelier reality. **Decision: keep building for 3–4** — the doctor component handles any N, and a grid that degrades to one card is far cheaper than a single-profile layout that has to grow into a grid. | Low — if it turns out to be one doctor, delete the associate entries from `content.js` and the principal card stands alone |
+| ~~Dental Implants offered~~ | ✅ **Confirmed in §1** | — |
+| ~~Crowns & Bridges, Braces & Aligners, Whitening, Kids Dentistry~~ | ✅ **All four confirmed in §1** | — |
 | Timings Mon–Sat 9:30–20:00, Sun 10:00–14:00 | Typical Bangalore clinic | Low — one data edit |
 | Languages: Kannada, English, Hindi, Tamil, Telugu | Typical South Bangalore staff | Low |
 | Founded ~2015 | Guess from review volume | Medium — appears in About copy |
@@ -86,17 +115,19 @@ export const flags = {
 
 export const doctors = [
   {
-    slug: "MOCK-dr-...",
-    name: "MOCK: ...",
-    degrees: "MOCK: BDS, MDS",
-    specialisation: "MOCK: ...",
-    registrationNo: "MOCK-KA-00000",       // ⚠️ must be real before launch
-    experienceYears: 0,                     // MOCK
-    treatments: ["laser-rct", "..."],       // slugs from treatments[]
+    slug: "dr-sampath-kumar-rao-k",
+    name: "Dr. Sampath Kumar Rao K",          // verified
+    degrees: "MDS",                            // verified
+    specialisation: "Oral Implantologist · Periodontist · LASER Specialist",  // verified
+    isPrincipal: true,                         // renders the --principal card variant
+    registrationNo: "MOCK-KA-00000",           // ⚠️ must be real before launch
+    practisingSince: null,                     // ⚠️ MOCK — never render a years count, see §1a
+    treatments: ["dental-implants", "gum-treatment",
+                 "laser-gingivoplasty", "laser-dentistry"],
     bio: "MOCK: ...",
     photo: "assets/img/doctors/placeholder.webp",
   },
-  // ×3–4
+  // + 2–3 MOCK associates, standard card variant — see §2
 ];
 
 export const treatments = [
@@ -127,22 +158,27 @@ export const faqs    = [ /* MOCK ×8–10, homepage */ ];
 
 ## 5. Treatment pages — all 10
 
-Laser-first ordering. Built in S6 (confirmed) and S7 (assumed).
+Ordered by **pillar first**, then search demand. Not laser-first — laser is the method, not the identity.
 
-| # | Slug | Name | Laser | Status | Session |
-| :-- | :--- | :--- | :-- | :--- | :-- |
-| 1 | `laser-dentistry` | Laser Dentistry *(hub)* | ✅ | Confirmed | S6 |
-| 2 | `laser-rct` | Laser Root Canal | ✅ | Confirmed | S6 |
-| 3 | `laser-gingivoplasty` | Laser Gingivoplasty | ✅ | Confirmed | S6 |
-| 4 | `root-canal` | Root Canal Treatment | — | Confirmed | S6 |
-| 5 | `dental-restoration` | Dental Restoration | — | Confirmed | S6 |
-| 6 | `dental-implants` | Dental Implants | — | Assumed | S7 |
-| 7 | `crowns-and-bridges` | Crowns & Bridges | — | Assumed | S7 |
-| 8 | `braces-and-aligners` | Braces & Aligners | — | Assumed | S7 |
-| 9 | `teeth-whitening` | Teeth Whitening & Smile Design | — | Assumed | S7 |
-| 10 | `kids-dentistry` | Kids Dentistry | — | Assumed | S7 |
+| # | Slug | Name | Pillar | Laser | Status | Session |
+| :-- | :--- | :--- | :--- | :-- | :--- | :-- |
+| 1 | `dental-implants` | Dental Implants | ⭐ Implants | ✅ | **Verified** | S6 |
+| 2 | `gum-treatment` | Gum & Periodontal Treatment | ⭐ Gums | ✅ | **Verified** | S6 |
+| 3 | `laser-gingivoplasty` | Laser Gingivoplasty | Gums | ✅ | **Verified** | S6 |
+| 4 | `laser-dentistry` | Laser Dentistry *(method hub)* | — | ✅ | **Verified** | S6 |
+| 5 | `root-canal` | Root Canal Treatment | — | — | **Verified** | S6 |
+| 6 | `laser-rct` | Laser Root Canal | — | ✅ | **Verified** | S6 |
+| 7 | `crowns-and-bridges` | Crowns & Bridges | — | — | **Verified** | S7 |
+| 8 | `dental-restoration` | Dental Restoration & Fillings | — | — | **Verified** | S7 |
+| 9 | `braces-and-aligners` | Braces & Invisible Aligners | — | — | **Verified** | S7 |
+| 10 | `teeth-whitening` | Teeth Whitening & Smile Design | — | — | **Verified** | S7 |
+| 11 | `kids-dentistry` | Kids Dentistry | — | — | **Verified** | S7 |
 
-Laser treatments (1–3) embed the S3 comparator. Non-laser pages don't.
+All eleven are now verified as offered (`§1`), so nothing here is guesswork — but the **priority order** is still our judgment and should be sanity-checked with the client.
+
+**Comparator reuse:** pages 1, 2, 3, 4 and 6 embed the S3 comparator with rows adapted to that procedure. Pages 5, 7–11 don't.
+
+**Also offered, not getting their own page** (folded into related pages or the treatments hub): dentures, veneers/laminates, wisdom tooth extraction, scaling & polishing, tooth extraction, minor oral surgery. Promote any of these to a full page if the client says it's a revenue driver.
 
 ---
 

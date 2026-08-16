@@ -147,3 +147,58 @@ if (footerHours) {
 /* ---------- 8. sticky action bar ---------- */
 /* Per DESIGN-SYSTEM §6 the bar is always present below 768px via CSS media
    query; no scroll-triggered reveal needed here. */
+
+/* ---------- 9. two pillars (homepage) ---------- */
+/* Panels pull straight from content.js's treatments entries for
+   dental-implants / gum-treatment, so the positioning copy and the grid
+   card below it never drift out of sync — single source, CONVENTIONS §3. */
+
+const pillarsGrid = document.getElementById("pillarsGrid");
+if (pillarsGrid) {
+  const pillarSlugs = ["dental-implants", "gum-treatment"];
+  const pillarLabel = { "dental-implants": "Implants", "gum-treatment": "Gum & periodontal" };
+
+  pillarsGrid.innerHTML = pillarSlugs
+    .map((slug, i) => {
+      const t = treatments.find((tr) => tr.slug === slug);
+      if (!t) return "";
+      const delay = `${i * 80}ms`;
+      return `<a class="pillar-panel" href="treatments/${t.slug}.html" data-reveal style="transition-delay: ${delay};">
+        <span class="pillar-panel__eyebrow mono-label">${pillarLabel[slug]}</span>
+        <h3 class="pillar-panel__title">${t.name}</h3>
+        <p class="pillar-panel__desc">${t.summary}</p>
+        <span class="pillar-panel__link">Learn more <span aria-hidden="true">&rarr;</span></span>
+      </a>`;
+    })
+    .join("");
+}
+
+/* ---------- 10. treatments grid (homepage) ---------- */
+/* Laser-first ordering comes straight from content.js's `order` field —
+   laser treatments are already 1-3. Cards carry data-reveal for motion.js's
+   scroll-reveal observer; per-card stagger is set inline here since the card
+   count is data-driven, same reasoning as motion.js's hero word-stagger. */
+
+const treatmentsGrid = document.getElementById("treatmentsGrid");
+if (treatmentsGrid) {
+  const beamMark =
+    '<svg class="treatment-card__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+    '<line x1="20" y1="2" x2="9" y2="13" /><circle cx="9" cy="13" r="3" /></svg>';
+
+  treatmentsGrid.innerHTML = treatments
+    .slice()
+    .sort((a, b) => a.order - b.order)
+    .map((t, i) => {
+      const delay = `${(i % 3) * 60}ms`;
+      return `<a class="treatment-card" href="treatments/${t.slug}.html" data-laser="${t.isLaser}" data-reveal style="transition-delay: ${delay};">
+        ${t.isLaser ? beamMark : ""}
+        <h3 class="treatment-card__title">${t.name}</h3>
+        <p class="treatment-card__desc">${t.summary}</p>
+        <div class="treatment-card__footer">
+          <span class="chip treatment-card__chip">${t.sittings} sittings</span>
+          <span class="treatment-card__arrow" aria-hidden="true">&rarr;</span>
+        </div>
+      </a>`;
+    })
+    .join("");
+}

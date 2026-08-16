@@ -80,6 +80,7 @@
   --duration-state: 300ms;
   --duration-reveal: 500ms;
   --duration-reveal-stagger: 60ms;
+  --duration-ambient: 20s;
   --ease-reveal: cubic-bezier(0.22, 0.61, 0.36, 1);
 
   /* ---------- z-index ---------- */

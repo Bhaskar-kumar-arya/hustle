@@ -8,21 +8,37 @@
 
 ## 1. The design thesis
 
-**The subject:** a laser-led dental clinic in South Bangalore with 1,465 Google reviews at 4.9★.
-**The audience:** Hulimavu / Bannerghatta Road / JP Nagar / BTM residents, 25–55, families and working professionals, arriving from a phone search like *"root canal near me"* or *"laser dentistry Bangalore"*.
+**The subject:** a specialist-led dental clinic in South Bangalore with 1,465 Google reviews at 4.9★, built around **dental implants** and **gum (periodontal) treatment**, both delivered with laser.
+**The audience:** Hulimavu / Bannerghatta Road / JP Nagar / BTM residents, 25–55, families and working professionals, arriving from a phone search like *"dental implant cost Bangalore"*, *"gum treatment near me"*, or *"root canal Hulimavu"*.
 **The page's single job:** convert an anxious searcher into a WhatsApp message or a phone call.
 
-The emotional truth of this brief is **dental anxiety**. The fear is specific and physical: the drill's sound, the needle, the blood, the stitches. Laser dentistry's entire value proposition is that it removes those specific things. So the site's job is not to look clinical and credible — every clinic site does that, and clinical credibility doesn't move an anxious person. The job is to **lower the visitor's heart rate**.
+### Two pillars, one method
+
+The principal is **Dr. Sampath Kumar Rao K, MDS — Oral Implantologist, Periodontist, LASER Specialist**. That's not three things, it's two clinical specialisms and the technique he applies within them:
+
+- **Pillar 1 — Dental Implants.** First in the clinic's own name, first in his qualifications, and the highest-ticket procedure in the practice.
+- **Pillar 2 — Gum & periodontal treatment.** His MDS specialism. Laser gingivoplasty *is* a periodontal procedure — the laser and the gum work are the same thing, not separate offerings.
+- **Laser is the method, not the identity.** It's *how* the clinic does implants and gum work, and it's a genuine differentiator locally. It is not what the clinic *is*, and the site must not present it as such.
+
+> ⚠️ An earlier version of this document treated laser as the clinic's identity and demoted implants to an assumed, secondary treatment. Online verification (`CONTENT-DATA.md` §1) corrected that. Both pillars carry equal weight in the hero, the treatments grid, and the sitemap.
+
+### The emotional thesis
+
+The emotional truth of this brief is **dental anxiety**, and it's strongest at exactly the two things this clinic specialises in — implants and gum surgery are the procedures patients most fear. Both are surgical, both involve the gum tissue, and the fear is specific and physical: the drill, the needle, the blood, the stitches, the healing.
+
+Laser's value proposition speaks to precisely those fears. So the site's job is not to look clinical and credible — every clinic site does that, and clinical credibility doesn't move a frightened person. The job is to **lower the visitor's heart rate**.
 
 That produces the one non-obvious decision the whole system hangs on:
 
 > **Laser is not the scary technology here. It is the calm one.**
 
-The obvious read of "laser" is cold blue-white precision — steel, grids, lab light. That direction is both a cliché *and* actively wrong for this brief, because it makes an already-frightening word more frightening. So we go the other way: laser as **warm light**. Amber, not blue. Glow, not glare. Soft, unhurried, quiet.
+The obvious read of "laser" is cold blue-white precision — steel, grids, lab light. That direction is both a cliché *and* actively wrong for this brief, because it makes an already-frightening word more frightening, attached to the two procedures people already dread most. So we go the other way: laser as **warm light**. Amber, not blue. Glow, not glare. Soft, unhurried, quiet.
 
 **What we are deliberately not doing:** the default dental palette (medical blue, white, mint), stock photos of models mid-laugh, "Your Perfect Smile Starts Here," rounded-corner card grids on a white page. That is what every ₹5,900 clinic template in Bangalore looks like, and it's precisely what this client's budget is buying its way out of.
 
-**The risk we're taking:** the hero is not a photograph and not a headline-over-image. It's an interactive comparator (§6) that answers the visitor's actual question — *will this hurt?* — in the first five seconds. Justification: for a laser-differentiated clinic, the differentiator *is* the hook, and no competitor in the locality is explaining it. It also sidesteps our biggest compliance constraint (§10) — nothing to show but the procedure itself.
+**The risk we're taking:** the hero is not a photograph and not a headline-over-image. It's an interactive comparator (§6) that answers the visitor's actual question — *will this hurt?* — in the first five seconds. Justification: the visitor is here about a procedure they're frightened of, no competitor in the locality is explaining how theirs differs, and the comparator sidesteps our biggest compliance constraint (§10) by having nothing to show but the procedure itself.
+
+The hero **headline** names the two pillars; the **comparator** demonstrates the method. Headline does the positioning, comparator does the reassurance — neither carries both jobs alone.
 
 ---
 
@@ -132,17 +148,18 @@ DESKTOP  ≥1024px                          MOBILE  <768px
 
 | # | Section | Ground | Contents |
 | :-- | :--- | :--- | :--- |
-| 1 | **Hero** | porcelain | Clinic name (Fraunces), one-line thesis, locality line, rating chip, primary CTA pair — **and the comparator** (§6). Desktop: split 45/55. Mobile: text + CTA above the fold, comparator immediately below. |
+| 1 | **Hero** | porcelain | Clinic name (Fraunces), a headline naming **both pillars** (implants + gum treatment), locality line, rating chip, primary CTA pair — **and the comparator** (§6). Desktop: split 45/55. Mobile: text + CTA above the fold, comparator immediately below. |
 | 2 | **Rating monument** | bisque | `4.9` set at `--step-6` in Fraunces with the amber beam-arc behind it; `1,465 verified Google reviews` in Plex Mono beneath; three review excerpts pulled live. See §6. |
-| 3 | **Treatments** | porcelain | 8–10 cards in a 2/3-col grid. Laser treatments carry a small amber beam mark; the rest don't. Ordered laser-first. |
-| 4 | **Why laser** | **drape** | The dark section. Ambient amber glow, four factual procedure attributes, doctor-led explainer copy. This is where the palette pays off. |
-| 5 | **Meet the dentists** | porcelain | 3–4 doctor cards with full credential blocks (§6). |
-| 6 | **Technology & sterilisation** | bisque | Equipment cards + the sterilisation protocol. Anxiety-reduction content, ranks as trust content, fully DCI-safe. |
-| 7 | **Patient stories** | porcelain | Live Google reviews embed. |
-| 8 | **Visiting the clinic** | bisque | Map, directions CTA, timings table, parking, nearest landmark, languages spoken. |
-| 9 | **Questions** | porcelain | 8–10 FAQ accordion → FAQPage schema. |
-| 10 | **Closing CTA** | **drape** | Second dark section. Call / WhatsApp / Book, timings, phone. |
-| 11 | **Footer** | drape (darker) | NAP, treatment links, hours, privacy policy, social. |
+| 3 | **The two pillars** | porcelain | Two large paired panels — *Dental Implants* and *Gum & Periodontal Treatment* — each with a one-line description and a link through. This is the positioning section; it sits above the full treatments grid and carries more visual weight than any single card in it. |
+| 4 | **Treatments** | porcelain | 11 cards in a 2/3-col grid, the full scope. Laser-delivered treatments carry a small amber beam mark. Ordered by pillar, then by search demand — **not** laser-first. |
+| 5 | **How we work — laser** | **drape** | The dark section. Ambient amber glow, four factual procedure attributes, doctor-led explainer. Framed as *method*, not identity: this is how the implants and gum work above are delivered. |
+| 6 | **Meet the dentists** | porcelain | Dr. Sampath's card leads at larger scale (principal, MDS, both specialisms); associate cards follow in the standard grid. See §6. |
+| 7 | **Technology & sterilisation** | bisque | Equipment cards + the sterilisation protocol. Anxiety-reduction content, ranks as trust content, fully DCI-safe. |
+| 8 | **Patient stories** | porcelain | Live Google reviews embed. |
+| 9 | **Visiting the clinic** | bisque | Map, directions CTA, timings table, parking, nearest landmark, languages spoken. |
+| 10 | **Questions** | porcelain | 8–10 FAQ accordion → FAQPage schema. |
+| 11 | **Closing CTA** | **drape** | Second dark section. Call / WhatsApp / Book, timings, phone. |
+| 12 | **Footer** | drape (darker) | NAP, treatment links, hours, privacy policy, social. |
 
 ---
 
@@ -172,6 +189,8 @@ The one thing the site is remembered by. A two-state toggle — **Conventional**
 
 **Why it's the right signature:** it answers the visitor's actual first question in the hero instead of making them scroll for it; it's built from the clinic's genuine differentiator; it's useful rather than decorative; and it needs zero patient imagery, which sidesteps the compliance problem entirely (§10).
 
+**Scope of the claim.** The comparator demonstrates *how the clinic works*, not *what the clinic is* — the hero headline does the positioning. It is reused on the treatment pages where laser is genuinely the delivery method (implants, gum treatment, gingivoplasty, laser RCT), with its rows adjusted to that procedure. It does **not** appear on pages where laser isn't involved.
+
 **Compliance-critical:** every row states a **procedure attribute**, never an outcome. "Drill used" is factual. "Painless" or "heals faster" is a prohibited outcome claim. The disclaimer line is not optional. Full detail in §10.
 
 **Mechanics:** inline SVG, both states in the DOM, crossfaded with a shared morph on the tissue path. Amber traces the beam path on the laser state. Toggle is a real `role="radiogroup"` — keyboard operable, `aria-live` on the rows. Under `prefers-reduced-motion` it becomes an instant swap.
@@ -188,7 +207,7 @@ The one thing the site is remembered by. A two-state toggle — **Conventional**
 | **Sticky action bar** (mobile) | `Call · WhatsApp · Book` — three equal thumb targets, min 48px. Always present below 768px. |
 | **Buttons** | *Primary:* drape fill, porcelain text, amber hairline underglow on hover. *Secondary:* transparent, 1px drape border. *WhatsApp:* its own green, the one palette exception — recognition beats consistency here. Focus: 2px `--beam-deep` offset ring. |
 | **Treatment card** | Plex Mono index, Karla 500 title, one-line description, sittings chip, arrow. Laser treatments get an amber beam mark. Hover: hairline warms to amber, card lifts 2px. |
-| **Doctor card** | Portrait (4:5), name in Fraunces, degrees + specialisation, **DCI registration number** in Plex Mono, years of experience, treatments performed. Registration number visible is a genuine trust signal and costs nothing. |
+| **Doctor card** | Portrait (4:5), name in Fraunces, degrees + specialisation, **DCI registration number** in Plex Mono, treatments performed. Registration number visible is a genuine trust signal and costs nothing. Two variants: `--principal` (larger, spans two columns, adds a short bio — used for Dr. Sampath) and the standard card for associates. Experience is rendered as *"in practice since <year>"*, never a years count — see CONVENTIONS §1. |
 | **Credential block** | Reusable strip: degrees · registration · experience · memberships. Appears on doctor cards and treatment pages. |
 | **Step process** | Numbered 01→05 — numbering used **only here**, because a treatment genuinely is a sequence. Vertical on mobile, horizontal with a connecting beam line on desktop. |
 | **Cost block** | Indicative range + EMI note + "final cost determined after examination." Built behind a `showPricing` flag in `content.js` — ships hidden until the client confirms. |
