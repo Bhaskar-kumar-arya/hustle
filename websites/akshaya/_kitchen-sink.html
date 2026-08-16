@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Kitchen sink — Akshaya Dental (scratch, not shipped)</title>
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <style>
+    /* Scratch-only preview styling. Not shipped — deleted in S12. Uses tokens throughout. */
+    .ks-section {
+      padding: var(--space-16) var(--section-pad-inline);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .ks-section h2 {
+      margin-bottom: var(--space-8);
+    }
+
+    .ks-type-row {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-6);
+      margin-bottom: var(--space-4);
+    }
+
+    .ks-type-row .ks-label {
+      width: 6rem;
+      flex-shrink: 0;
+    }
+
+    .ks-swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: var(--space-6);
+    }
+
+    .ks-swatch {
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+    }
+
+    .ks-swatch-fill {
+      height: 5rem;
+    }
+
+    .ks-swatch-label {
+      padding: var(--space-3);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+    }
+
+    .ks-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+
+    .ks-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-6);
+      border-radius: var(--radius-pill);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: var(--step-0);
+      min-height: 48px;
+      transition: transform var(--duration-hover) var(--ease-reveal),
+        opacity var(--duration-hover) var(--ease-reveal);
+    }
+
+    .ks-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .ks-btn-primary {
+      background: var(--drape);
+      color: var(--porcelain);
+    }
+
+    .ks-btn-secondary {
+      background: transparent;
+      color: var(--fg);
+      border: 1px solid var(--drape-mid);
+    }
+
+    .ks-btn-whatsapp {
+      background: var(--beam);
+      color: var(--drape);
+    }
+
+    [data-ground="drape"] .ks-btn-secondary {
+      border-color: var(--rule);
+      color: var(--fg);
+    }
+
+    .ks-ground {
+      padding: var(--space-16) var(--section-pad-inline);
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    .ks-ground p {
+      color: var(--fg-muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="ks-section">
+      <p class="eyebrow">S1 — Foundation</p>
+      <h1 style="margin-top: var(--space-2);">Kitchen sink</h1>
+      <p style="color: var(--fg-muted); margin-top: var(--space-2);">
+        Scratch page proving tokens, fonts, and grounds render correctly. Not linked from the site, not shipped — deleted in S12.
+      </p>
+    </section>
+
+    <section class="ks-section">
+      <h2>Type scale</h2>
+      <div class="ks-type-row"><span class="ks-label mono-label">step-6</span><span style="font-family: var(--font-display); font-size: var(--step-6); font-variation-settings: 'SOFT' 60;">4.9</span></div>
+      <div class="ks-type-row"><span class="ks-label mono-label">step-5</span><span style="font-family: var(--font-display); font-size: var(--step-5); font-variation-settings: 'SOFT' 60;">Hero headline</span></div>
+      <div class="ks-type-row"><span class="ks-label mono-label">step-4</span><span style="font-family: var(--font-display); font-size: var(--step-4); font-variation-settings: 'SOFT' 60;">Inner page h1</span></div>
+      <div class="ks-type-row"><span class="ks-label mono-label">step-3</span><span style="font-family: var(--font-display); font-size: var(--step-3); font-variation-settings: 'SOFT' 60;">Section heading h2</span></div>
+      <div class="ks-type-row"><span class="ks-label mono-label">step-2</span><span style="font-size: var(--step-2); font-weight: 700;">Subheading h3 (Karla, not Fraunces)</span></div>
+      <div class="ks-type-row"><span class="ks-label mono-label">step-1</span><span style="font-size: var(--step-1);">Lead paragraph text, set in Karla for readability on a mid-range Android screen.</span></div>
+      <div class="ks-type-row"><span class="ks-label mono-label">step-0</span><span style="font-size: var(--step-0);">Body text at the base size, line-height 1.65, max-width 68ch.</span></div>
+      <div class="ks-type-row"><span class="ks-label mono-label">step--1</span><span style="font-size: var(--step--1);">Caption / legal text, smallest step.</span></div>
+      <div class="ks-type-row"><span class="ks-label mono-label">mono</span><span class="mono-label">4.9 star · 1,465 verified google reviews</span></div>
+      <div class="ks-type-row">
+        <span class="ks-label mono-label">weights</span>
+        <span style="font-family: var(--font-display); font-size: var(--step-2); font-variation-settings: 'SOFT' 60; font-weight: 400;">Fraunces 400 </span>
+        <span style="font-family: var(--font-display); font-size: var(--step-2); font-variation-settings: 'SOFT' 60; font-weight: 500;">500 </span>
+        <span style="font-family: var(--font-display); font-size: var(--step-2); font-variation-settings: 'SOFT' 60; font-weight: 600;">600</span>
+      </div>
+      <div class="ks-type-row">
+        <span class="ks-label mono-label">Karla</span>
+        <span style="font-weight: 400;">400 regular </span>
+        <span style="font-weight: 500;">500 medium </span>
+        <span style="font-weight: 700;">700 bold</span>
+      </div>
+    </section>
+
+    <section class="ks-section">
+      <h2>Color tokens</h2>
+      <div class="ks-swatches">
+        <div class="ks-swatch"><div class="ks-swatch-fill" style="background: var(--porcelain);"></div><div class="ks-swatch-label">--porcelain #FCFBF8</div></div>
+        <div class="ks-swatch"><div class="ks-swatch-fill" style="background: var(--bisque);"></div><div class="ks-swatch-label">--bisque #F1ECE3</div></div>
+        <div class="ks-swatch"><div class="ks-swatch-fill" style="background: var(--drape);"></div><div class="ks-swatch-label" style="color: var(--porcelain); background: var(--drape);">--drape #12302A</div></div>
+        <div class="ks-swatch"><div class="ks-swatch-fill" style="background: var(--drape-mid);"></div><div class="ks-swatch-label" style="color: var(--porcelain); background: var(--drape-mid);">--drape-mid #2E5A4E</div></div>
+        <div class="ks-swatch"><div class="ks-swatch-fill" style="background: var(--beam);"></div><div class="ks-swatch-label">--beam #E3A24A</div></div>
+        <div class="ks-swatch"><div class="ks-swatch-fill" style="background: var(--beam-deep);"></div><div class="ks-swatch-label" style="color: var(--porcelain); background: var(--beam-deep);">--beam-deep #8F5A15</div></div>
+      </div>
+      <p style="margin-top: var(--space-6); color: var(--accent-text);">This line uses --accent-text (--beam-deep) — the AA-safe accent for body-size text on a light ground.</p>
+    </section>
+
+    <section class="ks-section">
+      <h2>Buttons (preview only — components.css ships in S2)</h2>
+      <div class="ks-buttons">
+        <button class="ks-btn ks-btn-primary">Book a consultation</button>
+        <button class="ks-btn ks-btn-secondary">Call the clinic</button>
+        <button class="ks-btn ks-btn-whatsapp">WhatsApp us</button>
+      </div>
+    </section>
+
+    <section class="ks-ground" data-ground="drape">
+      <p class="eyebrow">Dark ground — [data-ground="drape"]</p>
+      <h2 style="margin-top: var(--space-2);">Why laser, on a drape section</h2>
+      <p style="margin-top: var(--space-4); max-width: var(--measure);">
+        On this ground, <span style="color: var(--beam);">--beam is text-safe</span> and freely usable — this is the one place the glow is allowed to actually glow. Body copy and muted text invert automatically via the token redefinitions in tokens.css.
+      </p>
+      <div class="ks-buttons" style="margin-top: var(--space-8);">
+        <button class="ks-btn" style="background: var(--beam); color: var(--drape);">Primary on drape</button>
+        <button class="ks-btn ks-btn-secondary">Secondary on drape</button>
+      </div>
+    </section>
+
+    <section class="ks-section" style="background: var(--bisque);">
+      <p class="eyebrow">Light ground — default</p>
+      <h2 style="margin-top: var(--space-2);">Back to porcelain / bisque banding</h2>
+      <p style="margin-top: var(--space-4);">Section banding alternates porcelain → bisque → porcelain, with at most two drape sections per page.</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -49,6 +49,8 @@ temp/
 # Client / Generated website output (if generated dynamically)
 websites/*
 !websites/.gitkeep
+!websites/akshaya/
+!websites/akshaya/**
 
 # Production / Build outputs
 dist/
