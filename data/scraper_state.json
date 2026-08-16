@@ -73,7 +73,7 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dental Clinic",
       "query": "Dental Clinic in Jayanagar Bangalore",
-      "status": "PENDING",
+      "status": "RUNNING",
       "leadsFound": 0,
       "qualifiedSaved": 0
     },
@@ -1032,5 +1032,5 @@
     "microLocalities": false
   },
   "isPaused": true,
-  "updatedAt": "2026-08-16T07:21:07.362Z"
+  "updatedAt": "2026-08-16T07:44:44.285Z"
 }
