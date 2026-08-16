@@ -139,9 +139,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dental Clinic",
       "query": "Dental Clinic in BTM Layout Bangalore",
-      "status": "RUNNING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 15
     },
     {
       "locality": "BTM Layout",
@@ -150,8 +150,8 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Orthodontist",
       "query": "Orthodontist in BTM Layout Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
+      "status": "COMPLETED",
+      "leadsFound": 60,
       "qualifiedSaved": 0
     },
     {
@@ -161,7 +161,7 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dentist",
       "query": "Dentist in BTM Layout Bangalore",
-      "status": "PENDING",
+      "status": "RUNNING",
       "leadsFound": 0,
       "qualifiedSaved": 0
     },
@@ -1024,7 +1024,7 @@
       "qualifiedSaved": 0
     }
   ],
-  "currentIndex": 12,
+  "currentIndex": 14,
   "options": {
     "maxResults": 60,
     "filterNoWebsiteOnly": true,
@@ -1032,5 +1032,5 @@
     "microLocalities": false
   },
   "isPaused": true,
-  "updatedAt": "2026-08-16T08:20:34.393Z"
+  "updatedAt": "2026-08-16T09:19:26.368Z"
 }
