@@ -2,13 +2,15 @@
 
 > **This is the living file.** Every session updates it before finishing. If it disagrees with any other doc, trust this one.
 
-**Last updated:** 2026-08-16 — S2 The frame complete
+**Last updated:** 2026-08-16 — 🚩 S3 Hero + Comparator complete — STOP for human review before S4
 
 ---
 
-## ▶ Next session: **🚩 S3 — Hero + Procedure Comparator**
+## ▶ Next session: **S4 — Homepage, part A** (after human review of S3)
 
-Read `SESSION-PLAN.md` → S3 for scope and read list. This is the review-gate session — stop after it and let the human look before S4. The frame (header, nav, mobile menu, rail, action bar, WhatsApp float, footer) is in place and reads from `content.js` via `main.js`; `index.html` does not exist yet.
+This was the review-gate session. **Do not start S4 until a human has looked at `index.html` in a browser and signed off.** When they do, read `SESSION-PLAN.md` → S4 for scope and read list.
+
+`index.html` now exists with the header/nav/mobile-menu/rail/action-bar/WhatsApp-float/footer frame plus the hero + Procedure Comparator. Only one section (`Hero`) exists on the page so far — S4 adds the rating monument, treatments grid, and the first `drape` section, each needing its own `data-rail-label`.
 
 ---
 
@@ -18,7 +20,7 @@ Read `SESSION-PLAN.md` → S3 for scope and read list. This is the review-gate s
 | :--- | :--- | :--- |
 | S1 — Foundation | ✅ Done | Folder structure, `tokens.css`, `base.css`, self-hosted subset fonts (Fraunces/Karla/IBM Plex Mono, 98.6KB total), `content.js`, `_kitchen-sink.html` |
 | S2 — The frame | ✅ Done | `components.css` (buttons/pills/chips/header/rail/action bar/WhatsApp float/footer), `main.js` (first `content.js` consumer), header + mobile overlay menu + rail + progress line + sticky action bar + footer added to kitchen sink for verification |
-| 🚩 S3 — Hero + Comparator | ⬜ Not started | |
+| 🚩 S3 — Hero + Comparator | ✅ Done — awaiting human review | `index.html` (skeleton + hero), `sections.css` (hero, comparator, load-sequence, scroll-reveal), `comparator.js`, `motion.js`, `.visually-hidden` utility added to `base.css` |
 | S4 — Homepage part A | ⬜ Not started | |
 | S5 — Homepage part B | ⬜ Not started | |
 | S6 — Treatment template + confirmed | ⬜ Not started | |
@@ -45,6 +47,11 @@ Read `SESSION-PLAN.md` → S3 for scope and read list. This is the review-gate s
 - Header transparency (`body[data-header-mode="transparent"]`) only applies when the `<body>` tag carries that attribute — set it only on pages with a hero the header can float over (homepage). Inner pages should omit the attribute so the header is solid from load.
 - `treatments/index.html`, `about.html`, `team.html`, etc. don't exist yet, so all nav/footer links in the frame markup point at paths that 404 until S6–S10 build them. Expected, not a bug.
 - Pre-existing, out of S2's scope: the kitchen sink's S1 "type weights" demo row (`Fraunces 400 500 600` in one `ks-type-row`) overflows horizontally at 360px — a scratch-page-only cosmetic issue, not present on any real component. Leave it; the whole file is deleted in S12.
+- `index.html` deliberately omits `data-header-mode="transparent"` — see Decision log. Any future page keeps the header solid unless a real dark/image hero is introduced.
+- `.hero`'s bottom padding includes `+ var(--action-bar-height)` below 768px so the section's own end clears the fixed action bar — every future section that can end a page (i.e. is the last section before the footer) on a page with the action bar needs the same clearance, or its bottom content sits under the bar. This is currently handled per-section (mobile-first base + `min-width: 768px` override back to normal), not globally — worth revisiting as a shared utility if it gets repetitive across S4+.
+- The WhatsApp float (≥768px) and the sticky action bar (<768px) are fixed-position and will overlap whatever content is currently scrolled beneath them — confirmed this is expected/standard floating-button behavior, not a layout bug, after seeing it in the S3 screenshots.
+- Comparator row copy ("Drill used / Sutures / Typical sittings / Anaesthesia", values incl. "Often none") is copied directly from DESIGN-SYSTEM.md §6's own worked example — treated as pre-vetted DCI-compliant copy, not `MOCK:`-flagged, since it states generic laser-vs-conventional procedure attributes rather than an Akshaya-specific fact. `CONTENT-DATA.md` doesn't model comparator rows in `content.js`; they're hardcoded in `index.html`/`comparator.js` on the reasoning that "never hardcode client data" (CONVENTIONS §3) covers name/phone/address/doctor/timing facts, not this kind of system copy shared by any laser-dentistry clinic. Flag if a future session disagrees.
+- `motion.js` must load after `main.js` in `index.html`'s script order — it reads and re-splits the hero heading's already-bound text into `.load-word` spans for the stagger effect, so it depends on `main.js`'s `data-bind` pass having already run. Module scripts execute in document order, so keep `main.js` → `comparator.js` → `motion.js` on every future page that includes the hero heading pattern.
 
 ---
 
@@ -73,6 +80,10 @@ Read `SESSION-PLAN.md` → S3 for scope and read list. This is the review-gate s
 | 2026-08-16 | S2: added `--header-height` and `--action-bar-height` tokens | Needed by multiple components (rail sticky offset, mobile menu close-button centering, section scroll-padding) — better as a shared token than repeated magic numbers. |
 | 2026-08-16 | S2: header transparency is opt-in via `body[data-header-mode="transparent"]`, not the default | Only the homepage hero needs a transparent-over-image header; every inner page wants it solid from load. Keeps the transparent CSS scoped instead of fighting it back to solid everywhere else. |
 | 2026-08-16 | S2: `data-bind`/`data-cta` elements ship with empty text/`href="#"` in markup, not a real-value fallback | CONVENTIONS.md §3's hardcoding ban applies even to fallback text — a duplicated real value in 13 pages' markup breaks the single-file content swap the whole system is built around. |
+| 2026-08-16 | S3: `index.html`'s `<body>` does **not** carry `data-header-mode="transparent"`, despite S2's note that the homepage is the intended user of it | S3's hero ground is `porcelain` (light) per DESIGN-SYSTEM §5 row 1 — the transparent-header CSS swaps header text to `--porcelain` (white) for a dark/image hero to sit under, which on a light hero would render near-invisible white-on-near-white nav text. No dark or image passage exists at the top of this hero, so solid-from-load is the only contrast-safe option here. The transparent mode itself is untouched in `components.css` and stays available for a future page with an actual dark/image hero. |
+| 2026-08-16 | S3: comparator hero split is 45/55 only at ≥1024px; 768–1023px stays stacked (single column) rather than also splitting | DESIGN-SYSTEM §9's 768–1023 row explicitly allows "stays stacked" as a fallback "if the comparator has room, else—"; the comparator card plus its illustration needs more than half of a 768px viewport to read cleanly, so stacking was chosen over a cramped split. |
+| 2026-08-16 | S3: comparator toggle state, illustration, and row copy are driven by the component's own markup/JS, not `content.js` | Per CONTENT-DATA.md §4, `content.js`'s shape has no comparator model — the rows are generic laser-vs-conventional procedure facts (see Carried forward), not client-specific data, so CONVENTIONS §3's hardcoding ban doesn't apply to them the way it does to name/phone/address/doctor data. |
+| 2026-08-16 | S3: page-load motion sequence hides its initial (pre-animation) state only inside `@media (prefers-reduced-motion: no-preference)` in `sections.css`, rather than hiding unconditionally and un-hiding via a JS-added class for reduced-motion users | Guarantees reduced-motion users never see a hidden/opacity-0 state at all — no dependency on JS timing or a fallback class to avoid a flash of invisible content, satisfying CONVENTIONS §6's "the page must lose nothing but movement" more robustly than a JS-toggled override. |
 
 ---
 
@@ -121,3 +132,21 @@ Verified with a real headless-browser render (Puppeteer) at 360 / 768 / 1440px: 
 **Done-when check:** header, footer, rail, action bar render on kitchen sink at 360/768/1440 ✅ · nav keyboard operable ✅ (tab order + hamburger focus verified) · no client data hardcoded ✅ (grepped, and the fallback-text bug above was caught and fixed).
 
 **Files created/changed:** `assets/css/components.css`, `assets/js/main.js`, `assets/css/tokens.css` (added `--drape-deep`, `--whatsapp`, `--header-height`, `--action-bar-height`), `_kitchen-sink.html` (header/rail/menu/action-bar/WhatsApp-float/footer markup added).
+
+### 2026-08-16 — 🚩 S3 Hero + Procedure Comparator
+
+Built `index.html` — the first real page, assembling the S2 frame around the hero and the signature Procedure Comparator. Hero: eyebrow (locality), `h1` (clinic name), lead paragraph (tagline), rating pill, and a CTA pair (Book / WhatsApp), all bound from `content.js` via the existing `main.js` pattern. Desktop splits 45/55 at ≥1024px; stays stacked at 768–1023px (see Decision log); mobile stacks with the primary CTA visible above the fold at 360×640.
+
+Comparator (`comparator.js` + markup in `index.html`): a real `role="radiogroup"` segmented Conventional/Laser toggle, keyboard-operable (arrow keys move focus and selection), `aria-live="polite"` region announcing state changes, four rows (Drill used, Sutures, Typical sittings, Anaesthesia) crossfading their values, an inline SVG tooth illustration with two crossfaded overlay layers (drill+sutures vs. amber beam+glow), and the required suitability disclaimer. Row copy is DESIGN-SYSTEM §6's own vetted example, not `content.js`-modeled (see Carried forward). Instant swap under `prefers-reduced-motion`.
+
+`motion.js`: the 5-beat page-load sequence (ground fade → heading word-stagger → meta/CTA fade-up → comparator fade-up + SVG trace via `pathLength="1"` + `stroke-dashoffset` → rail hairline draw), gated entirely inside `@media (prefers-reduced-motion: no-preference)` in `sections.css` so reduced-motion users never see a hidden initial state. Also exports and calls the reusable `initScrollReveal()` IntersectionObserver utility (`[data-reveal]`/`.is-revealed`, once-only) that S4+ will use for section reveals — unused this session since only one section exists.
+
+New `sections.css` (hero, comparator, load-sequence, scroll-reveal) and a `.visually-hidden` utility added to `base.css` for the comparator's live region. `index.html`'s `<body>` omits `data-header-mode="transparent"` (see Decision log — this hero's ground is light, transparent mode assumes a dark/image hero).
+
+Verified with Playwright at 360×640 / 768×1024 / 1440×900: zero console errors, zero failed requests, no horizontal overflow, primary CTA visible without scrolling at 360×640, comparator toggles correctly by click and by arrow-key with correct `aria-checked`/`aria-live` updates, and reduced-motion context shows full opacity with no hidden state. Screenshotted both comparator states at all three widths.
+
+**Done-when check:** hero + comparator work at 360/768/1440 ✅ · toggle keyboard operable and screen-reader sane ✅ (`role="radiogroup"`, arrow-key navigation, `aria-live`) · reduced-motion path verified ✅ · no outcome claims anywhere ✅ (rows are procedure attributes only, disclaimer present).
+
+**Files created/changed:** `index.html`, `assets/css/sections.css`, `assets/js/comparator.js`, `assets/js/motion.js`, `assets/css/base.css` (added `.visually-hidden`).
+
+**🚩 Stop here for human review before S4.**

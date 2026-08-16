@@ -1,0 +1,338 @@
+/*
+  sections.css — page-section-specific styles (hero, comparator, and later
+  homepage/inner-page sections). Reads tokens/base/components only, never the
+  reverse. Layer order: tokens -> base -> components -> sections -> pages.
+  See CONVENTIONS.md §4.
+*/
+
+/* ==================== hero ==================== */
+
+.hero {
+  padding-top: calc(var(--header-height) + var(--space-16));
+  /* clears the fixed sticky action bar, present below 768px */
+  padding-bottom: calc(var(--space-16) + var(--action-bar-height));
+  padding-inline: var(--section-pad-inline);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-bottom: var(--space-16);
+  }
+}
+
+.hero__grid {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.hero__eyebrow {
+  margin-bottom: var(--space-2);
+}
+
+.hero__heading {
+  font-size: var(--step-5);
+}
+
+.hero__lead {
+  font-size: var(--step-1);
+  color: var(--fg-muted);
+  max-width: 42ch;
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding-top: calc(var(--header-height) + var(--space-24));
+    padding-bottom: var(--space-24);
+  }
+
+  .hero__grid {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-16);
+  }
+
+  .hero__content {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+
+  .hero__comparator-wrap {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+/* ==================== procedure comparator ==================== */
+
+.comparator {
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+  padding: var(--space-8) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.comparator__toggle {
+  display: inline-flex;
+  align-self: center;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-pill);
+  padding: var(--space-1);
+  gap: var(--space-1);
+}
+
+.comparator__toggle-btn {
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  transition: background var(--duration-hover) var(--ease-reveal),
+    color var(--duration-hover) var(--ease-reveal);
+}
+
+.comparator__toggle-btn::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--beam);
+  opacity: 0;
+  transition: opacity var(--duration-hover) var(--ease-reveal);
+}
+
+.comparator[data-state="laser"] .comparator__toggle-btn[data-value="laser"]::before {
+  opacity: 1;
+}
+
+.comparator__toggle-btn[aria-checked="true"] {
+  background: var(--drape);
+  color: var(--porcelain);
+}
+
+.comparator__illus-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.comparator__illus {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+
+.comparator__tooth {
+  fill: var(--porcelain);
+  stroke: var(--drape-mid);
+  stroke-width: 2.5;
+}
+
+.comparator__layer {
+  opacity: 0;
+  transition: opacity var(--duration-state) var(--ease-reveal);
+}
+
+.comparator__layer.is-active {
+  opacity: 1;
+}
+
+.comparator__drill-line {
+  stroke: var(--drape-mid);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.comparator__drill-head {
+  fill: var(--drape-mid);
+}
+
+.comparator__sutures {
+  stroke: var(--drape-mid);
+  stroke-width: 2;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.comparator__beam {
+  stroke: var(--beam);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.comparator__glow {
+  fill: var(--beam);
+  opacity: 0.35;
+}
+
+.comparator__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.comparator__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-2);
+  border-bottom: 1px solid var(--rule);
+}
+
+.comparator__row:last-child {
+  border-bottom: none;
+}
+
+.comparator__row dt {
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+}
+
+.comparator__row dd {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--fg);
+  text-align: right;
+}
+
+.comparator__disclaimer {
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+  text-align: center;
+}
+
+@media (max-width: 479px) {
+  .comparator__row {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .comparator__row dd {
+    text-align: left;
+  }
+}
+
+/* ==================== load sequence (page-load motion, once) ==================== */
+/* See DESIGN-SYSTEM.md §8. Only active without a reduced-motion preference —
+   reduced-motion users never see the hidden initial state, so nothing to undo. */
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-load="ground"] {
+    opacity: 0;
+    transition: opacity 400ms var(--ease-reveal);
+  }
+
+  html.motion-ready [data-load="ground"] {
+    opacity: 1;
+  }
+
+  .load-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity var(--duration-reveal) var(--ease-reveal),
+      transform var(--duration-reveal) var(--ease-reveal);
+  }
+
+  html.motion-ready .load-word {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  [data-load="meta"] {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity var(--duration-reveal) var(--ease-reveal) 320ms,
+      transform var(--duration-reveal) var(--ease-reveal) 320ms;
+  }
+
+  html.motion-ready [data-load="meta"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  [data-load="comparator"] {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity var(--duration-reveal) var(--ease-reveal) 420ms,
+      transform var(--duration-reveal) var(--ease-reveal) 420ms;
+  }
+
+  html.motion-ready [data-load="comparator"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .comparator__tooth {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 500ms var(--ease-reveal) 420ms;
+  }
+
+  html.motion-ready .comparator__tooth {
+    stroke-dashoffset: 0;
+  }
+
+  .rail__track {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 500ms var(--ease-reveal) 600ms;
+  }
+
+  html.motion-ready .rail__track {
+    transform: scaleY(1);
+  }
+}
+
+/* ==================== scroll reveal (used from S4 onward) ==================== */
+
+[data-reveal] {
+  transition: opacity var(--duration-reveal) var(--ease-reveal),
+    transform var(--duration-reveal) var(--ease-reveal);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  [data-reveal].is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
