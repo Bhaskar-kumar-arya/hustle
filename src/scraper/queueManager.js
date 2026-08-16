@@ -84,31 +84,55 @@ class QueueManager {
       localities = 'ALL', // 'ALL' or array of locality names
       niches = 'ALL',     // 'ALL' or array of niche IDs
       maxResults = 15,
-      filterNoWebsiteOnly = true
+      filterNoWebsiteOnly = true,
+      expandSearchTerms = true,  // search all of a niche's searchTerms, not just the first
+      microLocalities = false    // also expand each area into its micro-locality keywords
     } = params;
 
-    const targetLocalities = localities === 'ALL' 
-      ? BANGALORE_AREAS.map(a => a.name)
-      : (Array.isArray(localities) ? localities : [localities]);
+    const localityNameList = Array.isArray(localities) ? localities : [localities];
+    const targetAreas = localities === 'ALL'
+      ? BANGALORE_AREAS
+      : BANGALORE_AREAS.filter(a => localityNameList.includes(a.name));
+
+    // Fall back to a bare locality string with no zone/keyword data if it isn't a known area
+    const unmatchedLocalityNames = localities === 'ALL'
+      ? []
+      : localityNameList.filter(name => !BANGALORE_AREAS.some(a => a.name === name));
+    for (const name of unmatchedLocalityNames) {
+      targetAreas.push({ name, zone: 'Bangalore', keywords: [] });
+    }
 
     const targetNiches = niches === 'ALL'
       ? BUSINESS_NICHES
       : BUSINESS_NICHES.filter(n => Array.isArray(niches) ? niches.includes(n.id) : niches === n.id);
 
-    // Generate grid matrix
+    // Generate grid matrix: area (+ optional micro-localities) x niche x (optional all search terms)
     const newQueue = [];
-    for (const loc of targetLocalities) {
-      for (const nic of targetNiches) {
-        const searchTerm = nic.searchTerms ? nic.searchTerms[0] : nic.name;
-        newQueue.push({
-          locality: loc,
-          nicheId: nic.id,
-          nicheName: nic.name,
-          query: `${searchTerm} in ${loc} Bangalore`,
-          status: 'PENDING', // PENDING, RUNNING, COMPLETED, FAILED
-          leadsFound: 0,
-          qualifiedSaved: 0
-        });
+    for (const area of targetAreas) {
+      const localityNames = microLocalities && Array.isArray(area.keywords) && area.keywords.length > 0
+        ? [area.name, ...area.keywords]
+        : [area.name];
+
+      for (const locName of localityNames) {
+        for (const nic of targetNiches) {
+          const terms = expandSearchTerms && Array.isArray(nic.searchTerms) && nic.searchTerms.length > 0
+            ? nic.searchTerms
+            : [nic.searchTerms ? nic.searchTerms[0] : nic.name];
+
+          for (const term of terms) {
+            newQueue.push({
+              locality: locName,
+              zone: area.zone || 'Bangalore',
+              nicheId: nic.id,
+              nicheName: nic.name,
+              searchTerm: term,
+              query: `${term} in ${locName} Bangalore`,
+              status: 'PENDING', // PENDING, RUNNING, COMPLETED, FAILED
+              leadsFound: 0,
+              qualifiedSaved: 0
+            });
+          }
+        }
       }
     }
 
@@ -116,7 +140,12 @@ class QueueManager {
     this.currentIndex = 0;
     this.isRunning = true;
     this.isPaused = false;
-    this.options = { maxResults: parseInt(maxResults, 10) || 15, filterNoWebsiteOnly };
+    this.options = {
+      maxResults: parseInt(maxResults, 10) || 15,
+      filterNoWebsiteOnly,
+      expandSearchTerms,
+      microLocalities
+    };
     this.saveState();
 
     this.broadcast({
@@ -196,6 +225,7 @@ class QueueManager {
       const scraped = await scraper.scrape({
         query: item.query,
         locality: item.locality,
+        zone: item.zone,
         nicheId: item.nicheId,
         maxResults: this.options.maxResults,
         onProgress: (p) => {
@@ -229,14 +259,37 @@ class QueueManager {
         qualifiedSaved: res.addedCount
       });
 
-      // Polite anti-ban pause between queries (1.5 - 3 seconds)
       if (this.isRunning && !this.isPaused) {
-        const delay = Math.floor(Math.random() * 1500 + 1500);
+        // Every 15 queries, take a longer cooldown break in addition to the normal
+        // jitter, to look less like a scripted crawl over a long "Scrape All" run.
+        const isCooldownCheckpoint = this.currentIndex > 0 && this.currentIndex % 15 === 0;
+        const delay = isCooldownCheckpoint
+          ? Math.floor(Math.random() * 20000 + 20000) // 20-40s cooldown
+          : Math.floor(Math.random() * 2500 + 2500);   // 2.5-5s polite jitter
+
+        if (isCooldownCheckpoint) {
+          this.broadcast({ type: 'COOLDOWN', message: `Cooling down for ${Math.round(delay / 1000)}s to avoid rate-limiting...` });
+        }
         setTimeout(() => this.processNext(), delay);
       }
 
     } catch (err) {
       console.error(`Error processing queue item ${item.query}:`, err);
+
+      // Google actively blocked this session — pause the whole harvester rather than
+      // burning through the remaining queue getting nothing back.
+      if (err instanceof scraper.GoogleBlockError || err.name === 'GoogleBlockError') {
+        item.status = 'PENDING';
+        this.pauseQueue();
+        this.broadcast({
+          type: 'HARVESTER_BLOCKED',
+          message: 'Google flagged this session as automated. Harvester paused — wait a while before resuming.',
+          index: this.currentIndex,
+          total: this.queue.length
+        });
+        return;
+      }
+
       item.status = 'FAILED';
       item.error = err.message;
       this.currentIndex++;

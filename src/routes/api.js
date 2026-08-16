@@ -7,8 +7,7 @@ const { BANGALORE_AREAS } = require('../config/bangaloreAreas');
 const { BUSINESS_NICHES } = require('../config/businessNiches');
 const { NICHE_DEMO_SITES } = require('../config/nicheDemoSites');
 const {
-  generateWhatsAppPitch,
-  generateJustdialPitch,
+  generateUnifiedPitch,
   generateColdCallScript,
   generateEmailPitch
 } = require('../services/pitchGenerator');
@@ -115,16 +114,17 @@ router.get('/leads/:id/pitch', (req, res) => {
     return res.status(404).json({ error: 'Lead not found' });
   }
 
-  const whatsapp = generateWhatsAppPitch(lead);
-  const justdialHook = generateJustdialPitch(lead);
+  // Single unified message now covers both NO_WEBSITE and SOCIAL_ONLY leads;
+  // both response keys point at the same pitch to keep the existing two-tab UI working.
+  const unified = generateUnifiedPitch(lead);
   const coldCall = generateColdCallScript(lead);
   const email = generateEmailPitch(lead);
 
   res.json({
     lead,
     pitches: {
-      whatsapp,
-      justdialHook,
+      whatsapp: unified,
+      justdialHook: unified,
       coldCall,
       email
     }
@@ -186,6 +186,8 @@ router.post('/scrape', async (req, res) => {
   const nicheObj = BUSINESS_NICHES.find(n => n.id === nicheId) || { name: 'Businesses', searchTerms: ['Business'] };
   const searchTerm = nicheObj.searchTerms ? nicheObj.searchTerms[0] : nicheObj.name;
   const finalQuery = customQuery || `${searchTerm} in ${locality} Bangalore`;
+  const areaObj = BANGALORE_AREAS.find(a => a.name === locality);
+  const zone = areaObj ? areaObj.zone : 'Bangalore';
 
   isSingleScrapingActive = true;
   res.json({
@@ -208,6 +210,7 @@ router.post('/scrape', async (req, res) => {
       const scrapedLeads = await scraper.scrape({
         query: finalQuery,
         locality,
+        zone,
         nicheId,
         maxResults: parseInt(maxResults, 10) || 15,
         onProgress: (progress) => {
@@ -251,8 +254,8 @@ router.get('/harvester/status', (req, res) => {
 });
 
 router.post('/harvester/start', (req, res) => {
-  const { localities, niches, maxResults, filterNoWebsiteOnly } = req.body;
-  const status = queueManager.startQueue({ localities, niches, maxResults, filterNoWebsiteOnly });
+  const { localities, niches, maxResults, filterNoWebsiteOnly, expandSearchTerms, microLocalities } = req.body;
+  const status = queueManager.startQueue({ localities, niches, maxResults, filterNoWebsiteOnly, expandSearchTerms, microLocalities });
   res.json(status);
 });
 

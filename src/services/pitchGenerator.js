@@ -34,67 +34,15 @@ function formatWhatsAppUrl(phone, message) {
 }
 
 /**
- * Generate a WhatsApp sales pitch for a business lacking a website
+ * Generate a single unified WhatsApp sales pitch that targets both lead types —
+ * NO_WEBSITE (no site at all) and SOCIAL_ONLY (only Justdial/Instagram/etc.) —
+ * through one shared "visibility gap" hook instead of two separate messages.
  */
-function generateWhatsAppPitch(lead) {
-  const { name, rating, reviewsCount, locality, category, phone } = lead;
+function generateUnifiedPitch(lead) {
+  const { name, rating, reviewsCount, locality, category, phone, website, websiteStatus } = lead;
   const demoUrl = buildDemoUrl(lead);
   const ratingText = rating ? `${rating}★` : 'great';
   const reviewsText = reviewsCount ? ` (${reviewsCount}+ reviews)` : '';
-  const areaText = locality ? ` in ${locality}, Bangalore` : ' in Bangalore';
-
-  // Tailored hook based on category
-  const cat = (category || '').toLowerCase();
-  let specificBenefit = 'showcase your services and accept direct customer bookings/inquiries 24/7';
-  if (cat.includes('dental')) {
-    specificBenefit = 'allow patients to book dental appointments and view smile transformation results online';
-  } else if (cat.includes('interior') || cat.includes('architect')) {
-    specificBenefit = 'showcase your stunning 3D design portfolio and get high-ticket interior design inquiries directly';
-  } else if (cat.includes('salon')) {
-    specificBenefit = 'display your service rate card, bridal packages, and let clients book salon appointments on WhatsApp';
-  } else if (cat.includes('pet')) {
-    specificBenefit = 'offer online vet appointment booking, emergency contact, and pet care service details';
-  } else if (cat.includes('car')) {
-    specificBenefit = 'showcase before/after ceramic coating gloss results and let car owners get instant detailing estimates';
-  } else if (cat.includes('ayurved')) {
-    specificBenefit = 'explain Panchakarma treatment packages and allow patients to book doctor consultations';
-  }
-
-  const previewLine = demoUrl
-    ? `Here's a live 1-minute preview, built specifically for ${name}:\n${demoUrl}`
-    : `Would you be open to a quick 2-minute preview link on WhatsApp? No obligations at all! :)`;
-
-  const message = `Hello ${name} Team! 👋
-
-I came across your profile on Google Maps with an impressive ${ratingText} rating${reviewsText}${areaText} -- congratulations on the fantastic customer reputation! 🌟
-
-While searching for ${category || 'your services'} in ${locality || 'Bangalore'}, I noticed that your business *does not yet have an official website* linked on Google.
-
-Every day, dozens of high-value customers searching on Google end up choosing competitors simply because they have a professional website where they can browse instantly.
-
-I am a Bangalore-based web designer, and I have already put together a *modern, mobile-friendly website demo concept* for ${name} to ${specificBenefit}.
-
-${previewLine}
-
-Looking forward to hearing from you.
-Best regards!`;
-
-  return {
-    text: message,
-    encodedText: encodeURIComponent(message),
-    demoUrl,
-    whatsappUrl: formatWhatsAppUrl(phone, message)
-  };
-}
-
-/**
- * Generate a Specialized "Justdial / Shared Directory Trap" WhatsApp Pitch
- */
-function generateJustdialPitch(lead) {
-  const { name, locality, category, phone, rating, reviewsCount, website } = lead;
-  const demoUrl = buildDemoUrl(lead);
-  const ratingText = rating ? `${rating}★` : '4.8★';
-  const reviewsText = reviewsCount ? ` with ${reviewsCount}+ reviews` : '';
   const areaText = locality ? ` in ${locality}, Bangalore` : ' in Bangalore';
 
   let directoryName = 'Justdial / third-party listings';
@@ -104,21 +52,26 @@ function generateJustdialPitch(lead) {
   else if (website && website.includes('indiamart')) directoryName = 'IndiaMART';
   else if (website && website.includes('instagram')) directoryName = 'Instagram';
 
-  const message = `Hi ${name} Team! 👋
+  const presenceGap = websiteStatus === 'SOCIAL_ONLY'
+    ? `your online presence is only through *${directoryName}*, not your own official website`
+    : `your business *does not yet have an official website* linked on Google`;
 
-I was looking at your top-rated profile${areaText} (${ratingText}${reviewsText}) -- your work in ${category || 'your field'} is truly top tier! 🌟
+  const previewLine = demoUrl
+    ? `Here's a live 1-minute preview, built specifically for ${name}:\n${demoUrl}`
+    : `Would you be open to a quick 1-minute preview link on WhatsApp? No obligations at all! :)`;
 
-I noticed your online presence currently relies on *${directoryName}* rather than your own official website.
+  const message = `Hello ${name} Team! 👋
 
-Here is the biggest issue with directory listings:
-1) *Shared Leads Trap:* When customers search on directories, they broadcast that same customer inquiry to 5-10 other competitors at the exact same second, causing price wars.
-2) *Competitor Ads:* Directory platforms place ads for other nearby businesses right on your listing page!
+I came across your profile on Google Maps with an impressive ${ratingText} rating${reviewsText}${areaText} -- congratulations on the fantastic reputation! 🌟
 
-With your own *official custom website*, 100% of customer inquiries and WhatsApp bookings come exclusively to YOU -- zero competitors, zero shared leads, and total brand authority. 🚀
+I noticed ${presenceGap}. Here's why that costs you money: when customers search for ${category || 'your services'} in ${locality || 'Bangalore'}, they either can't find you directly, or find you sandwiched between 5-10 competing businesses on a shared directory listing -- same inquiry, same second, price war guaranteed.
 
-I've already built a clean, fast 1-page website concept customized for ${name}.
+I've already built a modern, mobile-friendly website concept for ${name} that sends 100% of customer inquiries exclusively to you.
 
-${demoUrl ? `Here's a live 1-minute preview, built specifically for ${name}:\n${demoUrl}` : 'Would you like a 1-minute WhatsApp preview link? No pressure or obligation at all! :)'}`;
+${previewLine}
+
+Looking forward to hearing from you.
+Best regards!`;
 
   return {
     text: message,
@@ -208,8 +161,7 @@ function calculateLeadScore(lead) {
 }
 
 module.exports = {
-  generateWhatsAppPitch,
-  generateJustdialPitch,
+  generateUnifiedPitch,
   generateColdCallScript,
   generateEmailPitch,
   calculateLeadScore

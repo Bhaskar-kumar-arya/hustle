@@ -103,8 +103,11 @@ class Storage {
     let addedCount = 0;
 
     for (const lead of newLeads) {
-      // Deduplicate by phone or exact name+locality
+      // Deduplicate by Google place ID (most reliable), then phone, then exact name+locality
       const isDuplicate = existing.some(e => {
+        if (lead.placeId && e.placeId && lead.placeId === e.placeId) {
+          return true;
+        }
         if (lead.phone && e.phone && lead.phone.replace(/\D/g, '') === e.phone.replace(/\D/g, '')) {
           return true;
         }

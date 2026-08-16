@@ -1,6 +1,24 @@
 const { chromium } = require('playwright');
 const { calculateLeadScore } = require('../services/pitchGenerator');
 
+const USER_AGENTS = [
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15',
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
+];
+
+function randomUserAgent() {
+  return USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)];
+}
+
+class GoogleBlockError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'GoogleBlockError';
+  }
+}
+
 // Social media / Directory domains that do NOT count as official custom websites
 const SOCIAL_DOMAINS = [
   'instagram.com',
@@ -91,6 +109,7 @@ class GoogleMapsScraper {
     const {
       query = 'Dental Clinic in Koramangala Bangalore',
       locality = 'Koramangala',
+      zone = 'Bangalore',
       nicheId = 'dental-clinics',
       maxResults = 15,
       onProgress = () => {}
@@ -104,14 +123,14 @@ class GoogleMapsScraper {
       onProgress({ status: 'STARTING', message: `Launching Google Maps scraper for: "${query}"...` });
       const browser = await this.initBrowser();
       context = await browser.newContext({
-        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+        userAgent: randomUserAgent(),
         viewport: { width: 1280, height: 900 },
         locale: 'en-IN'
       });
 
       page = await context.newPage();
       const searchUrl = `https://www.google.com/maps/search/${encodeURIComponent(query)}?hl=en`;
-      
+
       onProgress({ status: 'NAVIGATING', message: `Opening Google Maps query: ${query}...` });
       await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: 35000 });
 
@@ -127,15 +146,40 @@ class GoogleMapsScraper {
       onProgress({ status: 'SEARCHING', message: `Scanning Google Maps listings for ${locality}...` });
       await page.waitForTimeout(3000);
 
-      // Scroll feed to load items
+      // Detect Google's rate-limit / CAPTCHA "sorry" interstitial before wasting the rest of the run on it
+      const blocked = await page.evaluate(() => {
+        const text = document.body ? document.body.innerText || '' : '';
+        return /unusual traffic|automated queries|solve this puzzle|recaptcha/i.test(text);
+      }).catch(() => false);
+      if (blocked || page.url().includes('/sorry/')) {
+        throw new GoogleBlockError(`Google flagged this session as automated while scraping "${query}"`);
+      }
+
+      // Scroll the feed dynamically: keep going until enough cards are loaded, the
+      // list explicitly ends, or the feed stops growing for two consecutive scrolls.
       const feedSelector = 'div[role="feed"]';
-      for (let i = 0; i < 4; i++) {
-        await page.evaluate((sel) => {
+      let previousCardCount = 0;
+      let stableRounds = 0;
+      for (let i = 0; i < 20; i++) {
+        const { count, reachedEnd } = await page.evaluate((sel) => {
           const feed = document.querySelector(sel);
           if (feed) feed.scrollTop += 1800;
           else window.scrollBy(0, 1800);
+          const cardCount = document.querySelectorAll('div.Nv2PK, div[role="article"]').length;
+          const bodyText = document.body ? document.body.innerText || '' : '';
+          return { count: cardCount, reachedEnd: /reached the end of the list/i.test(bodyText) };
         }, feedSelector);
+
         await page.waitForTimeout(1200);
+
+        if (reachedEnd || count >= maxResults * 3) break;
+        if (count === previousCardCount) {
+          stableRounds++;
+          if (stableRounds >= 2) break;
+        } else {
+          stableRounds = 0;
+        }
+        previousCardCount = count;
       }
 
       // Collect place links from search feed
@@ -145,6 +189,9 @@ class GoogleMapsScraper {
 
         elements.forEach(el => {
           if (items.length >= max * 2) return;
+
+          const cardText = el.textContent || '';
+          if (/permanently closed|temporarily closed/i.test(cardText)) return;
 
           const linkEl = el.querySelector('a.hfpxzc');
           const title = el.querySelector('div.qBF1Pd')?.textContent?.trim() || linkEl?.getAttribute('aria-label')?.trim();
@@ -180,6 +227,8 @@ class GoogleMapsScraper {
           });
 
           const mapsUrl = linkEl ? linkEl.getAttribute('href') : null;
+          const placeIdMatch = mapsUrl ? mapsUrl.match(/!1s(0x[0-9a-f]+:0x[0-9a-f]+)/i) : null;
+          const placeId = placeIdMatch ? placeIdMatch[1] : null;
 
           items.push({
             name: title,
@@ -189,7 +238,8 @@ class GoogleMapsScraper {
             address,
             phone,
             website,
-            mapsUrl
+            mapsUrl,
+            placeId
           });
         });
 
@@ -239,7 +289,10 @@ class GoogleMapsScraper {
                 if (match) reviews = parseInt(match[1].replace(/,/g, ''), 10);
               }
 
-              return { phone, address, website, category, rating, reviews };
+              const bodyText = document.body ? document.body.innerText || '' : '';
+              const closed = /permanently closed|temporarily closed/i.test(bodyText);
+
+              return { phone, address, website, category, rating, reviews, closed };
             });
 
             if (details.phone) realPhone = details.phone;
@@ -248,6 +301,7 @@ class GoogleMapsScraper {
             if (details.category) realCategory = details.category;
             if (details.rating) realRating = details.rating;
             if (details.reviews) realReviews = details.reviews;
+            if (details.closed) card.closed = true;
 
             await detailPage.close();
           } catch (e) {
@@ -255,8 +309,17 @@ class GoogleMapsScraper {
           }
         }
 
+        if (card.closed) continue;
+
         const cleanPhone = formatIndianPhone(realPhone);
         const websiteStatus = classifyWebsite(realWebsite);
+
+        // Best-effort second hop: for social/directory-only leads, peek at the linked
+        // profile for a lightweight activity signal (follower/description snippet).
+        let socialSnippet = null;
+        if (websiteStatus === 'SOCIAL_ONLY' && realWebsite) {
+          socialSnippet = await this.peekSocialProfile(context, realWebsite);
+        }
 
         const lead = {
           id: `blr-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
@@ -264,7 +327,7 @@ class GoogleMapsScraper {
           category: realCategory || 'Local Business',
           nicheId: nicheId || 'general',
           locality: locality || 'Bangalore',
-          zone: 'Bangalore',
+          zone: zone || 'Bangalore',
           address: realAddress || `${locality}, Bengaluru, Karnataka`,
           phone: cleanPhone,
           rawPhone: realPhone || null,
@@ -272,12 +335,15 @@ class GoogleMapsScraper {
           reviewsCount: realReviews || 0,
           website: realWebsite || null,
           websiteStatus,
+          placeId: card.placeId || null,
+          socialSnippet: socialSnippet || null,
           googleMapsUrl: card.mapsUrl || `https://maps.google.com/?q=${encodeURIComponent(card.name + ' ' + locality + ' Bangalore')}`,
           crmStatus: 'NEW',
-          notes: websiteStatus === 'NO_WEBSITE' 
-            ? 'Verified Live Lead: Zero website listed on Google Maps.' 
+          notes: websiteStatus === 'NO_WEBSITE'
+            ? 'Verified Live Lead: Zero website listed on Google Maps.'
             : (websiteStatus === 'SOCIAL_ONLY' ? `Verified Live Lead: Only ${realWebsite} listed.` : 'Has existing website.'),
-          createdAt: new Date().toISOString()
+          createdAt: new Date().toISOString(),
+          lastVerifiedAt: new Date().toISOString()
         };
 
         lead.opportunityScore = calculateLeadScore(lead);
@@ -295,14 +361,101 @@ class GoogleMapsScraper {
 
     } catch (err) {
       console.error('Scraper error:', err);
+      if (err instanceof GoogleBlockError) {
+        onProgress({ status: 'BLOCKED', message: err.message });
+        if (page) await page.close().catch(() => {});
+        if (context) await context.close().catch(() => {});
+        throw err;
+      }
       onProgress({ status: 'ERROR', message: `Scraper error: ${err.message}` });
     } finally {
-      if (page) await page.close();
-      if (context) await context.close();
+      if (page && !page.isClosed()) await page.close().catch(() => {});
+      if (context) await context.close().catch(() => {});
     }
 
     return leads;
   }
+
+  /**
+   * Best-effort peek at a linked social/directory profile to pull a lightweight
+   * activity signal (e.g. Instagram bio/follower text). Never throws.
+   */
+  async peekSocialProfile(context, url) {
+    let socialPage = null;
+    try {
+      socialPage = await context.newPage();
+      await socialPage.goto(url, { waitUntil: 'domcontentloaded', timeout: 12000 });
+      await socialPage.waitForTimeout(1500);
+
+      const snippet = await socialPage.evaluate(() => {
+        const meta = document.querySelector('meta[name="description"], meta[property="og:description"]');
+        return meta ? meta.getAttribute('content') : null;
+      });
+
+      return snippet ? snippet.trim().slice(0, 300) : null;
+    } catch (e) {
+      return null;
+    } finally {
+      if (socialPage) await socialPage.close().catch(() => {});
+    }
+  }
+
+  /**
+   * Re-visit a previously scraped lead's own Google Maps place page to refresh its
+   * website status / rating / reviews, for stale-lead re-verification.
+   */
+  async recheckLead(googleMapsUrl) {
+    if (!googleMapsUrl) return null;
+    let context = null;
+    let detailPage = null;
+    try {
+      const browser = await this.initBrowser();
+      context = await browser.newContext({
+        userAgent: randomUserAgent(),
+        viewport: { width: 1280, height: 900 },
+        locale: 'en-IN'
+      });
+      detailPage = await context.newPage();
+      await detailPage.goto(googleMapsUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
+      await detailPage.waitForTimeout(2000);
+
+      const details = await detailPage.evaluate(() => {
+        const webEl = document.querySelector('a[data-item-id="authority"], a[aria-label*="Website:"]');
+        const website = webEl ? webEl.getAttribute('href') : null;
+
+        const ratingEl = document.querySelector('div.F7nice span[aria-hidden="true"]');
+        const rating = ratingEl ? parseFloat(ratingEl.textContent.trim()) : null;
+
+        const reviewsEl = document.querySelector('div.F7nice span[aria-label*="review"]');
+        let reviews = 0;
+        if (reviewsEl) {
+          const match = (reviewsEl.getAttribute('aria-label') || reviewsEl.textContent).match(/([\d,]+)/);
+          if (match) reviews = parseInt(match[1].replace(/,/g, ''), 10);
+        }
+
+        const bodyText = document.body ? document.body.innerText || '' : '';
+        const closed = /permanently closed|temporarily closed/i.test(bodyText);
+
+        return { website, rating, reviews, closed };
+      });
+
+      return {
+        websiteStatus: classifyWebsite(details.website),
+        website: details.website || null,
+        rating: details.rating,
+        reviewsCount: details.reviews,
+        closed: details.closed,
+        lastVerifiedAt: new Date().toISOString()
+      };
+    } catch (e) {
+      return null;
+    } finally {
+      if (detailPage) await detailPage.close().catch(() => {});
+      if (context) await context.close().catch(() => {});
+    }
+  }
 }
 
-module.exports = new GoogleMapsScraper();
+const scraperInstance = new GoogleMapsScraper();
+scraperInstance.GoogleBlockError = GoogleBlockError;
+module.exports = scraperInstance;
