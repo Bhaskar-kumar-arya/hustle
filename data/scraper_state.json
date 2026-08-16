@@ -7,7 +7,7 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dental Clinic",
       "query": "Dental Clinic in Koramangala Bangalore",
-      "status": "RUNNING",
+      "status": "COMPLETED",
       "leadsFound": 0,
       "qualifiedSaved": 0
     },
@@ -29,8 +29,8 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dentist",
       "query": "Dentist in Koramangala Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
+      "status": "COMPLETED",
+      "leadsFound": 60,
       "qualifiedSaved": 0
     },
     {
@@ -40,9 +40,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dental Clinic",
       "query": "Dental Clinic in HSR Layout Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 3
     },
     {
       "locality": "HSR Layout",
@@ -51,8 +51,8 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Orthodontist",
       "query": "Orthodontist in HSR Layout Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
+      "status": "COMPLETED",
+      "leadsFound": 60,
       "qualifiedSaved": 0
     },
     {
@@ -62,8 +62,8 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dentist",
       "query": "Dentist in HSR Layout Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
+      "status": "COMPLETED",
+      "leadsFound": 60,
       "qualifiedSaved": 0
     },
     {
@@ -73,8 +73,8 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dental Clinic",
       "query": "Dental Clinic in Jayanagar Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
+      "status": "COMPLETED",
+      "leadsFound": 60,
       "qualifiedSaved": 0
     },
     {
@@ -84,9 +84,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Orthodontist",
       "query": "Orthodontist in Jayanagar Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 5
     },
     {
       "locality": "Jayanagar",
@@ -95,9 +95,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dentist",
       "query": "Dentist in Jayanagar Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 2
     },
     {
       "locality": "JP Nagar",
@@ -106,9 +106,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dental Clinic",
       "query": "Dental Clinic in JP Nagar Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 10
     },
     {
       "locality": "JP Nagar",
@@ -117,9 +117,9 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Orthodontist",
       "query": "Orthodontist in JP Nagar Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
-      "qualifiedSaved": 0
+      "status": "COMPLETED",
+      "leadsFound": 60,
+      "qualifiedSaved": 4
     },
     {
       "locality": "JP Nagar",
@@ -128,8 +128,8 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dentist",
       "query": "Dentist in JP Nagar Bangalore",
-      "status": "PENDING",
-      "leadsFound": 0,
+      "status": "COMPLETED",
+      "leadsFound": 20,
       "qualifiedSaved": 0
     },
     {
@@ -139,7 +139,7 @@
       "nicheName": "Dental Clinics & Orthodontists",
       "searchTerm": "Dental Clinic",
       "query": "Dental Clinic in BTM Layout Bangalore",
-      "status": "PENDING",
+      "status": "RUNNING",
       "leadsFound": 0,
       "qualifiedSaved": 0
     },
@@ -1024,7 +1024,7 @@
       "qualifiedSaved": 0
     }
   ],
-  "currentIndex": 0,
+  "currentIndex": 12,
   "options": {
     "maxResults": 60,
     "filterNoWebsiteOnly": true,
@@ -1032,5 +1032,5 @@
     "microLocalities": false
   },
   "isPaused": true,
-  "updatedAt": "2026-08-16T07:47:32.646Z"
+  "updatedAt": "2026-08-16T08:20:34.393Z"
 }
