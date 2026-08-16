@@ -1,6 +1,6 @@
 {
   "queue": [],
-  "currentIndex": 0,
+  "currentIndex": 1,
   "options": {
     "maxResults": 60,
     "filterNoWebsiteOnly": true,
@@ -8,5 +8,5 @@
     "microLocalities": false
   },
   "isPaused": false,
-  "updatedAt": "2026-08-16T07:44:57.195Z"
+  "updatedAt": "2026-08-16T07:45:39.931Z"
 }
