@@ -7,6 +7,7 @@
   <title>Kitchen sink — Akshaya Dental (scratch, not shipped)</title>
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
   <style>
     /* Scratch-only preview styling. Not shipped — deleted in S12. Uses tokens throughout. */
     .ks-section {
@@ -108,17 +109,71 @@
     }
   </style>
 </head>
-<body>
-  <main>
-    <section class="ks-section">
-      <p class="eyebrow">S1 — Foundation</p>
+<body data-header-mode="transparent" data-page-context="Kitchen sink">
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo" data-bind="name"></a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a href="treatments/index.html">Treatments</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="site-header__phone" data-cta="call" data-bind="phoneDisplay"></a>
+        <a class="btn btn-primary btn-sm" data-cta="book" href="contact.html">Book</a>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="progress-line"><div class="progress-line__fill"></div></div>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close menu">
+      <span></span><span></span>
+    </button>
+    <nav aria-label="Mobile primary">
+      <ul class="mobile-menu__list">
+        <li><a href="treatments/index.html">Treatments</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__actions">
+      <a class="btn btn-primary" data-cta="book" href="contact.html">Book a consultation</a>
+      <a class="btn btn-secondary" data-cta="call" href="#">Call the clinic</a>
+    </div>
+  </div>
+
+  <a class="whatsapp-float" data-cta="whatsapp" href="#" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.13h.01c5.46 0 9.9-4.45 9.9-9.9C21.95 6.45 17.5 2 12.04 2Zm5.8 14.06c-.24.68-1.39 1.3-1.92 1.35-.51.06-.98.26-3.34-.7-2.82-1.14-4.63-4-4.77-4.19-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.07.99-2.35.26-.28.56-.35.75-.35h.53c.17 0 .4-.06.62.48.24.58.8 1.99.87 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.75 1.24 1.62 2 1.11.99 2.05 1.3 2.34 1.45.29.14.46.12.63-.07.17-.19.72-.84.92-1.13.19-.28.38-.24.63-.14.26.1 1.65.78 1.93.92.29.14.48.21.55.33.07.12.07.68-.17 1.36Z"/></svg>
+  </a>
+
+  <div class="page-shell">
+    <aside class="rail" aria-hidden="true">
+      <span class="rail__label eyebrow">Kitchen sink</span>
+      <div class="rail__track"><div class="rail__fill"></div></div>
+    </aside>
+    <main>
+    <section class="ks-section" style="padding-top: calc(var(--header-height) + var(--space-8));" data-rail-label="Intro">
+      <p class="eyebrow">S1 + S2 — Foundation + frame</p>
       <h1 style="margin-top: var(--space-2);">Kitchen sink</h1>
       <p style="color: var(--fg-muted); margin-top: var(--space-2);">
-        Scratch page proving tokens, fonts, and grounds render correctly. Not linked from the site, not shipped — deleted in S12.
+        Scratch page proving tokens, fonts, grounds, and the frame components render correctly. Not linked from the site, not shipped — deleted in S12. Scroll to see the header solidify, the rail track fill, and the mobile progress line move.
       </p>
     </section>
 
-    <section class="ks-section">
+    <section class="ks-section" data-rail-label="Type">
       <h2>Type scale</h2>
       <div class="ks-type-row"><span class="ks-label mono-label">step-6</span><span style="font-family: var(--font-display); font-size: var(--step-6); font-variation-settings: 'SOFT' 60;">4.9</span></div>
       <div class="ks-type-row"><span class="ks-label mono-label">step-5</span><span style="font-family: var(--font-display); font-size: var(--step-5); font-variation-settings: 'SOFT' 60;">Hero headline</span></div>
@@ -143,7 +198,7 @@
       </div>
     </section>
 
-    <section class="ks-section">
+    <section class="ks-section" data-rail-label="Color">
       <h2>Color tokens</h2>
       <div class="ks-swatches">
         <div class="ks-swatch"><div class="ks-swatch-fill" style="background: var(--porcelain);"></div><div class="ks-swatch-label">--porcelain #FCFBF8</div></div>
@@ -156,32 +211,105 @@
       <p style="margin-top: var(--space-6); color: var(--accent-text);">This line uses --accent-text (--beam-deep) — the AA-safe accent for body-size text on a light ground.</p>
     </section>
 
-    <section class="ks-section">
-      <h2>Buttons (preview only — components.css ships in S2)</h2>
+    <section class="ks-section" data-rail-label="Buttons">
+      <h2>Buttons, pills, chips — components.css</h2>
       <div class="ks-buttons">
-        <button class="ks-btn ks-btn-primary">Book a consultation</button>
-        <button class="ks-btn ks-btn-secondary">Call the clinic</button>
-        <button class="ks-btn ks-btn-whatsapp">WhatsApp us</button>
+        <a class="btn btn-primary" href="#" data-cta="book">Book a consultation</a>
+        <a class="btn btn-secondary" href="#" data-cta="call">Call the clinic</a>
+        <a class="btn btn-whatsapp" href="#" data-cta="whatsapp">WhatsApp us</a>
+        <a class="btn btn-primary btn-sm" href="#">Small primary</a>
       </div>
+      <div class="ks-buttons" style="margin-top: var(--space-6);">
+        <span class="pill">4.9 ★ · 1,465 reviews</span>
+        <span class="chip">Laser</span>
+        <span class="chip">1–2 sittings</span>
+      </div>
+      <hr class="hairline" style="margin-top: var(--space-8);" />
     </section>
 
-    <section class="ks-ground" data-ground="drape">
+    <section class="ks-ground" data-ground="drape" data-rail-label="Why laser">
       <p class="eyebrow">Dark ground — [data-ground="drape"]</p>
       <h2 style="margin-top: var(--space-2);">Why laser, on a drape section</h2>
       <p style="margin-top: var(--space-4); max-width: var(--measure);">
         On this ground, <span style="color: var(--beam);">--beam is text-safe</span> and freely usable — this is the one place the glow is allowed to actually glow. Body copy and muted text invert automatically via the token redefinitions in tokens.css.
       </p>
       <div class="ks-buttons" style="margin-top: var(--space-8);">
-        <button class="ks-btn" style="background: var(--beam); color: var(--drape);">Primary on drape</button>
-        <button class="ks-btn ks-btn-secondary">Secondary on drape</button>
+        <a class="btn btn-primary" href="#" style="background: var(--beam); color: var(--drape);">Primary on drape</a>
+        <a class="btn btn-secondary" href="#">Secondary on drape</a>
       </div>
     </section>
 
-    <section class="ks-section" style="background: var(--bisque);">
+    <section class="ks-section" style="background: var(--bisque);" data-rail-label="Banding">
       <p class="eyebrow">Light ground — default</p>
       <h2 style="margin-top: var(--space-2);">Back to porcelain / bisque banding</h2>
       <p style="margin-top: var(--space-4);">Section banding alternates porcelain → bisque → porcelain, with at most two drape sections per page.</p>
     </section>
+
+    <section class="ks-section" data-rail-label="Frame" style="padding-bottom: calc(var(--space-32) + var(--action-bar-height));">
+      <p class="eyebrow">S2 — The frame</p>
+      <h2 style="margin-top: var(--space-2);">Header, rail, action bar, footer</h2>
+      <p style="margin-top: var(--space-4); color: var(--fg-muted);">
+        Resize the viewport: header nav + phone/Book show at ≥1024px, the hamburger below it. The left rail with its scroll-tracking label and hairline fill appears at ≥1024px; below that a 2px amber progress line sits under the header. The sticky Call · WhatsApp · Book bar is fixed to the bottom below 768px, and folds into the WhatsApp float above that. The footer below reads its treatment list and hours straight from <code>content.js</code>.
+      </p>
+    </section>
   </main>
+  </div>
+
+  <div class="action-bar" data-ground="drape">
+    <a class="action-bar__item" data-cta="call" href="#"><span>Call</span></a>
+    <a class="action-bar__item" data-cta="whatsapp" href="#"><span>WhatsApp</span></a>
+    <a class="action-bar__item" data-cta="book" href="contact.html"><span>Book</span></a>
+  </div>
+
+  <footer class="site-footer" data-ground="drape">
+    <div class="site-footer__inner">
+      <div class="site-footer__block">
+        <h2>Clinic</h2>
+        <p data-bind="nameFull"></p>
+        <address style="margin-top: var(--space-4);">
+          <span data-bind="addressLine1"></span><br />
+          <span data-bind="addressLine2"></span>
+        </address>
+        <p style="margin-top: var(--space-4);">
+          <a data-cta="call" data-bind="phoneDisplay" href="#"></a>
+        </p>
+        <div class="site-footer__social">
+          <a href="#" aria-label="Google Business Profile">G</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+
+      <div class="site-footer__block">
+        <h2>Treatments</h2>
+        <ul class="site-footer__links" id="footerTreatments"></ul>
+      </div>
+
+      <div class="site-footer__block">
+        <h2>Hours</h2>
+        <ul class="site-footer__hours" id="footerHours"></ul>
+      </div>
+
+      <div class="site-footer__block">
+        <h2>Site</h2>
+        <ul class="site-footer__links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="patient-information.html">Patient information</a></li>
+          <li><a href="privacy-policy.html">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>© <span id="footerYear"></span> <span data-bind="name"></span></p>
+      <a href="privacy-policy.html">Privacy policy</a>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+  <script>
+    document.getElementById("footerYear").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

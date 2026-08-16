@@ -11,6 +11,8 @@
   --drape-mid:  #2E5A4E;  /* secondary text, rules, muted UI */
   --beam:       #E3A24A;  /* warm amber — glow, large marks, decorative only, <=5% of screen */
   --beam-deep:  #8F5A15;  /* accent text, links, small marks (AA-safe on light) */
+  --drape-deep: #0B211C;  /* darker than --drape — footer band only, the one place two dark tones stack */
+  --whatsapp:   #25D366;  /* WhatsApp brand green — the one palette exception, recognition beats consistency */
 
   /* semantic color roles — default (light) ground */
   --fg:         var(--drape);
@@ -70,6 +72,8 @@
   /* ---------- layout ---------- */
   --rail-width: 120px;
   --content-max: 1080px;
+  --header-height: 72px;
+  --action-bar-height: 64px;
 
   /* ---------- motion durations ---------- */
   --duration-hover: 200ms;

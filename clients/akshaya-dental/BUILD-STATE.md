@@ -2,13 +2,13 @@
 
 > **This is the living file.** Every session updates it before finishing. If it disagrees with any other doc, trust this one.
 
-**Last updated:** 2026-08-16 — S1 Foundation complete
+**Last updated:** 2026-08-16 — S2 The frame complete
 
 ---
 
-## ▶ Next session: **S2 — The frame**
+## ▶ Next session: **🚩 S3 — Hero + Procedure Comparator**
 
-Read `SESSION-PLAN.md` → S2 for scope and read list. Foundation (tokens, base, fonts, content.js, kitchen sink) is in place; no header/footer/nav/buttons/rail exist yet.
+Read `SESSION-PLAN.md` → S3 for scope and read list. This is the review-gate session — stop after it and let the human look before S4. The frame (header, nav, mobile menu, rail, action bar, WhatsApp float, footer) is in place and reads from `content.js` via `main.js`; `index.html` does not exist yet.
 
 ---
 
@@ -17,7 +17,7 @@ Read `SESSION-PLAN.md` → S2 for scope and read list. Foundation (tokens, base,
 | Session | Status | Shipped |
 | :--- | :--- | :--- |
 | S1 — Foundation | ✅ Done | Folder structure, `tokens.css`, `base.css`, self-hosted subset fonts (Fraunces/Karla/IBM Plex Mono, 98.6KB total), `content.js`, `_kitchen-sink.html` |
-| S2 — The frame | ⬜ Not started | |
+| S2 — The frame | ✅ Done | `components.css` (buttons/pills/chips/header/rail/action bar/WhatsApp float/footer), `main.js` (first `content.js` consumer), header + mobile overlay menu + rail + progress line + sticky action bar + footer added to kitchen sink for verification |
 | 🚩 S3 — Hero + Comparator | ⬜ Not started | |
 | S4 — Homepage part A | ⬜ Not started | |
 | S5 — Homepage part B | ⬜ Not started | |
@@ -37,10 +37,14 @@ Read `SESSION-PLAN.md` → S2 for scope and read list. Foundation (tokens, base,
 
 *Things the next session must know. Out-of-scope issues spotted mid-session go here rather than into the diff.*
 
-- `components.css`, `sections.css`, `pages.css` don't exist yet — S1 only shipped `tokens.css` + `base.css`. The kitchen sink's button preview uses scratch inline `<style>` (token-driven, not shipped) purely to satisfy S1's "render buttons" done-criterion; S2 must build the real `.btn-*` classes in `components.css` and the kitchen sink's scratch styles can be left alone or removed then.
-- `main.js` doesn't exist yet — nothing currently imports `content.js`. S2's header/footer will be the first real consumers; follow the `data-bind` pattern in `public/demo/dental/script.js` per CONTENT-DATA.md.
 - Reduced-motion is handled in `base.css` by zeroing the `--duration-*` tokens inside the media query (no `!important`, per CONVENTIONS.md §4 CSS discipline). Component/section CSS should keep reading durations from those tokens rather than hardcoding transition timings, or this override won't reach them.
 - Fraunces was instanced down to two variable axes (`SOFT`, `wght` 400–600) with `opsz` pinned at 48 and `WONK` pinned at 0, rather than shipping all four axes — smaller file, and the design system only specifies fixed SOFT/WONK values plus a wght range anyway. `SOFT` is fixed at 60 via `font-variation-settings` in `base.css` h1/h2 rules. Karla was instanced to a single variable file covering wght 400–700 (one file, not three statics).
+- **Any component with a `--drape`/`--drape-deep` background must also carry `data-ground="drape"` on the same element**, or `--fg`/`--fg-muted` stay at their light-ground (dark green) values and text renders invisibly dark-on-dark. Hit this bug with the footer and action bar in S2 — both fixed by adding the attribute. `.site-footer` and `.action-bar` set their background directly (not via `--bg`, since the drape ground token block doesn't redefine `--bg`), so the `data-ground` attribute is doing fg-only inversion work — don't skip it when reusing these classes on future pages.
+- `main.js` binds via `data-bind`/`data-cta` but the bound elements ship with **empty** text content and `href="#"` in markup, not the real fallback value — CONVENTIONS.md §3 bans hardcoding client data into markup even as a fallback, since it breaks the "swap content.js and nothing else" guarantee. Every future page's header/footer copy-paste should follow this — empty `data-bind` targets, not pre-filled ones.
+- `.rail`'s current-section label needs a `data-rail-label="..."` attribute on each major section for the `IntersectionObserver` in `main.js` to track; homepage sections in S3+ must carry one each or the rail label will just freeze at whatever it last saw.
+- Header transparency (`body[data-header-mode="transparent"]`) only applies when the `<body>` tag carries that attribute — set it only on pages with a hero the header can float over (homepage). Inner pages should omit the attribute so the header is solid from load.
+- `treatments/index.html`, `about.html`, `team.html`, etc. don't exist yet, so all nav/footer links in the frame markup point at paths that 404 until S6–S10 build them. Expected, not a bug.
+- Pre-existing, out of S2's scope: the kitchen sink's S1 "type weights" demo row (`Fraunces 400 500 600` in one `ks-type-row`) overflows horizontally at 360px — a scratch-page-only cosmetic issue, not present on any real component. Leave it; the whole file is deleted in S12.
 
 ---
 
@@ -65,6 +69,10 @@ Read `SESSION-PLAN.md` → S2 for scope and read list. Foundation (tokens, base,
 | 2026-08-16 | S1: Fraunces variable font instanced to only `SOFT` + `wght` (400–600) axes; `opsz` pinned 48, `WONK` pinned 0. Karla shipped as one variable file (wght 400–700) instead of 3 statics | Matches the fixed SOFT/WONK values + wght range actually used in DESIGN-SYSTEM §3; smallest file for the axes CSS actually varies. Total font payload 98.6KB, under the 120KB budget. |
 | 2026-08-16 | S1: reduced-motion handled by zeroing `--duration-*` tokens in `base.css`'s media query, not blanket `!important` overrides | CONVENTIONS.md §4 bans `!important` outright; token-driven durations let later sections' CSS honour reduced-motion automatically as long as they read `var(--duration-*)` instead of hardcoding timings. |
 | 2026-08-16 | `.gitignore`'s blanket `websites/*` ignore now has an exception for `websites/akshaya/` | That rule was written for dynamically-generated demo output; this build is hand-authored client work and should be version-controlled. Committed in `a0d0cf8`. |
+| 2026-08-16 | S2: added `--drape-deep` and `--whatsapp` tokens to `tokens.css` (footer band, WhatsApp brand green) | Both needed a raw hex not already covered by the S1 palette; CONVENTIONS.md §4 requires all raw hex to live in `tokens.css`, and DESIGN-SYSTEM §6 explicitly calls WhatsApp green "the one palette exception." |
+| 2026-08-16 | S2: added `--header-height` and `--action-bar-height` tokens | Needed by multiple components (rail sticky offset, mobile menu close-button centering, section scroll-padding) — better as a shared token than repeated magic numbers. |
+| 2026-08-16 | S2: header transparency is opt-in via `body[data-header-mode="transparent"]`, not the default | Only the homepage hero needs a transparent-over-image header; every inner page wants it solid from load. Keeps the transparent CSS scoped instead of fighting it back to solid everywhere else. |
+| 2026-08-16 | S2: `data-bind`/`data-cta` elements ship with empty text/`href="#"` in markup, not a real-value fallback | CONVENTIONS.md §3's hardcoding ban applies even to fallback text — a duplicated real value in 13 pages' markup breaks the single-file content swap the whole system is built around. |
 
 ---
 
@@ -104,3 +112,12 @@ Built the system all later sessions render on top of. Folder structure per DESIG
 **Done-when check:** kitchen sink renders all tokens correctly ✅ (screenshotted at desktop + mobile) · no literal hex outside `tokens.css` ✅ (grepped) · fonts load locally with no network calls ✅ (requestfailed listener empty, all font URLs relative) · total font payload under 120KB ✅ (98.6KB).
 
 **Files created/changed:** `CLAUDE.md`, `clients/akshaya-dental/{00-START-HERE,SESSION-PLAN,CONVENTIONS,CONTENT-DATA,BUILD-STATE}.md`, moved `PROJECT-BRIEF.md` + `DESIGN-SYSTEM.md` into `clients/akshaya-dental/`.
+
+### 2026-08-16 — S2 The frame
+Built the site-wide chrome every later page assembles into: `components.css` (buttons incl. the WhatsApp brand-green exception, pills, chips, hairline, header, mobile overlay menu, sticky left rail + scroll fill, mobile progress line, sticky action bar, WhatsApp float, footer) and `main.js` — the first real `content.js` consumer, binding via `data-bind`/`data-cta`, driving header solid-on-scroll, the hamburger/overlay menu (focus management, Escape-to-close, keyboard operable), rail label tracking via `IntersectionObserver`, scroll-progress fill, and generating the footer's treatment links and hours list straight from `content.js`. Added the header/rail/menu/action-bar/WhatsApp-float/footer markup to `_kitchen-sink.html` so the done-criteria could be verified against a real page. Added two tokens to `tokens.css` (`--drape-deep`, `--whatsapp`) and two layout tokens (`--header-height`, `--action-bar-height`).
+
+Verified with a real headless-browser render (Puppeteer) at 360 / 768 / 1440px: nav/rail/WhatsApp-float appear only ≥1024px and ≥768px respectively per spec, action bar only <768px, footer treatment list (10) and hours (7, today highlighted) generate correctly from `content.js`, all `tel:`/`wa.me` links resolve with the right numbers, hamburger menu opens/closes with correct `aria-expanded`/focus movement and Escape support, desktop tab order reaches every nav link, and `prefers-reduced-motion` correctly zeroes all duration tokens. Caught and fixed a real bug in the process: `.action-bar` and `.site-footer` set dark backgrounds directly but were missing `data-ground="drape"`, so `--fg`/`--fg-muted` stayed at light-ground values and text rendered dark-on-dark (invisible except for the one hardcoded-color WhatsApp item). Also caught that my own markup was hardcoding real confirmed client values (phone, name, address) as `data-bind` fallback text — removed per CONVENTIONS.md §3, elements now ship empty and are populated by `main.js`.
+
+**Done-when check:** header, footer, rail, action bar render on kitchen sink at 360/768/1440 ✅ · nav keyboard operable ✅ (tab order + hamburger focus verified) · no client data hardcoded ✅ (grepped, and the fallback-text bug above was caught and fixed).
+
+**Files created/changed:** `assets/css/components.css`, `assets/js/main.js`, `assets/css/tokens.css` (added `--drape-deep`, `--whatsapp`, `--header-height`, `--action-bar-height`), `_kitchen-sink.html` (header/rail/menu/action-bar/WhatsApp-float/footer markup added).
