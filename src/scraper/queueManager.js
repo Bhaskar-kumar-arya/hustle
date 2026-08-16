@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const scraper = require('./mapsScraper');
 const storage = require('../db/storage');
+const gitSync = require('../services/gitSync');
 const { BANGALORE_AREAS } = require('../config/bangaloreAreas');
 const { BUSINESS_NICHES } = require('../config/businessNiches');
 
@@ -18,6 +19,7 @@ class QueueManager {
       maxResults: 15,
       filterNoWebsiteOnly: true
     };
+    this.lastSyncResult = null;
     this.listeners = new Set();
     this.loadState();
   }
@@ -168,13 +170,31 @@ class QueueManager {
       currentIndex: this.currentIndex,
       totalItems: this.queue.length
     });
+
+    // Push the paused state to git so another device can pick it up. Fire-and-forget:
+    // pausing must not hang on network/git latency.
+    this.syncPush(`sync: harvester paused at ${this.currentIndex}/${this.queue.length}`);
+
     return this.getStatus();
   }
 
-  resumeQueue() {
-    if (this.queue.length === 0 || this.currentIndex >= this.queue.length) {
-      return { error: 'No incomplete queue found to resume.' };
+  /**
+   * Resuming always pulls first, so if the queue was paused (or progressed further)
+   * on another device, this device picks up that newer state before continuing —
+   * that's what makes cross-device resume safe.
+   */
+  async resumeQueue() {
+    const pullResult = await gitSync.pullState();
+    this.lastSyncResult = { action: 'pull', ...pullResult, at: new Date().toISOString() };
+    this.broadcast({ type: 'SYNC_RESULT', ...this.lastSyncResult });
+    if (pullResult.synced) {
+      this.loadState();
     }
+
+    if (this.queue.length === 0 || this.currentIndex >= this.queue.length) {
+      return { error: 'No incomplete queue found to resume (it may already have been completed/synced from another device).' };
+    }
+
     this.isPaused = false;
     this.isRunning = true;
     this.saveState();
@@ -187,9 +207,22 @@ class QueueManager {
     return this.getStatus();
   }
 
+  /**
+   * Best-effort push of harvester state to the git remote. Never throws —
+   * failures (offline, no git identity configured, etc.) are broadcast as a
+   * SYNC_RESULT event rather than breaking the harvester itself.
+   */
+  syncPush(message) {
+    gitSync.pushState(message).then(res => {
+      this.lastSyncResult = { action: 'push', ...res, at: new Date().toISOString() };
+      this.broadcast({ type: 'SYNC_RESULT', ...this.lastSyncResult });
+    }).catch(() => {});
+  }
+
   stopQueue() {
     this.isRunning = false;
     this.isPaused = false;
+    this.syncPush(`sync: harvester stopped at ${this.currentIndex}/${this.queue.length}, saving leads`);
     this.resetState();
     this.broadcast({ type: 'QUEUE_STOPPED' });
     return this.getStatus();
@@ -206,6 +239,7 @@ class QueueManager {
         type: 'QUEUE_COMPLETED',
         totalProcessed: this.queue.length
       });
+      this.syncPush(`sync: harvester completed ${this.queue.length} queries`);
       return;
     }
 
@@ -269,6 +303,9 @@ class QueueManager {
 
         if (isCooldownCheckpoint) {
           this.broadcast({ type: 'COOLDOWN', message: `Cooling down for ${Math.round(delay / 1000)}s to avoid rate-limiting...` });
+          // Piggyback a state checkpoint on the same cadence, so a crash mid-run
+          // never loses more than ~15 queries' worth of progress.
+          this.syncPush(`sync: harvester checkpoint ${this.currentIndex}/${this.queue.length}`);
         }
         setTimeout(() => this.processNext(), delay);
       }
@@ -320,7 +357,8 @@ class QueueManager {
       totalItems: this.queue.length,
       currentJob: this.currentJob,
       progressPercent: this.queue.length > 0 ? Math.round((this.currentIndex / this.queue.length) * 100) : 0,
-      options: this.options
+      options: this.options,
+      lastSyncResult: this.lastSyncResult
     };
   }
 }

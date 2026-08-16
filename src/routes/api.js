@@ -3,6 +3,7 @@ const router = express.Router();
 const storage = require('../db/storage');
 const scraper = require('../scraper/mapsScraper');
 const queueManager = require('../scraper/queueManager');
+const gitSync = require('../services/gitSync');
 const { BANGALORE_AREAS } = require('../config/bangaloreAreas');
 const { BUSINESS_NICHES } = require('../config/businessNiches');
 const { NICHE_DEMO_SITES } = require('../config/nicheDemoSites');
@@ -264,14 +265,27 @@ router.post('/harvester/pause', (req, res) => {
   res.json(status);
 });
 
-router.post('/harvester/resume', (req, res) => {
-  const status = queueManager.resumeQueue();
+router.post('/harvester/resume', async (req, res) => {
+  const status = await queueManager.resumeQueue();
   res.json(status);
 });
 
 router.post('/harvester/stop', (req, res) => {
   const status = queueManager.stopQueue();
   res.json(status);
+});
+
+// 12. Cross-device sync controls (harvester state lives in data/scraper_state.json +
+// data/leads.json, and is kept in sync between devices through the git remote)
+router.post('/harvester/sync/push', async (req, res) => {
+  const result = await gitSync.pushState('sync: manual checkpoint push');
+  res.json(result);
+});
+
+router.post('/harvester/sync/pull', async (req, res) => {
+  const result = await gitSync.pullState();
+  if (result.synced) queueManager.loadState();
+  res.json(result);
 });
 
 module.exports = router;
