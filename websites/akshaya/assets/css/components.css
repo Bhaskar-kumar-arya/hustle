@@ -110,6 +110,22 @@
   color: var(--fg-muted);
 }
 
+/* ==================== image placeholder ==================== */
+/* Flat bisque block + Plex Mono label naming the required shot, per
+   CONTENT-DATA.md §7 — a shot list, not a stock photo. Aspect ratio is set
+   per usage (doctor-card__photo, equipment-card__photo, …), not here. */
+
+.placeholder-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--bisque);
+  border: 1px dashed var(--drape-mid);
+  border-radius: var(--radius-card);
+}
+
 /* ==================== hairline ==================== */
 
 .hairline {
@@ -249,6 +265,10 @@ body[data-header-mode="transparent"] .site-header:not(.is-scrolled) .site-nav__l
 
 /* ==================== mobile overlay menu ==================== */
 
+.mobile-menu[hidden] {
+  display: none;
+}
+
 .mobile-menu {
   position: fixed;
   inset: 0;
@@ -368,6 +388,33 @@ body[data-header-mode="transparent"] .site-header:not(.is-scrolled) .site-nav__l
     height: 0%;
     background: var(--beam-deep);
     transition: height 80ms linear;
+  }
+
+  /* rail table-of-contents variant (blog post pages, S10) — replaces the
+     rail__label/rail__track pair with a list of in-page anchor links tracked
+     by an IntersectionObserver in main.js. Still governed by the same
+     .rail display rule above, so it's hidden below 1024px automatically. */
+  .rail__toc {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .rail__toc-link {
+    padding-left: var(--space-3);
+    border-left: 1px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: var(--tracking-mono);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    transition: color var(--duration-hover) var(--ease-reveal), border-color var(--duration-hover) var(--ease-reveal);
+  }
+
+  .rail__toc-link.is-active {
+    color: var(--beam-deep);
+    border-color: var(--beam-deep);
   }
 }
 
@@ -554,8 +601,8 @@ body[data-header-mode="transparent"] .site-header:not(.is-scrolled) .site-nav__l
 
 .site-footer__social a {
   display: inline-flex;
-  width: 36px;
-  height: 36px;
+  width: var(--space-12);
+  height: var(--space-12);
   align-items: center;
   justify-content: center;
   border: 1px solid var(--rule);

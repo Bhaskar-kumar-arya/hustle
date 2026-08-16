@@ -46,6 +46,12 @@ if (root) {
     if (announce && live) {
       live.textContent = `Showing ${state === "laser" ? "laser" : "conventional"} procedure attributes.`;
     }
+
+    // Only fires on a real user toggle — the initial setState() call below
+    // passes announce: false, so mount doesn't count as a conversion event.
+    if (announce) {
+      document.dispatchEvent(new CustomEvent("comparator:toggle", { detail: { state } }));
+    }
   };
 
   toggleBtns.forEach((btn, i) => {
