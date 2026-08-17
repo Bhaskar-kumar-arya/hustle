@@ -51,6 +51,8 @@ websites/*
 !websites/.gitkeep
 !websites/akshaya/
 !websites/akshaya/**
+!websites/demo-dental/
+!websites/demo-dental/**
 
 # Production / Build outputs
 dist/
