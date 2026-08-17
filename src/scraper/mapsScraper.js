@@ -45,7 +45,12 @@ const SOCIAL_DOMAINS = [
  */
 function formatIndianPhone(rawPhone) {
   if (!rawPhone) return null;
-  const digits = rawPhone.replace(/\D/g, '');
+
+  // Pull out just the actual phone number, ignoring any surrounding text
+  // (review counts, ratings, labels) that may have been scraped alongside it.
+  const match = rawPhone.match(/(\+?91[\s-]?)?[6-9]\d{9}|0?80[\s-]?\d{7,8}/);
+  const digits = (match ? match[0] : rawPhone).replace(/\D/g, '');
+
   if (digits.length === 10) {
     return `+91${digits}`;
   } else if (digits.length === 11 && digits.startsWith('0')) {
@@ -267,8 +272,8 @@ class GoogleMapsScraper {
             await detailPage.waitForTimeout(2000);
 
             const details = await detailPage.evaluate(() => {
-              const phoneEl = document.querySelector('button[data-tooltip="Copy phone number"] div.Io6YTe, button[data-item-id*="phone"] div.Io6YTe, button[aria-label*="Phone:"]');
-              const phone = phoneEl ? phoneEl.textContent.trim().replace(/^/, '').trim() : null;
+              const phoneEl = document.querySelector('button[data-tooltip="Copy phone number"] div.Io6YTe, button[data-item-id*="phone"] div.Io6YTe, button[aria-label*="Phone:"] div.Io6YTe');
+              const phone = phoneEl ? phoneEl.textContent.trim() : null;
 
               const addrEl = document.querySelector('button[data-item-id="address"] div.Io6YTe, button[aria-label*="Address:"] div.Io6YTe');
               const address = addrEl ? addrEl.textContent.trim() : null;
