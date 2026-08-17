@@ -61,6 +61,14 @@
   --section-pad-block: clamp(4rem, 10vw, 8rem);
   --section-pad-inline: clamp(1.25rem, 5vw, 3rem);
 
+  /* Page-intro (`*-hero`) blocks must NOT use --section-pad-block at their
+     block-end: the following section already opens with a full
+     --section-pad-block, so two abutting section wrappers each paid it and the
+     gap after an h1+lead reached ~256px. The intro contributes a small
+     shoulder and the *next* section owns the rhythm — one source, not two.
+     (S10's blog/post/privacy heroes already did this with --space-8.) */
+  --page-intro-pad-end: var(--space-8);
+
   /* ---------- radii ---------- */
   --radius-input: 2px;
   --radius-card: 10px;

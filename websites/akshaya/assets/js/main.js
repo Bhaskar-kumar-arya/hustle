@@ -51,14 +51,27 @@ const bindings = {
   aboutStory: about.story,
   aboutPhilosophy: about.philosophy,
   email: clinic.email,
+  // Reads as one sentence with or without an email address on file, so the
+  // privacy-policy contact line needs no HTML edit when the client supplies one.
+  emailSentence: clinic.email ? `, or write to us at ${clinic.email}` : "",
   emiNote: patientInfo.emiNote,
   insurance: patientInfo.insurance,
   emergency: patientInfo.emergency,
 };
 
+// A field the client hasn't supplied yet is null in content.js (email,
+// parking, ...). Hide the element that binds it rather than rendering an empty
+// line or a stub value — a visible placeholder makes a finished page read as a
+// draft, see content.js's header note.
 document.querySelectorAll("[data-bind]").forEach((el) => {
   const key = el.getAttribute("data-bind");
-  if (bindings[key] !== undefined) el.textContent = bindings[key];
+  const value = bindings[key];
+  if (value === undefined) return;
+  if (value === null || value === "") {
+    el.hidden = true;
+    return;
+  }
+  el.textContent = value;
 });
 
 /* ---------- 3. CTA hrefs ---------- */
@@ -66,9 +79,9 @@ document.querySelectorAll("[data-bind]").forEach((el) => {
 document.querySelectorAll('[data-cta="call"]').forEach((el) => (el.href = telLink));
 document.querySelectorAll('[data-cta="whatsapp"]').forEach((el) => (el.href = waLink));
 document.querySelectorAll('[data-cta="directions"]').forEach((el) => {
-  if (clinic.address.mapsUrl && !clinic.address.mapsUrl.startsWith("MOCK")) {
-    el.href = clinic.address.mapsUrl;
-  }
+  // mapsUrl is null until the Google Business Profile listing is confirmed;
+  // until then the address itself is enough for Maps to resolve the clinic.
+  el.href = clinic.address.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${clinic.name}, ${clinic.address.line1}, ${clinic.address.line2}`)}`;
 });
 
 /* ---------- 4. header: solid-on-scroll ---------- */
