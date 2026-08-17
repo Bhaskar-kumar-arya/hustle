@@ -1,0 +1,1097 @@
+/*
+  pages.css — inner-page templates, starting with the treatment page (S6).
+  Reads tokens/base/components/sections only, never the reverse. Layer order:
+  tokens -> base -> components -> sections -> pages. See CONVENTIONS.md §4.
+*/
+
+/* ==================== breadcrumb ==================== */
+
+.breadcrumb {
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) 0;
+}
+
+.breadcrumb__list {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.breadcrumb__list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.breadcrumb__list li:not(:last-child)::after {
+  content: "/";
+  color: var(--rule);
+}
+
+.breadcrumb__list a:hover {
+  color: var(--beam-deep);
+}
+
+.breadcrumb__list li[aria-current="page"] {
+  color: var(--fg);
+}
+
+/* ==================== treatment hero ==================== */
+
+.treatment-hero {
+  padding: var(--space-8) var(--section-pad-inline) var(--section-pad-block);
+}
+
+.treatment-hero__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.treatment-hero__heading {
+  max-width: 24ch;
+}
+
+.treatment-hero__lead {
+  margin-top: var(--space-4);
+  font-size: var(--step-1);
+  color: var(--fg-muted);
+  max-width: var(--measure);
+}
+
+.treatment-hero__meta {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.treatment-hero__ctas {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.treatment-hero__disclaimer {
+  margin-top: var(--space-6);
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+}
+
+/* ==================== signs ==================== */
+
+.signs {
+  background: var(--bg-alt);
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.signs__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.signs__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.signs-list {
+  margin-top: var(--space-12);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  max-width: var(--measure);
+}
+
+@media (min-width: 480px) {
+  .signs-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.signs-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--step-0);
+}
+
+.signs-list__mark {
+  flex-shrink: 0;
+  margin-top: 0.5em;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--beam);
+}
+
+/* ==================== step process ==================== */
+/* The only component allowed 01/02/03-style numbering. See CONVENTIONS.md §5. */
+
+.step-process {
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.step-process__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.step-process__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.step-process__list {
+  margin-top: var(--space-16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.step-process__item {
+  position: relative;
+  display: flex;
+  gap: var(--space-6);
+}
+
+.step-process__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 1.1em;
+  top: 2.4em;
+  bottom: calc(-1 * var(--space-8));
+  width: 1px;
+  background: var(--rule);
+}
+
+.step-process__index {
+  flex-shrink: 0;
+  width: 2.4em;
+  font-size: var(--step-0);
+  color: var(--beam-deep);
+}
+
+.step-process__title {
+  font-size: var(--step-1);
+}
+
+.step-process__desc {
+  margin-top: var(--space-1);
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+  max-width: 48ch;
+}
+
+@media (min-width: 1024px) {
+  .step-process__list {
+    flex-direction: row;
+    gap: var(--space-6);
+  }
+
+  .step-process__item {
+    flex-direction: column;
+    flex: 1;
+    gap: var(--space-4);
+  }
+
+  .step-process__item:not(:last-child)::after {
+    left: 2.2em;
+    right: calc(-1 * var(--space-6) / 2);
+    top: 1.1em;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+  }
+}
+
+/* ==================== data block (sittings & duration) ==================== */
+
+.data-block {
+  background: var(--bg-alt);
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.data-block__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 480px) {
+  .data-block__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.data-block__stat {
+  padding: var(--space-8);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+}
+
+.data-block__value {
+  font-family: var(--font-mono);
+  font-size: var(--step-3);
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.data-block__label {
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* ==================== comparator section (treatment-page reuse) ==================== */
+
+.comparator-section {
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.comparator-section__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.comparator-section__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.comparator-section__wrap {
+  margin-top: var(--space-12);
+  max-width: 560px;
+}
+
+/* ==================== cost block (flag-hidden) ==================== */
+
+.cost-block {
+  background: var(--bg-alt);
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.cost-block[hidden] {
+  display: none;
+}
+
+.cost-block__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.cost-block__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.cost-block__range {
+  margin-top: var(--space-8);
+  font-family: var(--font-mono);
+  font-size: var(--step-3);
+  font-weight: 500;
+}
+
+.cost-block__emi {
+  margin-top: var(--space-2);
+  color: var(--fg-muted);
+}
+
+.cost-block__note {
+  margin-top: var(--space-6);
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+}
+
+/* ==================== aftercare ==================== */
+
+.aftercare {
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.aftercare__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.aftercare__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.aftercare__list {
+  margin-top: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: var(--measure);
+}
+
+/* ==================== treatment FAQs ==================== */
+/* Reuses .faq-list / .faq-item from sections.css — same accordion, new heading. */
+
+.treatment-faqs {
+  background: var(--bg-alt);
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.treatment-faqs__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.treatment-faqs__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.treatment-faqs .faq-list {
+  margin-top: var(--space-16);
+}
+
+/* ==================== credential block (performing dentist) ==================== */
+
+.credential-block {
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.credential-block__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.credential-block__card {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-8);
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+}
+
+@media (min-width: 768px) {
+  .credential-block__card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.credential-block__photo {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  max-width: 180px;
+}
+
+.credential-block__name {
+  font-size: var(--step-2);
+}
+
+.credential-block__degrees {
+  margin-top: var(--space-2);
+  color: var(--beam-deep);
+}
+
+.credential-block__reg {
+  margin-top: var(--space-2);
+}
+
+.credential-block__link {
+  margin-top: var(--space-4);
+  display: inline-block;
+  font-size: var(--step--1);
+  color: var(--beam-deep);
+}
+
+/* ==================== related treatments (S7) ==================== */
+
+.related-treatments {
+  background: var(--bg-alt);
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.related-treatments__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.related-treatments__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.related-treatments__list {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.related-treatments__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+  font-size: var(--step-0);
+  transition: border-color var(--duration-hover) var(--ease-reveal),
+    transform var(--duration-hover) var(--ease-reveal);
+}
+
+.related-treatments__link:hover {
+  border-color: var(--beam);
+  transform: translateY(-2px);
+}
+
+/* ==================== treatments hub (S7) ==================== */
+
+.treatments-hub-intro {
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--section-pad-block);
+}
+
+.treatments-hub-intro__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.treatments-hub-intro__heading {
+  max-width: 30ch;
+}
+
+.treatments-hub-intro__lead {
+  margin-top: var(--space-4);
+  font-size: var(--step-1);
+  color: var(--fg-muted);
+  max-width: var(--measure);
+}
+
+.treatments-hub {
+  background: var(--bg-alt);
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.treatments-hub__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.treatments-hub__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.treatments-hub__group:not(:first-child) {
+  margin-top: var(--space-16);
+}
+
+.treatments-hub__group-label {
+  font-size: var(--step-1);
+  margin-bottom: var(--space-6);
+}
+
+.also-offered {
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.also-offered__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.also-offered__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.also-offered__list {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  list-style: none;
+  padding: 0;
+}
+
+/* ==================== about page (S8) ==================== */
+
+.about-hero {
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--section-pad-block);
+}
+
+.about-hero__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.about-hero__heading {
+  max-width: 26ch;
+}
+
+.about-hero__lead {
+  margin-top: var(--space-4);
+  font-size: var(--step-1);
+  color: var(--fg-muted);
+  max-width: var(--measure);
+}
+
+.prose-section {
+  background: var(--bg-alt);
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.prose-section:nth-of-type(even) {
+  background: var(--bg);
+}
+
+.prose-section__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.prose-section__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.prose-section__body {
+  margin-top: var(--space-8);
+  font-size: var(--step-1);
+  color: var(--fg-muted);
+  max-width: var(--measure);
+}
+
+.facility-grid {
+  margin-top: var(--space-16);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 480px) {
+  .facility-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.facility-grid__photo {
+  aspect-ratio: 3 / 2;
+  width: 100%;
+}
+
+/* ==================== team hero + doctor hero (S8) ==================== */
+
+.team-hero {
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--section-pad-block);
+}
+
+.team-hero__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.team-hero__heading {
+  max-width: 30ch;
+}
+
+.team-hero__lead {
+  margin-top: var(--space-4);
+  font-size: var(--step-1);
+  color: var(--fg-muted);
+  max-width: var(--measure);
+}
+
+.doctor-card__link {
+  margin-top: var(--space-2);
+  display: inline-block;
+  font-size: var(--step--1);
+  color: var(--beam-deep);
+}
+
+.doctor-hero {
+  padding: var(--space-8) var(--section-pad-inline) var(--section-pad-block);
+}
+
+.doctor-hero__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .doctor-hero__inner {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.doctor-hero__photo {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  max-width: 280px;
+  flex-shrink: 0;
+}
+
+.doctor-hero__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.doctor-hero__degrees {
+  margin-top: var(--space-2);
+  color: var(--beam-deep);
+}
+
+.doctor-hero__reg {
+  margin-top: var(--space-2);
+}
+
+.doctor-hero__bio {
+  margin-top: var(--space-6);
+  font-size: var(--step-1);
+  color: var(--fg-muted);
+  max-width: var(--measure);
+}
+
+.doctor-hero__ctas {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.doctor-treatments {
+  background: var(--bg-alt);
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.doctor-treatments__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.doctor-treatments__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.doctor-treatments__list {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* ==================== technology page (S8) ==================== */
+
+.technology-hero {
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--section-pad-block);
+}
+
+.technology-hero__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.technology-hero__heading {
+  max-width: 30ch;
+}
+
+.technology-hero__lead {
+  margin-top: var(--space-4);
+  font-size: var(--step-1);
+  color: var(--fg-muted);
+  max-width: var(--measure);
+}
+
+.sterilisation-workflow {
+  background: var(--bg-alt);
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.sterilisation-workflow__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.sterilisation-workflow__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.sterilisation-workflow .step-process__list {
+  margin-top: var(--space-16);
+}
+
+/* ==================== patient information / reviews / contact hero (S9) ==================== */
+/* Same block as .about-hero/.team-hero/.technology-hero — one class per page
+   for the eyebrow+h1+lead intro, per the established S8 naming pattern. */
+
+.patient-hero,
+.reviews-hero,
+.contact-hero {
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--section-pad-block);
+}
+
+.patient-hero__inner,
+.reviews-hero__inner,
+.contact-hero__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.patient-hero__heading,
+.reviews-hero__heading,
+.contact-hero__heading {
+  max-width: 26ch;
+}
+
+.patient-hero__lead,
+.reviews-hero__lead,
+.contact-hero__lead {
+  margin-top: var(--space-4);
+  font-size: var(--step-1);
+  color: var(--fg-muted);
+  max-width: var(--measure);
+}
+
+/* ==================== booking form (S9) ==================== */
+/* Four fields only, per CONVENTIONS.md §1 — name, phone, treatment interest,
+   preferred day. Consent line sits directly above the submit button (DPDP).
+   Validation logic lives in form.js. */
+
+.booking {
+  background: var(--bg-alt);
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.booking__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.booking__heading {
+  margin-top: var(--space-4);
+  max-width: 42ch;
+}
+
+.booking__lead {
+  margin-top: var(--space-4);
+  color: var(--fg-muted);
+  max-width: var(--measure);
+}
+
+.booking-form {
+  margin-top: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 480px;
+}
+
+.booking-form[hidden] {
+  display: none;
+}
+
+.booking-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.booking-form__field label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.booking-form__field input,
+.booking-form__field select {
+  min-height: var(--space-12);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-input);
+  font-size: var(--step-0);
+  color: var(--fg);
+}
+
+.booking-form__field input[aria-invalid="true"],
+.booking-form__field select[aria-invalid="true"] {
+  border-color: var(--beam-deep);
+}
+
+.booking-form__error {
+  min-height: 1.2em;
+  font-size: var(--step--1);
+  color: var(--beam-deep);
+}
+
+.booking-form__consent {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: var(--space-3);
+}
+
+.booking-form__consent input {
+  margin-top: 0.3em;
+  width: 20px;
+  height: 20px;
+  accent-color: var(--drape);
+}
+
+.booking-form__consent label {
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+}
+
+.booking-form__consent label a {
+  color: var(--beam-deep);
+  text-decoration: underline;
+}
+
+.booking-form__consent .booking-form__error {
+  grid-column: 2;
+}
+
+.booking-form__submit {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.booking-form .btn {
+  align-self: flex-start;
+}
+
+.booking-confirmation {
+  margin-top: var(--space-12);
+  max-width: 480px;
+  padding: var(--space-8);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+}
+
+.booking-confirmation[hidden] {
+  display: none;
+}
+
+.booking-confirmation p {
+  margin-top: var(--space-2);
+  color: var(--fg-muted);
+}
+
+.booking-confirmation .btn {
+  margin-top: var(--space-6);
+}
+
+/* ==================== privacy policy (S9) ==================== */
+/* Reuses .prose-section (About page, S8) for each DPDP-notice section — no
+   new wrapper needed, this page is prose top to bottom. */
+
+.privacy-hero {
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--space-8);
+}
+
+.privacy-hero__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.privacy-hero__heading {
+  max-width: 30ch;
+}
+
+.privacy-hero__meta {
+  margin-top: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* ==================== blog index (S10) ==================== */
+
+.blog-hero {
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--space-8);
+}
+
+.blog-hero__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.blog-hero__heading {
+  max-width: 26ch;
+}
+
+.blog-hero__lead {
+  margin-top: var(--space-4);
+  font-size: var(--step-1);
+  color: var(--fg-muted);
+  max-width: var(--measure);
+}
+
+.blog-index {
+  background: var(--bg-alt);
+  padding: var(--section-pad-block) var(--section-pad-inline);
+}
+
+.blog-index__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 480px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+  transition: border-color var(--duration-hover) var(--ease-reveal),
+    transform var(--duration-hover) var(--ease-reveal);
+}
+
+.blog-card:hover {
+  border-color: var(--beam);
+  transform: translateY(-2px);
+}
+
+.blog-card__photo {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.blog-card__category {
+  align-self: flex-start;
+  margin-top: var(--space-2);
+}
+
+.blog-card__title {
+  font-size: var(--step-2);
+}
+
+.blog-card__excerpt {
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card__meta {
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+/* ==================== blog post template (S10) ==================== */
+/* Post body caps at --measure (68ch) per DESIGN-SYSTEM §7; the hero/cover
+   image are allowed the full content column. The rail's table of contents
+   (.rail__toc, components.css) is populated from the same body[] array that
+   generates #postBody below — see main.js section 25. */
+
+.post-hero {
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--space-8);
+}
+
+.post-hero__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.post-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.post-hero__heading {
+  margin-top: var(--space-4);
+  max-width: 32ch;
+}
+
+.post-hero__byline {
+  margin-top: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.post-hero__cover {
+  margin-top: var(--space-8);
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.post {
+  padding: 0 var(--section-pad-inline) var(--section-pad-block);
+}
+
+.post__inner {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+
+.post__section:not(:first-child) {
+  margin-top: var(--space-12);
+}
+
+.post__heading {
+  margin-bottom: var(--space-4);
+}
+
+.post__paragraph {
+  margin-top: var(--space-4);
+  font-size: var(--step-0);
+  color: var(--fg-muted);
+}
+
+.post__paragraph:first-of-type {
+  margin-top: 0;
+}

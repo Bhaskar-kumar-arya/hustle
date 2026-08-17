@@ -1,0 +1,98 @@
+/*
+  tokens.css — the only file where a raw hex, rem literal, or duration may appear.
+  Every other file references these as var(--token). See CONVENTIONS.md §4.
+*/
+
+:root {
+  /* ---------- color ---------- */
+  --porcelain:  #FCFBF8;  /* page ground — near-white, barely warm */
+  --bisque:     #F1ECE3;  /* alternate surface, cards, section banding */
+  --drape:      #12302A;  /* deep surgical green — body text + dark sections */
+  --drape-mid:  #2E5A4E;  /* secondary text, rules, muted UI */
+  --beam:       #E3A24A;  /* warm amber — glow, large marks, decorative only, <=5% of screen */
+  --beam-deep:  #8F5A15;  /* accent text, links, small marks (AA-safe on light) */
+  --drape-deep: #0B211C;  /* darker than --drape — footer band only, the one place two dark tones stack */
+  --whatsapp:   #25D366;  /* WhatsApp brand green — the one palette exception, recognition beats consistency */
+
+  /* semantic color roles — default (light) ground */
+  --fg:         var(--drape);
+  --fg-muted:   var(--drape-mid);
+  --bg:         var(--porcelain);
+  --bg-alt:     var(--bisque);
+  --rule:       rgba(18, 48, 42, 0.10);
+  --accent:     var(--beam);
+  --accent-text: var(--beam-deep);
+  --focus-ring: var(--beam-deep);
+
+  /* ---------- type families ---------- */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body:    "Karla", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* ---------- fluid type scale ---------- */
+  --step--1: clamp(0.83rem, 0.80rem + 0.15vw, 0.92rem);   /* captions, legal */
+  --step-0:  clamp(1.00rem, 0.96rem + 0.20vw, 1.13rem);   /* body */
+  --step-1:  clamp(1.20rem, 1.13rem + 0.35vw, 1.42rem);   /* lead paragraph */
+  --step-2:  clamp(1.44rem, 1.32rem + 0.60vw, 1.78rem);   /* h3 */
+  --step-3:  clamp(1.73rem, 1.53rem + 1.00vw, 2.23rem);   /* h2 */
+  --step-4:  clamp(2.07rem, 1.75rem + 1.60vw, 2.79rem);   /* h1 (inner pages) */
+  --step-5:  clamp(2.49rem, 1.97rem + 2.60vw, 3.48rem);   /* hero h1 */
+  --step-6:  clamp(3.20rem, 2.10rem + 5.50vw, 6.00rem);   /* rating monument */
+
+  /* type settings */
+  --leading-body: 1.65;
+  --leading-display: 1.08;
+  --tracking-display: -0.015em;
+  --tracking-mono: 0.16em;
+  --measure: 68ch;
+
+  /* ---------- spacing scale (8px base, geometric) ---------- */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  --section-pad-block: clamp(4rem, 10vw, 8rem);
+  --section-pad-inline: clamp(1.25rem, 5vw, 3rem);
+
+  /* ---------- radii ---------- */
+  --radius-input: 2px;
+  --radius-card: 10px;
+  --radius-pill: 999px;
+
+  /* ---------- elevation ---------- */
+  --shadow-sticky-bar: 0 -8px 32px rgba(18, 48, 42, 0.10);
+
+  /* ---------- layout ---------- */
+  --rail-width: 120px;
+  --content-max: 1080px;
+  --header-height: 72px;
+  --action-bar-height: 64px;
+
+  /* ---------- motion durations ---------- */
+  --duration-hover: 200ms;
+  --duration-state: 300ms;
+  --duration-reveal: 500ms;
+  --duration-reveal-stagger: 60ms;
+  --duration-ambient: 20s;
+  --ease-reveal: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* ---------- z-index ---------- */
+  --z-header: 40;
+  --z-overlay: 50;
+  --z-sticky-bar: 30;
+}
+
+/* Dark ground inversion — [data-ground="drape"] sections only. See CONVENTIONS.md §4. */
+[data-ground="drape"] {
+  --fg: #EDE8DE;
+  --fg-muted: #A9BDB5;
+  --rule: rgba(237, 232, 222, 0.14);
+  --bg: var(--drape);
+}

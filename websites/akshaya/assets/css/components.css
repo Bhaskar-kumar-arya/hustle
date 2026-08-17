@@ -1,0 +1,654 @@
+/*
+  components.css — reusable pieces: buttons, pills, chips, header, rail,
+  sticky action bar, WhatsApp float, footer. Reads tokens only, no raw
+  literals. Layer order: tokens -> base -> components -> sections -> pages.
+  See CONVENTIONS.md §4.
+*/
+
+/* ==================== buttons ==================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--space-12);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--step-0);
+  white-space: nowrap;
+  transition: box-shadow var(--duration-hover) var(--ease-reveal),
+    border-color var(--duration-hover) var(--ease-reveal),
+    color var(--duration-hover) var(--ease-reveal),
+    transform var(--duration-hover) var(--ease-reveal);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-sm {
+  min-height: 40px;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--step--1);
+}
+
+.btn-primary {
+  background: var(--drape);
+  color: var(--porcelain);
+  box-shadow: 0 0 0 0 rgba(227, 162, 74, 0.45);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 0 3px rgba(227, 162, 74, 0.45);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--drape-mid);
+}
+
+.btn-secondary:hover {
+  border-color: var(--beam-deep);
+  color: var(--beam-deep);
+}
+
+[data-ground="drape"] .btn-secondary {
+  border-color: var(--rule);
+  color: var(--fg);
+}
+
+[data-ground="drape"] .btn-secondary:hover {
+  border-color: var(--beam);
+  color: var(--beam);
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: var(--drape-deep);
+}
+
+.btn-whatsapp:hover {
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.35);
+}
+
+.btn-icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+}
+
+/* ==================== pills & chips ==================== */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--bg-alt);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-input);
+  border: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* ==================== image placeholder ==================== */
+/* Flat bisque block + Plex Mono label naming the required shot, per
+   CONTENT-DATA.md §7 — a shot list, not a stock photo. Aspect ratio is set
+   per usage (doctor-card__photo, equipment-card__photo, …), not here. */
+
+.placeholder-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--bisque);
+  border: 1px dashed var(--drape-mid);
+  border-radius: var(--radius-card);
+}
+
+/* ==================== hairline ==================== */
+
+.hairline {
+  border: none;
+  border-top: 1px solid var(--rule);
+}
+
+/* ==================== header ==================== */
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: var(--z-header);
+  height: var(--header-height);
+  background: var(--porcelain);
+  border-bottom: 1px solid var(--rule);
+  transition: background var(--duration-state) var(--ease-reveal),
+    border-color var(--duration-state) var(--ease-reveal);
+}
+
+body[data-header-mode="transparent"] .site-header {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+body[data-header-mode="transparent"] .site-header.is-scrolled {
+  background: var(--porcelain);
+  border-bottom-color: var(--rule);
+}
+
+body[data-header-mode="transparent"] .site-header:not(.is-scrolled) .site-header__logo,
+body[data-header-mode="transparent"] .site-header:not(.is-scrolled) .site-nav a,
+body[data-header-mode="transparent"] .site-header:not(.is-scrolled) .site-header__phone {
+  color: var(--porcelain);
+}
+
+body[data-header-mode="transparent"] .site-header:not(.is-scrolled) .hamburger span {
+  background: var(--porcelain);
+}
+
+.site-header__inner {
+  max-width: var(--content-max);
+  height: 100%;
+  margin-inline: auto;
+  padding-inline: var(--section-pad-inline);
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.site-header__logo {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--step--1);
+  color: var(--fg);
+  max-width: 40%;
+  line-height: 1.2;
+}
+
+.site-nav {
+  display: none;
+  margin-inline-start: auto;
+}
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.site-nav__list a {
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--fg);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration-hover) var(--ease-reveal),
+    color var(--duration-hover) var(--ease-reveal);
+}
+
+.site-nav__list a:hover,
+.site-nav__list a[aria-current="page"] {
+  color: var(--beam-deep);
+  border-bottom-color: var(--beam-deep);
+}
+
+body[data-header-mode="transparent"] .site-header:not(.is-scrolled) .site-nav__list a:hover {
+  color: var(--beam);
+  border-bottom-color: var(--beam);
+}
+
+.site-header__actions {
+  display: none;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.site-header__phone {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--fg);
+  white-space: nowrap;
+}
+
+.hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: var(--space-12);
+  height: var(--space-12);
+  margin-inline-start: auto;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--fg);
+  transition: transform var(--duration-hover) var(--ease-reveal),
+    opacity var(--duration-hover) var(--ease-reveal),
+    background var(--duration-hover) var(--ease-reveal);
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ==================== mobile overlay menu ==================== */
+
+.mobile-menu[hidden] {
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-16) var(--section-pad-inline);
+  background: var(--bg);
+  color: var(--fg);
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity var(--duration-state) var(--ease-reveal),
+    transform var(--duration-state) var(--ease-reveal);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.mobile-menu__list a {
+  font-family: var(--font-display);
+  font-variation-settings: "SOFT" 60;
+  font-size: var(--step-3);
+  color: var(--fg);
+}
+
+.mobile-menu__actions {
+  margin-top: var(--space-16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.mobile-menu__close {
+  position: absolute;
+  top: calc((var(--header-height) - var(--space-12)) / 2);
+  right: var(--section-pad-inline);
+  width: var(--space-12);
+  height: var(--space-12);
+}
+
+.mobile-menu__close span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--fg);
+  margin-inline: auto;
+}
+
+.mobile-menu__close span:first-child {
+  transform: rotate(45deg) translate(1px, 1px);
+}
+
+.mobile-menu__close span:last-child {
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+/* ==================== page shell (rail + content) ==================== */
+
+.page-shell {
+  display: flex;
+  gap: var(--space-8);
+  max-width: calc(var(--content-max) + var(--rail-width) + var(--space-8));
+  margin-inline: auto;
+}
+
+.page-shell > main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ==================== rail ==================== */
+
+.rail {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .rail {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-24));
+    align-self: start;
+    width: var(--rail-width);
+    height: fit-content;
+    padding-top: var(--space-2);
+  }
+
+  .rail__label {
+    min-height: 2.6em;
+  }
+
+  .rail__track {
+    position: relative;
+    width: 1px;
+    height: 160px;
+    background: var(--rule);
+  }
+
+  .rail__fill {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 1px;
+    height: 0%;
+    background: var(--beam-deep);
+    transition: height 80ms linear;
+  }
+
+  /* rail table-of-contents variant (blog post pages, S10) — replaces the
+     rail__label/rail__track pair with a list of in-page anchor links tracked
+     by an IntersectionObserver in main.js. Still governed by the same
+     .rail display rule above, so it's hidden below 1024px automatically. */
+  .rail__toc {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .rail__toc-link {
+    padding-left: var(--space-3);
+    border-left: 1px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: var(--tracking-mono);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    transition: color var(--duration-hover) var(--ease-reveal), border-color var(--duration-hover) var(--ease-reveal);
+  }
+
+  .rail__toc-link.is-active {
+    color: var(--beam-deep);
+    border-color: var(--beam-deep);
+  }
+}
+
+/* ==================== mobile progress line ==================== */
+
+.progress-line {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: var(--z-header);
+  background: var(--rule);
+}
+
+.progress-line__fill {
+  height: 100%;
+  width: 0%;
+  background: var(--beam);
+  transition: width 80ms linear;
+}
+
+@media (min-width: 1024px) {
+  .progress-line {
+    display: none;
+  }
+}
+
+/* ==================== sticky mobile action bar ==================== */
+
+.action-bar {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: var(--z-sticky-bar);
+  display: flex;
+  height: var(--action-bar-height);
+  background: var(--drape);
+  box-shadow: var(--shadow-sticky-bar);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.action-bar__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: var(--space-12);
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+}
+
+.action-bar__item + .action-bar__item {
+  border-left: 1px solid var(--rule);
+}
+
+.action-bar__item[data-cta="whatsapp"] {
+  color: var(--whatsapp);
+}
+
+@media (min-width: 768px) {
+  .action-bar {
+    display: none;
+  }
+}
+
+/* ==================== WhatsApp float ==================== */
+
+.whatsapp-float {
+  display: none;
+  position: fixed;
+  right: var(--space-8);
+  bottom: var(--space-8);
+  z-index: var(--z-sticky-bar);
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-pill);
+  align-items: center;
+  justify-content: center;
+  background: var(--whatsapp);
+  color: var(--drape-deep);
+  box-shadow: 0 8px 24px rgba(18, 48, 42, 0.18);
+  transition: transform var(--duration-hover) var(--ease-reveal);
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-2px);
+}
+
+.whatsapp-float svg {
+  width: 26px;
+  height: 26px;
+}
+
+@media (min-width: 768px) {
+  .whatsapp-float {
+    display: flex;
+  }
+}
+
+/* ==================== footer ==================== */
+
+.site-footer {
+  background: var(--drape-deep);
+  color: var(--fg);
+  padding: var(--space-24) var(--section-pad-inline) var(--space-12);
+}
+
+.site-footer__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  display: grid;
+  gap: var(--space-16);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .site-footer__inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.site-footer__block h2 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: var(--space-4);
+}
+
+.site-footer__block p,
+.site-footer__block address {
+  font-style: normal;
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+  line-height: var(--leading-body);
+}
+
+.site-footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.site-footer__links a {
+  font-size: var(--step--1);
+  color: var(--fg);
+}
+
+.site-footer__links a:hover {
+  color: var(--beam);
+}
+
+.site-footer__hours {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.site-footer__hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  color: var(--fg-muted);
+}
+
+.site-footer__hours li[data-today="true"] {
+  color: var(--beam);
+}
+
+.site-footer__social {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.site-footer__social a {
+  display: inline-flex;
+  width: var(--space-12);
+  height: var(--space-12);
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-pill);
+  color: var(--fg-muted);
+}
+
+.site-footer__social a:hover {
+  color: var(--beam);
+  border-color: var(--beam);
+}
+
+.site-footer__bottom {
+  max-width: var(--content-max);
+  margin: var(--space-16) auto 0;
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-8);
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+}
+
+.site-footer__bottom a {
+  color: var(--fg-muted);
+}
+
+.site-footer__bottom a:hover {
+  color: var(--beam);
+}
+
+/* ==================== breakpoints: desktop nav ==================== */
+
+@media (min-width: 1024px) {
+  .site-nav {
+    display: block;
+  }
+
+  .site-header__actions {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
