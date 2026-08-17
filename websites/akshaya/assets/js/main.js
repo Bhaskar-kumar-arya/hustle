@@ -10,6 +10,12 @@ import { clinic, flags, treatments, doctors, equipment, sterilisation, reviews, 
 
 const telLink = `tel:${clinic.phone}`;
 
+// A fabricated-looking registration number (e.g. "MOCK-KA-00000") is worse
+// than no number at all when a real dentist reviews the site — see
+// CONTENT-DATA.md §3. Until the client supplies the real one, show a
+// truthful placeholder instead of inventing digits.
+const formatRegNo = (regNo) => (regNo ? `Reg. no. ${regNo}` : "Reg. no. on file at clinic");
+
 const treatmentSlug = document.body.dataset.treatmentSlug;
 const activeTreatment = treatmentSlug ? treatments.find((t) => t.slug === treatmentSlug) : null;
 
@@ -244,7 +250,7 @@ if (doctorsGrid) {
           <h3 class="doctor-card__name">${d.name}</h3>
           <p class="doctor-card__degrees mono-label">${d.degrees} — ${d.specialisation}</p>
           ${bio}
-          <p class="doctor-card__reg mono-label">Reg. no. ${d.registrationNo}</p>
+          <p class="doctor-card__reg mono-label">${formatRegNo(d.registrationNo)}</p>
         </div>
       </article>`;
     })
@@ -422,7 +428,7 @@ if (activeTreatment) {
   if (credentialName && performingDoctor) {
     credentialName.textContent = performingDoctor.name;
     document.getElementById("credentialDegrees").textContent = `${performingDoctor.degrees} — ${performingDoctor.specialisation}`;
-    document.getElementById("credentialReg").textContent = `Reg. no. ${performingDoctor.registrationNo}`;
+    document.getElementById("credentialReg").textContent = formatRegNo(performingDoctor.registrationNo);
     document.getElementById("credentialPhotoLabel").textContent = `Photo: ${performingDoctor.name}`;
   }
 
@@ -511,7 +517,7 @@ if (teamGrid) {
           <h3 class="doctor-card__name">${d.name}</h3>
           <p class="doctor-card__degrees mono-label">${d.degrees} — ${d.specialisation}</p>
           ${bio}
-          <p class="doctor-card__reg mono-label">Reg. no. ${d.registrationNo}</p>
+          <p class="doctor-card__reg mono-label">${formatRegNo(d.registrationNo)}</p>
           ${profileLink}
         </div>
       </article>`;
@@ -529,7 +535,7 @@ if (activeDoctor) {
 
   document.querySelectorAll("[data-bind-doctor='name']").forEach((el) => (el.textContent = d.name));
   document.querySelectorAll("[data-bind-doctor='degrees']").forEach((el) => (el.textContent = `${d.degrees} — ${d.specialisation}`));
-  document.querySelectorAll("[data-bind-doctor='reg']").forEach((el) => (el.textContent = `Reg. no. ${d.registrationNo}`));
+  document.querySelectorAll("[data-bind-doctor='reg']").forEach((el) => (el.textContent = formatRegNo(d.registrationNo)));
   document.querySelectorAll("[data-bind-doctor='bio']").forEach((el) => (el.textContent = d.bio));
   document.querySelectorAll("[data-bind-doctor='photo-label']").forEach((el) => (el.textContent = `Photo: ${d.name}`));
 

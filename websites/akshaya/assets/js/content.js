@@ -106,37 +106,21 @@ export const doctors = [
     degrees: "MDS", // verified
     specialisation: "Oral Implantologist · Periodontist · LASER Specialist", // verified
     isPrincipal: true, // renders the --principal card variant
-    registrationNo: "MOCK-KA-00000", // ⚠️ must be real before launch
+    registrationNo: null, // ⚠️ pending — get the real DCI/state council reg. no. before launch; renders as "Reg. no. on file at clinic" until set (see main.js formatRegNo)
     practisingSince: null, // ⚠️ MOCK — never render a years count, see CONVENTIONS §1
-    treatments: ["dental-implants", "gum-treatment", "laser-gingivoplasty", "laser-dentistry", "laser-rct"],
+    treatments: ["dental-implants", "gum-treatment", "laser-gingivoplasty", "laser-dentistry", "laser-rct", "root-canal", "dental-restoration", "crowns-and-bridges", "braces-and-aligners", "teeth-whitening", "kids-dentistry"],
     bio: "MOCK: Leads implant and periodontal care at the clinic, applying laser technique across both.",
     photo: "assets/img/doctors/placeholder.webp",
   },
-  {
-    slug: "MOCK-dr-anitha-rao",
-    name: "MOCK: Dr. Anitha Rao",
-    degrees: "MOCK: BDS, MDS (Conservative Dentistry & Endodontics)",
-    specialisation: "MOCK: Root canal & laser dentistry",
-    isPrincipal: false,
-    registrationNo: "MOCK-KA-00000", // must be real before launch
-    practisingSince: null, // MOCK
-    treatments: ["laser-rct", "root-canal", "laser-dentistry"],
-    bio: "MOCK: Focuses on single-sitting root canal treatment using laser-assisted disinfection.",
-    photo: "assets/img/doctors/placeholder.webp",
-  },
-  {
-    slug: "MOCK-dr-farah-khan",
-    name: "MOCK: Dr. Farah Khan",
-    degrees: "MOCK: BDS, MDS (Prosthodontics)",
-    specialisation: "MOCK: Restorations, crowns & bridges",
-    isPrincipal: false,
-    registrationNo: "MOCK-KA-00000",
-    practisingSince: null, // MOCK
-    treatments: ["dental-restoration", "crowns-and-bridges", "teeth-whitening"],
-    bio: "MOCK: Works on dental restorations, crowns, bridges and smile design cases.",
-    photo: "assets/img/doctors/placeholder.webp",
-  },
-]; // 1 verified principal + 2 MOCK associates — exact associate count/identities pending client call
+  // Verification (CONTENT-DATA §1) indicates this is a single-practitioner
+  // clinic — every public listing and review names only Dr. Sampath, with
+  // no associates found. The two invented associate doctors previously
+  // here (Dr. Anitha Rao, Dr. Farah Khan) were removed for that reason —
+  // showing fabricated colleagues to the client is worse than showing one
+  // real doctor. If the clinic call confirms associate dentists, re-add
+  // real entries here (never MOCK ones) and this array becomes a genuine
+  // multi-doctor grid again; the doctor-grid CSS already supports N cards.
+];
 
 export const equipment = [
   // MOCK ×4 — equipment list + model names pending client call, Open question #6.
