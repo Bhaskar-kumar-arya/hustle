@@ -46,7 +46,7 @@
 /* ==================== treatment hero ==================== */
 
 .treatment-hero {
-  padding: var(--space-8) var(--section-pad-inline) var(--section-pad-block);
+  padding: var(--space-8) var(--section-pad-inline) var(--page-intro-pad-end);
 }
 
 .treatment-hero__inner {
@@ -445,7 +445,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: var(--space-3) var(--space-5);
+  padding: var(--space-4) var(--space-6);
   border: 1px solid var(--rule);
   border-radius: var(--radius-card);
   font-size: var(--step-0);
@@ -461,7 +461,7 @@
 /* ==================== treatments hub (S7) ==================== */
 
 .treatments-hub-intro {
-  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--section-pad-block);
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--page-intro-pad-end);
 }
 
 .treatments-hub-intro__inner {
@@ -530,7 +530,7 @@
 /* ==================== about page (S8) ==================== */
 
 .about-hero {
-  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--section-pad-block);
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--page-intro-pad-end);
 }
 
 .about-hero__inner {
@@ -596,7 +596,7 @@
 /* ==================== team hero + doctor hero (S8) ==================== */
 
 .team-hero {
-  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--section-pad-block);
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--page-intro-pad-end);
 }
 
 .team-hero__inner {
@@ -623,7 +623,7 @@
 }
 
 .doctor-hero {
-  padding: var(--space-8) var(--section-pad-inline) var(--section-pad-block);
+  padding: var(--space-8) var(--section-pad-inline) var(--page-intro-pad-end);
 }
 
 .doctor-hero__inner {
@@ -702,7 +702,7 @@
 /* ==================== technology page (S8) ==================== */
 
 .technology-hero {
-  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--section-pad-block);
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--page-intro-pad-end);
 }
 
 .technology-hero__inner {
@@ -747,7 +747,7 @@
 .patient-hero,
 .reviews-hero,
 .contact-hero {
-  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--section-pad-block);
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--page-intro-pad-end);
 }
 
 .patient-hero__inner,
@@ -911,7 +911,7 @@
    new wrapper needed, this page is prose top to bottom. */
 
 .privacy-hero {
-  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--space-8);
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--page-intro-pad-end);
 }
 
 .privacy-hero__inner {
@@ -935,7 +935,7 @@
 /* ==================== blog index (S10) ==================== */
 
 .blog-hero {
-  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--space-8);
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--page-intro-pad-end);
 }
 
 .blog-hero__inner {
@@ -1034,7 +1034,7 @@
    generates #postBody below — see main.js section 25. */
 
 .post-hero {
-  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--space-8);
+  padding: calc(var(--header-height) + var(--space-8)) var(--section-pad-inline) var(--page-intro-pad-end);
 }
 
 .post-hero__inner {

@@ -104,15 +104,21 @@
 
       <section class="rating-monument" data-rail-label="Rating" data-reveal>
         <div class="rating-monument__inner">
-          <div class="rating-monument__figure">
-            <svg class="rating-monument__arc" viewBox="0 0 240 240" role="img" aria-hidden="true" focusable="false">
-              <circle class="rating-monument__arc-track" cx="120" cy="120" r="104" />
-              <circle class="rating-monument__arc-fill" pathLength="1" cx="120" cy="120" r="104" />
+          <div class="rating-monument__stamp">
+            <svg class="rating-monument__seal" viewBox="0 0 240 240" aria-hidden="true" focusable="false">
+              <circle class="rating-monument__seal-ring rating-monument__seal-ring--outer" pathLength="1" cx="120" cy="120" r="113" />
+              <circle class="rating-monument__seal-ring rating-monument__seal-ring--inner" pathLength="1" cx="120" cy="120" r="103" />
             </svg>
-            <p class="rating-monument__number" data-bind="rating"></p>
+            <span class="rating-monument__stamp-body">
+              <span class="visually-hidden">Google rating </span>
+              <span class="rating-monument__rating" data-bind="rating"></span>
+              <span class="visually-hidden"> out of 5, from</span>
+              <span class="rating-monument__stars" aria-hidden="true">★★★★★</span>
+            </span>
           </div>
-          <p class="rating-monument__label mono-label">
-            <span data-bind="reviewCount"></span> verified Google reviews
+          <p class="rating-monument__count">
+            <span class="rating-monument__count-figure" data-bind="reviewCount"></span>
+            <span class="rating-monument__count-label mono-label">verified Google reviews</span>
           </p>
         </div>
       </section>
