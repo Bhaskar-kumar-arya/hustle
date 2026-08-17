@@ -525,6 +525,16 @@ body[data-header-mode="transparent"] .site-header:not(.is-scrolled) .site-nav__l
   background: var(--drape-deep);
   color: var(--fg);
   padding: var(--space-24) var(--section-pad-inline) var(--space-12);
+  /* clears the fixed sticky action bar, present below 768px */
+  padding-bottom: calc(
+    var(--space-12) + var(--action-bar-height) + env(safe-area-inset-bottom, 0px)
+  );
+}
+
+@media (min-width: 768px) {
+  .site-footer {
+    padding-bottom: var(--space-12);
+  }
 }
 
 .site-footer__inner {
