@@ -8,7 +8,7 @@
   main.js on every page so bound text (breadcrumb labels, FAQ accordions,
   treatment/doctor/post templates) is in place before it's read back out.
 
-  Where a field is still MOCK (registrationNo, hours, tagline, ...), the
+  Where a field is still mock (registrationNo, hours, tagline, ...), the
   schema mirrors whatever's already visibly rendered on the page — never
   cleaner than the visible copy, which would read as cloaking to a crawler.
 */
@@ -37,7 +37,9 @@ const activePost = postSlug ? blogPosts.find((p) => p.slug === postSlug) : null;
 
 /* ---------- Dentist — every page ---------- */
 
-const realSocial = Object.values(clinic.social).filter((url) => url && !url.startsWith("MOCK"));
+// Unconfirmed profiles are null in content.js — sameAs is omitted entirely
+// rather than carrying a placeholder a crawler would try to follow.
+const realSocial = Object.values(clinic.social).filter(Boolean);
 
 inject("schema-dentist", {
   "@context": "https://schema.org",

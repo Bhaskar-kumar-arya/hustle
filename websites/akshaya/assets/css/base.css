@@ -44,6 +44,14 @@
   margin: 0;
 }
 
+/* The UA's own [hidden] rule loses the specificity tie to any author rule that
+   declares `display` on the element, which has bitten this build twice (see
+   BUILD-STATE S9/S12). One authoritative rule instead, so `el.hidden = true`
+   always hides — main.js relies on it for unsupplied content.js fields. */
+[hidden] {
+  display: none !important;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;

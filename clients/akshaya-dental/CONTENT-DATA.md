@@ -2,7 +2,9 @@
 
 The build runs on **mock data** until the client discovery call happens (`PROJECT-BRIEF.md` §7). This file is the boundary between what's real and what's invented.
 
-**The rule:** every invented value carries a `MOCK:` marker in `content.js`. When real data arrives, the swap must be a single-file edit. If it isn't, something got hardcoded — that's a bug.
+**The rule:** every invented value carries a `MOCK` marker in `content.js` — **in a comment beside the value, never inside the value itself**. When real data arrives, the swap must be a single-file edit. If it isn't, something got hardcoded — that's a bug.
+
+A marker baked into a rendered string (`tagline: "MOCK: ..."`) renders verbatim on the client's phone and makes the site look like a draft, so the site never prints it. Provisional content is called out verbally during the pitch instead (CONVENTIONS §3). A field the client hasn't supplied yet is `null` — `main.js` hides the element bound to it rather than rendering a dash.
 
 ---
 
@@ -65,7 +67,7 @@ Plus client-stated: Dental Restoration · Laser Gingivoplasty · Laser Dentistry
 | Founded ~2015 | Guess from review volume | Medium — appears in About copy |
 | Pricing not published (`showPricing: false`) | Safer default | None — block is built, just hidden |
 
-**All of these are `MOCK:` flagged.** None may appear in anything shown to the client without being labelled provisional.
+**All of these are `MOCK`-flagged in comments.** None may appear in anything shown to the client without being called out as provisional — verbally, during the pitch.
 
 ---
 
@@ -73,7 +75,7 @@ Plus client-stated: Dental Restoration · Laser Gingivoplasty · Laser Dentistry
 
 Doctor names, credentials, and registration numbers · clinic story and founding details · equipment model names · sterilisation protocol specifics · review excerpt text · blog posts · all photography · cost ranges.
 
-> ⚠️ **Registration numbers must be real before launch.** A fabricated DCI registration number on a live clinic site is a serious problem. Mock ones use the obviously-fake format `MOCK-KA-00000` so they cannot be mistaken for real and cannot survive a search.
+> ⚠️ **Registration numbers must be real before launch.** A fabricated DCI registration number on a live clinic site is a serious problem — and a visibly fake one beside a real dentist's name is the worst detail for him to spot in the pitch. `registrationNo` is therefore `null` until the real number arrives; `main.js`'s `formatRegNo()` renders "Reg. no. on file at clinic" in the meantime. Never invent digits, and never render a placeholder that looks like a number.
 
 ---
 
@@ -83,27 +85,27 @@ Doctor names, credentials, and registration numbers · clinic story and founding
 export const clinic = {
   name:        "Akshaya Multispeciality Dental Clinic",
   nameFull:    "Akshaya Multispeciality Dental Clinic — Dental Implants & LASER",
-  tagline:     "MOCK: laser-led dentistry in Hulimavu",
+  tagline:     "laser-led dentistry in Hulimavu",   // MOCK
   locality:    "Hulimavu",
   city:        "Bengaluru",
   address: {
     line1: "Bhagyalakshmi Avenue, Rukmaiah Layout",
     line2: "Hulimavu, Bengaluru, Karnataka 560114",
     pincode: "560114",
-    landmark: "MOCK: —",
-    mapsUrl:  "MOCK: —",
+    landmark: null,                       // pending client call
+    mapsUrl:  null,                       // pending GBP listing
     geo: { lat: null, lng: null },        // MOCK: from GBP listing
   },
   phone:     "+919538827905",
   phoneDisplay: "+91 95388 27905",
   whatsapp:  "919538827905",
-  email:     "MOCK: —",
+  email:     null,                         // pending client call
   rating:    4.9,
   reviewCount: 1465,
   foundedYear: 2015,                       // MOCK
-  hours: [ /* MOCK: {day, open, close, closed} ×7 */ ],
+  hours: [ /* MOCK — {day, open, close, closed} ×7 */ ],
   languages: ["Kannada","English","Hindi","Tamil","Telugu"],   // MOCK
-  parking: "MOCK: —",
+  parking: null,                           // pending client call
   social: { /* MOCK */ },
 };
 
@@ -120,14 +122,14 @@ export const doctors = [
     degrees: "MDS",                            // verified
     specialisation: "Oral Implantologist · Periodontist · LASER Specialist",  // verified
     isPrincipal: true,                         // renders the --principal card variant
-    registrationNo: "MOCK-KA-00000",           // ⚠️ must be real before launch
+    registrationNo: null,                      // ⚠️ must be real before launch; renders "Reg. no. on file at clinic" until then
     practisingSince: null,                     // ⚠️ MOCK — never render a years count, see §1a
     treatments: ["dental-implants", "gum-treatment",
                  "laser-gingivoplasty", "laser-dentistry"],
-    bio: "MOCK: ...",
+    bio: "...",                                // MOCK
     photo: "assets/img/doctors/placeholder.webp",
   },
-  // + 2–3 MOCK associates, standard card variant — see §2
+  // + any real associates, standard card variant — see §2
 ];
 
 export const treatments = [
@@ -139,8 +141,8 @@ export const treatments = [
     isHub: true,
     order: 1,
     summary: "...",
-    sittings: "MOCK: 1–2",
-    duration: "MOCK: 30–45 min",
+    sittings: "1–2",                  // MOCK, as is every prose field below
+    duration: "30–45 min",
     signs: [], steps: [], aftercare: [], faqs: [],
     costRange: null,                  // MOCK — hidden by flags.showPricing
     related: ["laser-rct", "laser-gingivoplasty"],

@@ -5,8 +5,8 @@
   the CTA elements it listens on already have their real hrefs bound.
 
   gtag.js is only loaded when content.js's analytics.ga4MeasurementId is a
-  real "G-" property — the MOCK placeholder never triggers a network call,
-  so the build stays dependency-free until the client provides a real ID.
+  real "G-" property — while it's empty no network call is triggered, so the
+  build stays dependency-free until the client provides a real ID.
 */
 import { analytics } from "./content.js";
 

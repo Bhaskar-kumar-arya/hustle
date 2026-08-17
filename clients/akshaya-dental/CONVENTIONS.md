@@ -58,7 +58,9 @@ websites/akshaya/
 
 - ❌ Never hardcode a client name, phone number, address, doctor name, or timing into markup.
 - ✅ Bind via `data-bind` attributes or template functions, following the pattern in `public/demo/dental/script.js`.
-- Every mock value carries a `MOCK:` marker so the real-data swap is a single-file edit with nothing missed.
+- Every mock value carries a `MOCK` marker **in a comment** so the real-data swap is a single-file edit with nothing missed.
+- ❌ Never put the marker inside a rendered value (`tagline: "MOCK: ..."`). It shows up verbatim on the client's phone during the pitch and makes a finished site read as a draft. Which content is placeholder gets said out loud in the pitch, not printed on the page.
+- A value the client hasn't supplied yet is `null`, not a placeholder dash — `main.js`'s `data-bind` pass hides the element that binds a `null`/empty value, so no stubbed line renders.
 - The success test for the whole build: replacing real data touches `content.js` and nothing else.
 
 See `CONTENT-DATA.md` for the object shape and what's real vs assumed.

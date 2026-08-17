@@ -6,19 +6,23 @@ The budget (₹50k–1L) is already agreed. This is **not a cold pitch — it's 
 
 ## 1. 🔴 Do this before the meeting — non-negotiable
 
-### Delete the two fabricated doctors
+### ~~Delete the two fabricated doctors~~ ✅ done
 
-`content.js` contains `MOCK-dr-anitha-rao` and `MOCK-dr-farah-khan`, with pages at `team/MOCK-*.html`. Verification (`CONTENT-DATA.md` §1) indicates this is a **single-practitioner clinic**.
+`content.js` contained `MOCK-dr-anitha-rao` and `MOCK-dr-farah-khan`, with pages at `team/MOCK-*.html`. Verification (`CONTENT-DATA.md` §1) indicates this is a **single-practitioner clinic**. Both entries and both pages are gone; `doctors[]` is now Dr. Sampath alone and `team.html` renders the single `--principal` card.
 
 You are about to show Dr. Sampath two colleagues who do not exist. He will notice in under three seconds, and from that moment he is auditing the site for other things you got wrong instead of falling in love with it. Nothing else on this list matters as much.
 
 Rebuild `team.html` around one specialist. It's a better story anyway — a single MDS implantologist/periodontist with two decades in practice beats an anonymous three-person grid.
 
-### Remove the fake registration number
+### ~~Remove the fake registration number~~ ✅ done
 
-`MOCK-KA-00000` sits next to his real name. Replace with the label and an empty value, or omit the row entirely until he supplies the real one. A fake council registration number beside a real dentist's name is the worst possible detail for him to spot.
+`MOCK-KA-00000` sat next to his real name. `registrationNo` is now `null` and the row reads "Reg. no. on file at clinic" until he supplies the real one. A fake council registration number beside a real dentist's name is the worst possible detail for him to spot.
 
-### Everything else that's still `MOCK:`
+### ~~Strip the `MOCK:` prefixes out of the visible copy~~ ✅ done
+
+Every placeholder value used to render its own `MOCK:` marker on the page, which reads as a draft on his phone. The markers now live only in `content.js` comments, and unsupplied fields (`email`, `parking`, `mapsUrl`, socials) are `null` — `main.js` hides the element rather than printing a dash. **Say which content is placeholder out loud in the meeting instead** — that's the whole reason the page no longer says it.
+
+### Everything else that's still mock
 
 | Fix | Why |
 | :--- | :--- |
