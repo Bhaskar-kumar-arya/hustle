@@ -1,5 +1,405 @@
 [
   {
+    "id": "pat-1787072791900-305",
+    "name": "Elegance For Women",
+    "category": "Facial spa",
+    "nicheId": "dermatology-skin",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "Laxmi Complex, 13, Boring Rd, Sri Krishna Puri, Patna, Bihar 800001",
+    "phone": "+919308578361",
+    "rawPhone": "093085 78361",
+    "rating": 4.9,
+    "reviewsCount": 132,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x39ed59c02c20be9d:0xe095112d5600a5d0",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Elegance+For+Women/data=!4m7!3m6!1s0x39ed59c02c20be9d:0xe095112d5600a5d0!8m2!3d25.61473!4d85.1155341!16s%2Fg%2F11fl8_tf1x!19sChIJnb4gLMBZ7TkR0KUAVi0RleA?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:06:31.900Z",
+    "lastVerifiedAt": "2026-08-18T17:06:31.900Z",
+    "opportunityScore": 100
+  },
+  {
+    "id": "pat-1787072674996-312",
+    "name": "Skin Care & Laser Clinic",
+    "category": "Skin care clinic",
+    "nicheId": "dermatology-skin",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "Chaturbhuj Complex, West Boring Canal Rd, Anandpuri, Patna, Bihar 800001",
+    "phone": "+919006198803",
+    "rawPhone": "090061 98803",
+    "rating": 4.6,
+    "reviewsCount": 51,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x140d7e61fbde9d85:0x90cb0f1a6a29fc0c",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Skin+Care+%26+Laser+Clinic/data=!4m7!3m6!1s0x140d7e61fbde9d85:0x90cb0f1a6a29fc0c!8m2!3d25.6157305!4d85.1201589!16s%2Fg%2F11b7ff5w2y!19sChIJhZ3e-2F-DRQRDPwpahoPy5A?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:04:34.996Z",
+    "lastVerifiedAt": "2026-08-18T17:04:34.996Z",
+    "opportunityScore": 100
+  },
+  {
+    "id": "pat-1787072667140-847",
+    "name": "NEELAM SKIN CITY",
+    "category": "Doctor",
+    "nicheId": "dermatology-skin",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "Boring Rd, opp. A. N. College Dhruv Tara, Anandpuri, Patna, Bihar 800013",
+    "phone": null,
+    "rawPhone": null,
+    "rating": 2.6,
+    "reviewsCount": 100,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x39ed5828e74dc8f3:0xa964d82927501c24",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/NEELAM+SKIN+CITY/data=!4m7!3m6!1s0x39ed5828e74dc8f3:0xa964d82927501c24!8m2!3d25.6194625!4d85.1102562!16s%2Fg%2F11c20qfdjb!19sChIJ88hN5yhY7TkRJBxQJynYZKk?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:04:27.140Z",
+    "lastVerifiedAt": "2026-08-18T17:04:27.140Z",
+    "opportunityScore": 90
+  },
+  {
+    "id": "pat-1787072664468-728",
+    "name": "Dr. Ravi Vikram Singh - Skin Clinic",
+    "category": "Dermatologist",
+    "nicheId": "dermatology-skin",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "J487+5FC, 136 / D Kesath House, Boring Rd, Sri Krishna Puri, Patna, Bihar 800001",
+    "phone": "+916122541224",
+    "rawPhone": "0612 254 1224",
+    "rating": 3.3,
+    "reviewsCount": 160,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x140d7e8a0b55712d:0x502a6154160ffb72",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Dr.+Ravi+Vikram+Singh+-+Skin+Clinic/data=!4m7!3m6!1s0x140d7e8a0b55712d:0x502a6154160ffb72!8m2!3d25.6151123!4d85.1135887!16s%2Fg%2F11b7dxrf50!19sChIJLXFVC4p-DRQRcvsPFlRhKlA?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:04:24.468Z",
+    "lastVerifiedAt": "2026-08-18T17:04:24.468Z",
+    "opportunityScore": 100
+  },
+  {
+    "id": "pat-1787072661816-80",
+    "name": "Dr. Sudhanshu Singh",
+    "category": "Dermatologist",
+    "nicheId": "dermatology-skin",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "Children park, M3/40, S.K puri children park Nera Post office, Boring Rd, Patna, Bihar 800001",
+    "phone": null,
+    "rawPhone": null,
+    "rating": 3.9,
+    "reviewsCount": 106,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x140d7e8ae693a72d:0xb9f2442141af846d",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Dr.+Sudhanshu+Singh/data=!4m7!3m6!1s0x140d7e8ae693a72d:0xb9f2442141af846d!8m2!3d25.6137338!4d85.115803!16s%2Fg%2F11b7gqfmry!19sChIJLaeT5op-DRQRbYSvQSFE8rk?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:04:21.816Z",
+    "lastVerifiedAt": "2026-08-18T17:04:21.816Z",
+    "opportunityScore": 90
+  },
+  {
+    "id": "pat-1787072653905-425",
+    "name": "Dr Anupama Clinic",
+    "category": "Skin care clinic",
+    "nicheId": "dermatology-skin",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "M2/9, Boring Canal Rd, Sri Krishna Puri, Patna, Bihar 800001",
+    "phone": "+919102561972",
+    "rawPhone": "091025 61972",
+    "rating": 3.2,
+    "reviewsCount": 240,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x39ed5825137ad90d:0x12806c0707e846ee",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Dr+Anupama+Clinic/data=!4m7!3m6!1s0x39ed5825137ad90d:0x12806c0707e846ee!8m2!3d25.6161766!4d85.1139485!16s%2Fg%2F1v96k5_j!19sChIJDdl6EyVY7TkR7kboBwdsgBI?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:04:13.905Z",
+    "lastVerifiedAt": "2026-08-18T17:04:13.905Z",
+    "opportunityScore": 100
+  },
+  {
+    "id": "pat-1787072651078-651",
+    "name": "Dr Mahboob Alam (MD Dermatologist)/ Sumit Polyclinic",
+    "category": "Dermatologist",
+    "nicheId": "dermatology-skin",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "J469+9J2, East Boring Canal Road, Gorakhnath Ln, near Dr Ajit Kumar Mishra, Patna, Bihar 800001",
+    "phone": null,
+    "rawPhone": null,
+    "rating": 4.8,
+    "reviewsCount": 40,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x39ed59339fb8cf17:0x99db20c64df24e1d",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Dr+Mahboob+Alam+%28MD+Dermatologist%29%2F+Sumit+Polyclinic/data=!4m7!3m6!1s0x39ed59339fb8cf17:0x99db20c64df24e1d!8m2!3d25.610882!4d85.1190162!16s%2Fg%2F11rkf66xsf!19sChIJF8-4nzNZ7TkRHU7yTcYg25k?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:04:11.078Z",
+    "lastVerifiedAt": "2026-08-18T17:04:11.078Z",
+    "opportunityScore": 90
+  },
+  {
+    "id": "pat-1787072645677-339",
+    "name": "Dr Archana Lokhande MD(Skin&VD)DermaZest Skin & Cosmetics Clinic- Best Skin Doctor",
+    "category": "Dermatologist",
+    "nicheId": "dermatology-skin",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "Opposite Sulabh International office Above Lal Path Lab &:Global Diagnostics Boring-Patliputra Road, Boring Rd, near Pani Tanki More, Patna, Bihar 800013",
+    "phone": "+919582405223",
+    "rawPhone": "095824 05223",
+    "rating": 4.9,
+    "reviewsCount": 431,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x39ed5f77f2d41987:0x76cc358141853b5",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Dr+Archana+Lokhande+MD%28Skin%26VD%29DermaZest+Skin+%26+Cosmetics+Clinic-+Best+Skin+Doctor/data=!4m7!3m6!1s0x39ed5f77f2d41987:0x76cc358141853b5!8m2!3d25.6219659!4d85.1086348!16s%2Fg%2F11spmq35t2!19sChIJhxnU8ndf7TkRtVMYFFjDbAc?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:04:05.677Z",
+    "lastVerifiedAt": "2026-08-18T17:04:05.677Z",
+    "opportunityScore": 100
+  },
+  {
+    "id": "pat-1787072563261-113",
+    "name": "Dr. Sharan's Dental Solutions",
+    "category": "Dentist",
+    "nicheId": "dental-clinics",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "E 83 BORING ROAD, Rajesh Kumar Path, near BASAWAN PARK, S K Puri, Patna, Bihar 800001",
+    "phone": "+917079778899",
+    "rawPhone": "070797 78899",
+    "rating": 5,
+    "reviewsCount": 90,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x39ed5959cc08e599:0xc8c558b251cf476d",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Dr.+Sharan%27s+Dental+Solutions/data=!4m7!3m6!1s0x39ed5959cc08e599:0xc8c558b251cf476d!8m2!3d25.6121601!4d85.1138277!16s%2Fg%2F11j8gc924j!19sChIJmeUIzFlZ7TkRbUfPUbJYxcg?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:02:43.261Z",
+    "lastVerifiedAt": "2026-08-18T17:02:43.261Z",
+    "opportunityScore": 100
+  },
+  {
+    "id": "pat-1787072549829-132",
+    "name": "Dr. Abhishek Vardhan(MDS) Ortho",
+    "category": "Dental clinic",
+    "nicheId": "dental-clinics",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "Boring Rd, Near Children Park, Sri Krishna Puri, Patna, Bihar 800001",
+    "phone": "+919835065997",
+    "rawPhone": "098350 65997",
+    "rating": 4.9,
+    "reviewsCount": 50,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x140d7e8a72230303:0x4f61c77d05c5690e",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Dr.+Abhishek+Vardhan%28MDS%29+Ortho/data=!4m7!3m6!1s0x140d7e8a72230303:0x4f61c77d05c5690e!8m2!3d25.6148555!4d85.113773!16s%2Fg%2F11b7f1g8wl!19sChIJAwMjcop-DRQRDmnFBX3HYU8?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:02:29.829Z",
+    "lastVerifiedAt": "2026-08-18T17:02:29.829Z",
+    "opportunityScore": 100
+  },
+  {
+    "id": "pat-1787072544488-280",
+    "name": "Om Oral Dental And Orthodontic Center",
+    "category": "Dental clinic",
+    "nicheId": "dental-clinics",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "Shop no-3, Vishnu Palace, E Boring Canal Rd, Patna, Bihar 800001",
+    "phone": "+919304414286",
+    "rawPhone": "093044 14286",
+    "rating": 4.7,
+    "reviewsCount": 37,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x39ed583a6b349af1:0xafdf23a19aca95bf",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Om+Oral+Dental+And+Orthodontic+Center/data=!4m7!3m6!1s0x39ed583a6b349af1:0xafdf23a19aca95bf!8m2!3d25.6158804!4d85.1208198!16s%2Fg%2F11b77pr60n!19sChIJ8Zo0azpY7TkRv5XKmqEj368?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:02:24.488Z",
+    "lastVerifiedAt": "2026-08-18T17:02:24.488Z",
+    "opportunityScore": 100
+  },
+  {
+    "id": "pat-1787072506307-392",
+    "name": "Rahul Dental Clinic",
+    "category": "Dental clinic",
+    "nicheId": "dental-clinics",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "Reliance Digital, Behind PNB ATM ( Union Bank) KD Vihar apartment North of Reliance trends, E Boring Canal Rd, opposite of Aditya vision, Patna, Bihar 800001",
+    "phone": "+919006158535",
+    "rawPhone": "090061 58535",
+    "rating": 4.9,
+    "reviewsCount": 159,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x39ed583b14a82269:0xc4e5c310dbf12f56",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Rahul+Dental+Clinic/data=!4m7!3m6!1s0x39ed583b14a82269:0xc4e5c310dbf12f56!8m2!3d25.6220822!4d85.1240579!16s%2Fg%2F11c20bphqz!19sChIJaSKoFDtY7TkRVi_x2xDD5cQ?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:01:46.307Z",
+    "lastVerifiedAt": "2026-08-18T17:01:46.307Z",
+    "opportunityScore": 100
+  },
+  {
+    "id": "pat-1787072501079-569",
+    "name": "Apollo dental clinic",
+    "category": "Dental clinic",
+    "nicheId": "dental-clinics",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "Shop no G-2A, Maya mahesh Building, 13, Boring Rd, near khadim showroom, Anandpuri, Patna, Bihar 800013",
+    "phone": "+917903094593",
+    "rawPhone": "079030 94593",
+    "rating": 4.9,
+    "reviewsCount": 91,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x39ed59e5baf8dfd1:0x5ebbdbd58f7f11d3",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Apollo+dental+clinic/data=!4m7!3m6!1s0x39ed59e5baf8dfd1:0x5ebbdbd58f7f11d3!8m2!3d25.6163276!4d85.1143233!16s%2Fg%2F11xykcrx3j!19sChIJ0d_4uuVZ7TkR0xF_j9Xbu14?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:01:41.079Z",
+    "lastVerifiedAt": "2026-08-18T17:01:41.079Z",
+    "opportunityScore": 100
+  },
+  {
+    "id": "pat-1787072485365-540",
+    "name": "Apollo Dental",
+    "category": "Dental clinic",
+    "nicheId": "dental-clinics",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "1st Floor, Pushpanjali Complex, Boring Rd, opp. Police Check Post, Anandpuri, Patna, Bihar 800013",
+    "phone": "+919471806304",
+    "rawPhone": "094718 06304",
+    "rating": 4,
+    "reviewsCount": 115,
+    "website": null,
+    "websiteStatus": "NO_WEBSITE",
+    "placeId": "0x140d7e6251e34589:0xa6dbc3a4b93ce47f",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Apollo+Dental/data=!4m7!3m6!1s0x140d7e6251e34589:0xa6dbc3a4b93ce47f!8m2!3d25.6159151!4d85.1153152!16s%2Fg%2F11fnnqfwlx!19sChIJiUXjUWJ-DRQRf-Q8uaTD26Y?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Verified Live Lead: Zero website listed on Google Maps.",
+    "createdAt": "2026-08-18T17:01:25.365Z",
+    "lastVerifiedAt": "2026-08-18T17:01:25.365Z",
+    "opportunityScore": 100
+  },
+  {
+    "id": "pat-1787072271301-234",
+    "name": "Manipal Dental Clinic",
+    "category": "Dentist",
+    "nicheId": "dental-clinics",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "101 & 102, First Floor, Verma Center Boring Road chauraha, beside petrol pump, Patna, Bihar 800001",
+    "phone": "+918969566559",
+    "rawPhone": "089695 66559",
+    "rating": 4.9,
+    "reviewsCount": 766,
+    "website": "https://manipaldental.netlify.app/",
+    "websiteStatus": "HAS_WEBSITE",
+    "placeId": "0x140d7e621d6ba0e7:0xc7771d2e099dc39d",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Manipal+Dental+Clinic/data=!4m7!3m6!1s0x140d7e621d6ba0e7:0xc7771d2e099dc39d!8m2!3d25.6126941!4d85.1184402!16s%2Fg%2F11b7d_yg03!19sChIJ56BrHWJ-DRQRncOdCS4dd8c?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Has existing website.",
+    "createdAt": "2026-08-18T16:57:51.301Z",
+    "lastVerifiedAt": "2026-08-18T16:57:51.301Z",
+    "opportunityScore": 85
+  },
+  {
+    "id": "pat-1787072268662-332",
+    "name": "Apollo Dental Care",
+    "category": "Dentist",
+    "nicheId": "dental-clinics",
+    "locality": "Boring Road",
+    "zone": "Central",
+    "city": "Patna",
+    "state": "Bihar",
+    "address": "Ground Floor, Bank Of India Building, Raghuvar Prabha(R.P) complex Near:, Boring Rd, opp. chunilal mega mart, Sri Krishna Puri, Patna, Bihar 800001",
+    "phone": "+919835081455",
+    "rawPhone": "098350 81455",
+    "rating": 4.9,
+    "reviewsCount": 814,
+    "website": "https://apollodentalcare.in/",
+    "websiteStatus": "HAS_WEBSITE",
+    "placeId": "0x39ed59c13b0cb415:0x2d569498d036fdfe",
+    "socialSnippet": null,
+    "googleMapsUrl": "https://www.google.com/maps/place/Apollo+Dental+Care/data=!4m7!3m6!1s0x39ed59c13b0cb415:0x2d569498d036fdfe!8m2!3d25.6150105!4d85.1158355!16s%2Fg%2F11qn08m5l_!19sChIJFbQMO8FZ7TkR_v020JiUVi0?authuser=0&hl=en&rclk=1",
+    "crmStatus": "NEW",
+    "notes": "Has existing website.",
+    "createdAt": "2026-08-18T16:57:48.662Z",
+    "lastVerifiedAt": "2026-08-18T16:57:48.662Z",
+    "opportunityScore": 85
+  },
+  {
     "id": "blr-1786874345161-687",
     "name": "nSmiles I Private Limited",
     "category": "Wellness center",
@@ -20,7 +420,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:59:05.161Z",
     "lastVerifiedAt": "2026-08-16T09:59:05.161Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786874151575-573",
@@ -39,11 +441,14 @@
     "placeId": "0x3bae137689a5ecbd:0x9c5653ec45612fbc",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Daffodil+Dental+Specilality+Care/data=!4m7!3m6!1s0x3bae137689a5ecbd:0x9c5653ec45612fbc!8m2!3d12.9283332!4d77.6716314!16s%2Fg%2F1v_0h65h!19sChIJveyliXYTrjsRvC9hRexTVpw?authuser=0&hl=en&rclk=1",
-    "crmStatus": "NEW",
+    "crmStatus": "PITCH_SENT",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:55:51.575Z",
     "lastVerifiedAt": "2026-08-16T09:55:51.575Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "updatedAt": "2026-08-18T08:39:24.176Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786874146247-400",
@@ -67,7 +472,9 @@
     "createdAt": "2026-08-16T09:55:46.248Z",
     "lastVerifiedAt": "2026-08-16T09:55:46.248Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:08:54.950Z"
+    "updatedAt": "2026-08-16T10:08:54.950Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786874137292-423",
@@ -90,7 +497,9 @@
     "notes": "Verified Live Lead: Only https://youtube.com/@Bracespecialist?si=ItMhhCY8XCVUWC6k listed.",
     "createdAt": "2026-08-16T09:55:37.292Z",
     "lastVerifiedAt": "2026-08-16T09:55:37.292Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786874122121-846",
@@ -113,7 +522,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:55:22.121Z",
     "lastVerifiedAt": "2026-08-16T09:55:22.121Z",
-    "opportunityScore": 75
+    "opportunityScore": 75,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786874116256-713",
@@ -132,12 +543,14 @@
     "placeId": "0x3bae13010b83fcf3:0xeb3e4f571fd2eae3",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Soorya+Health+Care/data=!4m7!3m6!1s0x3bae13010b83fcf3:0xeb3e4f571fd2eae3!8m2!3d12.9230349!4d77.6728212!16s%2Fg%2F11twtlflff!19sChIJ8_yDCwETrjsR4-rSH1dPPus?authuser=0&hl=en&rclk=1",
-    "crmStatus": "NEW",
+    "crmStatus": "CONTACTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:55:16.256Z",
     "lastVerifiedAt": "2026-08-16T09:55:16.256Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:24:03.131Z"
+    "updatedAt": "2026-08-18T08:24:35.785Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786874110220-294",
@@ -156,12 +569,14 @@
     "placeId": "0x3bae1341a48f49e9:0x66f271770e21d6ee",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Dr+Tanvi+V+Nair/data=!4m7!3m6!1s0x3bae1341a48f49e9:0x66f271770e21d6ee!8m2!3d12.9314909!4d77.6862963!16s%2Fg%2F11t0r7g74b!19sChIJ6UmPpEETrjsR7tYhDndx8mY?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "CONTACTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:55:10.220Z",
     "lastVerifiedAt": "2026-08-16T09:55:10.220Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:24:06.302Z"
+    "updatedAt": "2026-08-18T08:30:24.503Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786874092675-626",
@@ -180,12 +595,14 @@
     "placeId": "0x3bae13a1b7858fbd:0x11afc70142623570",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Smile+%26+Shine+Dental+Care/data=!4m7!3m6!1s0x3bae13a1b7858fbd:0x11afc70142623570!8m2!3d12.9248214!4d77.6948196!16s%2Fg%2F11krn0dy2c!19sChIJvY-Ft6ETrjsRcDViQgHHrxE?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:54:52.675Z",
     "lastVerifiedAt": "2026-08-16T09:54:52.675Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:26:36.013Z"
+    "updatedAt": "2026-08-18T08:32:50.435Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786874083797-468",
@@ -208,7 +625,9 @@
     "notes": "Verified Live Lead: Only https://www.practo.com/bangalore/clinic/the-dental-circle-bellandur/doctors?scrollToTabs=true listed.",
     "createdAt": "2026-08-16T09:54:43.797Z",
     "lastVerifiedAt": "2026-08-16T09:54:43.797Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786874070443-853",
@@ -227,12 +646,14 @@
     "placeId": "0x3bae14a00993ffff:0x454504b72d379d79",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Reliable+Dental+Clinic/data=!4m7!3m6!1s0x3bae14a00993ffff:0x454504b72d379d79!8m2!3d12.9291536!4d77.6723134!16s%2Fg%2F11g6qt584r!19sChIJ__-TCaAUrjsReZ03LbcERUU?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:54:30.443Z",
     "lastVerifiedAt": "2026-08-16T09:54:30.443Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:27:49.305Z"
+    "updatedAt": "2026-08-18T08:34:42.887Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786874055342-926",
@@ -256,7 +677,9 @@
     "createdAt": "2026-08-16T09:54:15.342Z",
     "lastVerifiedAt": "2026-08-16T09:54:15.342Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:30:00.124Z"
+    "updatedAt": "2026-08-16T10:30:00.124Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873552201-161",
@@ -280,7 +703,9 @@
     "createdAt": "2026-08-16T09:45:52.201Z",
     "lastVerifiedAt": "2026-08-16T09:45:52.201Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:31:29.636Z"
+    "updatedAt": "2026-08-16T10:31:29.636Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873530904-878",
@@ -299,12 +724,14 @@
     "placeId": "0x3bae13dfa0bdd0b5:0x91ffa0c61c382d0d",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/SLV+Dental+Clinic+%26+Implant+Center/data=!4m7!3m6!1s0x3bae13dfa0bdd0b5:0x91ffa0c61c382d0d!8m2!3d12.8942365!4d77.657064!16s%2Fg%2F11h5mphgrb!19sChIJtdC9oN8TrjsRDS04HMag_5E?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "CONTACTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:45:30.904Z",
     "lastVerifiedAt": "2026-08-16T09:45:30.904Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:33:48.286Z"
+    "updatedAt": "2026-08-18T08:55:47.172Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873527798-475",
@@ -323,12 +750,14 @@
     "placeId": "0x3bae13eefd43c129:0xd4fabce5b9a5b54b",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Dent+Inn/data=!4m7!3m6!1s0x3bae13eefd43c129:0xd4fabce5b9a5b54b!8m2!3d12.9025854!4d77.7021997!16s%2Fg%2F11sczp14q9!19sChIJKcFD_e4TrjsRS7WlueW8-tQ?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:45:27.798Z",
     "lastVerifiedAt": "2026-08-16T09:45:27.798Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:35:15.304Z"
+    "updatedAt": "2026-08-18T08:47:33.874Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873521706-205",
@@ -347,12 +776,14 @@
     "placeId": "0x3bae13005d83fbe5:0x6631496a6f9fb032",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Punarjani+Dental+Clinic/data=!4m7!3m6!1s0x3bae13005d83fbe5:0x6631496a6f9fb032!8m2!3d12.8964323!4d77.6948477!16s%2Fg%2F11vywwkqng!19sChIJ5fuDXQATrjsRMrCfb2pJMWY?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:45:21.706Z",
     "lastVerifiedAt": "2026-08-16T09:45:21.706Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:37:02.353Z"
+    "updatedAt": "2026-08-18T08:48:41.875Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873518599-310",
@@ -376,7 +807,9 @@
     "createdAt": "2026-08-16T09:45:18.599Z",
     "lastVerifiedAt": "2026-08-16T09:45:18.599Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:38:38.032Z"
+    "updatedAt": "2026-08-16T10:38:38.032Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873515486-769",
@@ -395,12 +828,14 @@
     "placeId": "0x3bae12d91d0e1c1b:0xdd3c43d743d1e612",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/AESTHETIC+SMILES+FAMILY+DENTAL+CLINIC/data=!4m7!3m6!1s0x3bae12d91d0e1c1b:0xdd3c43d743d1e612!8m2!3d12.8969377!4d77.7023513!16s%2Fg%2F11h9z8229c!19sChIJGxwOHdkSrjsREubRQ9dDPN0?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:45:15.486Z",
     "lastVerifiedAt": "2026-08-16T09:45:15.486Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:40:24.005Z"
+    "updatedAt": "2026-08-18T08:51:58.790Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873512410-86",
@@ -423,7 +858,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:45:12.410Z",
     "lastVerifiedAt": "2026-08-16T09:45:12.410Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873500069-215",
@@ -442,12 +879,14 @@
     "placeId": "0x3bae13013d35d7f7:0xa8d62187901c6f7b",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Coral+Dental+Care+%28Invisalign+%26+Multispeciality+Dental+Center%29/data=!4m7!3m6!1s0x3bae13013d35d7f7:0xa8d62187901c6f7b!8m2!3d12.9229461!4d77.6953508!16s%2Fg%2F1q64pmv0s!19sChIJ99c1PQETrjsRe28ckIch1qg?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "CONTACTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:45:00.069Z",
     "lastVerifiedAt": "2026-08-16T09:45:00.069Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:41:42.700Z"
+    "updatedAt": "2026-08-18T08:56:19.954Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873494282-631",
@@ -471,7 +910,9 @@
     "createdAt": "2026-08-16T09:44:54.282Z",
     "lastVerifiedAt": "2026-08-16T09:44:54.282Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:44:25.964Z"
+    "updatedAt": "2026-08-16T10:44:25.964Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873473349-222",
@@ -494,7 +935,9 @@
     "notes": "Verified Live Lead: Only https://www.instagram.com/sunrisedental_blr?igsh=Y3d2Z2h3ajE2c3l1 listed.",
     "createdAt": "2026-08-16T09:44:33.349Z",
     "lastVerifiedAt": "2026-08-16T09:44:33.349Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873464600-908",
@@ -518,7 +961,9 @@
     "createdAt": "2026-08-16T09:44:24.600Z",
     "lastVerifiedAt": "2026-08-16T09:44:24.600Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:45:31.675Z"
+    "updatedAt": "2026-08-16T10:45:31.675Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873461753-668",
@@ -537,12 +982,14 @@
     "placeId": "0x3bae1382a3d905b1:0x72186f053cbcfadb",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Toothbay+Dental+clinic+%7C+Dentist+near+you+at+kodathi+sarjapur+-+Root+canal,+Aligners,+Implants+DENTAL+CLINIC/data=!4m7!3m6!1s0x3bae1382a3d905b1:0x72186f053cbcfadb!8m2!3d12.8970949!4d77.7189501!16s%2Fg%2F11w2c_z59h!19sChIJsQXZo4ITrjsR2_q8PAVvGHI?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:44:21.753Z",
     "lastVerifiedAt": "2026-08-16T09:44:21.753Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:47:15.075Z"
+    "updatedAt": "2026-08-18T09:01:48.155Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873452357-836",
@@ -561,12 +1008,14 @@
     "placeId": "0x3bae13c3a41c7e8b:0xc3621ab03df6944",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/VARAD+MULTISPECIALITY+DENTAL+CLINIC/data=!4m7!3m6!1s0x3bae13c3a41c7e8b:0xc3621ab03df6944!8m2!3d12.882983!4d77.6723166!16s%2Fg%2F11t4bvn276!19sChIJi34cpMMTrjsRRGnfA6shNgw?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:44:12.357Z",
     "lastVerifiedAt": "2026-08-16T09:44:12.357Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:48:31.927Z"
+    "updatedAt": "2026-08-18T09:01:50.202Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873440839-43",
@@ -589,7 +1038,9 @@
     "notes": "Verified Live Lead: Only https://www.instagram.com/dentist_near.me?igsh=cGNtdzI3NnExYzZm listed.",
     "createdAt": "2026-08-16T09:44:00.839Z",
     "lastVerifiedAt": "2026-08-16T09:44:00.839Z",
-    "opportunityScore": 80
+    "opportunityScore": 80,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873346545-349",
@@ -608,12 +1059,14 @@
     "placeId": "0x3bae6c968120ad6b:0x77456f7460820f79",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Ram+Dental+Clinic/data=!4m7!3m6!1s0x3bae6c968120ad6b:0x77456f7460820f79!8m2!3d12.854938!4d77.6663581!16s%2Fg%2F1tfqzw6h!19sChIJa60ggZZsrjsReQ-CYHRvRXc?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:42:26.545Z",
     "lastVerifiedAt": "2026-08-16T09:42:26.545Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:49:24.487Z"
+    "updatedAt": "2026-08-18T09:03:45.513Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873340277-168",
@@ -636,7 +1089,9 @@
     "notes": "Verified Live Lead: Only https://www.instagram.com/kalyxdental?igsh=MXJwbDFmaGhzeG51bw== listed.",
     "createdAt": "2026-08-16T09:42:20.277Z",
     "lastVerifiedAt": "2026-08-16T09:42:20.277Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873325109-57",
@@ -660,7 +1115,9 @@
     "createdAt": "2026-08-16T09:42:05.109Z",
     "lastVerifiedAt": "2026-08-16T09:42:05.109Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:50:07.484Z"
+    "updatedAt": "2026-08-16T10:50:07.484Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873322060-20",
@@ -684,7 +1141,9 @@
     "createdAt": "2026-08-16T09:42:02.060Z",
     "lastVerifiedAt": "2026-08-16T09:42:02.060Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:50:41.475Z"
+    "updatedAt": "2026-08-16T10:50:41.475Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873315923-659",
@@ -707,7 +1166,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:41:55.923Z",
     "lastVerifiedAt": "2026-08-16T09:41:55.923Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873274492-0",
@@ -726,12 +1187,14 @@
     "placeId": "0x3bae6d00756f843f:0xca0156e2a8e0877c",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Prakash+Dental+Care/data=!4m7!3m6!1s0x3bae6d00756f843f:0xca0156e2a8e0877c!8m2!3d12.8290913!4d77.6693973!16s%2Fg%2F11ylsjqdhr!19sChIJP4RvdQBtrjsRfIfgqOJWAco?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:41:14.492Z",
     "lastVerifiedAt": "2026-08-16T09:41:14.492Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:51:15.602Z"
+    "updatedAt": "2026-08-18T09:08:20.046Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873128855-346",
@@ -754,7 +1217,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:38:48.855Z",
     "lastVerifiedAt": "2026-08-16T09:38:48.855Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873125797-325",
@@ -773,12 +1238,14 @@
     "placeId": "0x3bae6b7c39e4b717:0xf47763a8bae5dff2",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Laxmi+Dental+Clinic+@+Neeladri+Road/data=!4m7!3m6!1s0x3bae6b7c39e4b717:0xf47763a8bae5dff2!8m2!3d12.8410699!4d77.6499779!16s%2Fg%2F124ymfd2d!19sChIJF7fkOXxrrjsR8t_luqhjd_Q?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:38:45.797Z",
     "lastVerifiedAt": "2026-08-16T09:38:45.797Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:51:51.753Z"
+    "updatedAt": "2026-08-18T09:20:40.874Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786873102514-131",
@@ -797,12 +1264,14 @@
     "placeId": "0x3bae6b9438c37a77:0x41cbe3d658ea48d8",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Toothfully+Multispeciality+Dental+Clinic/data=!4m7!3m6!1s0x3bae6b9438c37a77:0x41cbe3d658ea48d8!8m2!3d12.8704174!4d77.654229!16s%2Fg%2F11vqtwgjpx!19sChIJd3rDOJRrrjsR2EjqWNbjy0E?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:38:22.514Z",
     "lastVerifiedAt": "2026-08-16T09:38:22.514Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:52:34.251Z"
+    "updatedAt": "2026-08-18T09:21:56.531Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872955138-538",
@@ -825,7 +1294,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:35:55.138Z",
     "lastVerifiedAt": "2026-08-16T09:35:55.138Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872938432-333",
@@ -844,12 +1315,14 @@
     "placeId": "0x3bae6ca8f993d255:0x94b18ae74a5421cf",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Varad+Dental+Clinic/data=!4m7!3m6!1s0x3bae6ca8f993d255:0x94b18ae74a5421cf!8m2!3d12.8705105!4d77.6545664!16s%2Fg%2F1jkvs2smg!19sChIJVdKT-ahsrjsRzyFUSueKsZQ?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:35:38.432Z",
     "lastVerifiedAt": "2026-08-16T09:35:38.432Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:53:34.982Z"
+    "updatedAt": "2026-08-18T09:22:44.912Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872927573-807",
@@ -868,12 +1341,14 @@
     "placeId": "0x3bae6d92eccb42a1:0xca43772ecb1e415e",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Innovative+dental+care/data=!4m7!3m6!1s0x3bae6d92eccb42a1:0xca43772ecb1e415e!8m2!3d12.8273961!4d77.6747772!16s%2Fg%2F11j928v6dw!19sChIJoULL7JJtrjsRXkEeyy53Q8o?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "CONTACTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:35:27.573Z",
     "lastVerifiedAt": "2026-08-16T09:35:27.573Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:53:59.971Z"
+    "updatedAt": "2026-08-18T09:24:01.346Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872916346-557",
@@ -896,7 +1371,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:35:16.347Z",
     "lastVerifiedAt": "2026-08-16T09:35:16.347Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872913406-713",
@@ -919,7 +1396,9 @@
     "notes": "Verified Live Lead: Only https://www.instagram.com/whiteandsmile.dental/ listed.",
     "createdAt": "2026-08-16T09:35:13.406Z",
     "lastVerifiedAt": "2026-08-16T09:35:13.406Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872904558-556",
@@ -942,7 +1421,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:35:04.558Z",
     "lastVerifiedAt": "2026-08-16T09:35:04.558Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872838615-418",
@@ -966,7 +1447,9 @@
     "createdAt": "2026-08-16T09:33:58.615Z",
     "lastVerifiedAt": "2026-08-16T09:33:58.615Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:54:46.292Z"
+    "updatedAt": "2026-08-16T10:54:46.292Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872736945-51",
@@ -989,7 +1472,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:32:16.945Z",
     "lastVerifiedAt": "2026-08-16T09:32:16.945Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872653297-879",
@@ -1008,12 +1493,14 @@
     "placeId": "0x3bae15320fad516f:0x4d836e90d403dfe4",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Dentinova,+Hulimavu/data=!4m7!3m6!1s0x3bae15320fad516f:0x4d836e90d403dfe4!8m2!3d12.8804782!4d77.5955164!16s%2Fg%2F1tffbmnz!19sChIJb1GtDzIVrjsR5N8D1JBug00?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "CONTACTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:30:53.297Z",
     "lastVerifiedAt": "2026-08-16T09:30:53.297Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:55:51.229Z"
+    "updatedAt": "2026-08-18T09:31:08.702Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872556957-557",
@@ -1032,12 +1519,14 @@
     "placeId": "0x3bae6d9947190549:0xe15e92ad2d805e61",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/The+Tooth+Company+T2C+-+Multispeciality+Dental+Clinic/data=!4m7!3m6!1s0x3bae6d9947190549:0xe15e92ad2d805e61!8m2!3d12.8362253!4d77.6651031!16s%2Fg%2F11tsjbm6sh!19sChIJSQUZR5ltrjsRYV6ALa2SXuE?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:29:16.957Z",
     "lastVerifiedAt": "2026-08-16T09:29:16.957Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:56:39.676Z"
+    "updatedAt": "2026-08-18T09:33:12.268Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872506762-151",
@@ -1056,12 +1545,14 @@
     "placeId": "0x3bae6d96982ad5ed:0x4c2ecfa61c5f03b",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/CAUVERY+DENTAL+CLINIC/data=!4m7!3m6!1s0x3bae6d96982ad5ed:0x4c2ecfa61c5f03b!8m2!3d12.8482609!4d77.6720618!16s%2Fg%2F11whp96fb8!19sChIJ7dUqmJZtrjsRO_DFYfrswgQ?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:28:26.762Z",
     "lastVerifiedAt": "2026-08-16T09:28:26.762Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:57:10.404Z"
+    "updatedAt": "2026-08-18T09:34:44.349Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872491636-201",
@@ -1080,12 +1571,14 @@
     "placeId": "0x3bae6bb7fd68df09:0xc8e89aa18966c184",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/DR+Dental+Multispeciality+clinic/data=!4m7!3m6!1s0x3bae6bb7fd68df09:0xc8e89aa18966c184!8m2!3d12.844923!4d77.646903!16s%2Fg%2F11h914msx8!19sChIJCd9o_bdrrjsRhMFmiaGa6Mg?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:28:11.636Z",
     "lastVerifiedAt": "2026-08-16T09:28:11.636Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:58:07.846Z"
+    "updatedAt": "2026-08-18T09:35:31.569Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872482651-288",
@@ -1104,12 +1597,14 @@
     "placeId": "0x3bae6ca0a5bf8959:0xd1ea6af9768b5d81",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/A+Cultured+Tooth/data=!4m7!3m6!1s0x3bae6ca0a5bf8959:0xd1ea6af9768b5d81!8m2!3d12.8619096!4d77.65404!16s%2Fg%2F11gcxztb8q!19sChIJWYm_paBsrjsRgV2Ldvlq6tE?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:28:02.651Z",
     "lastVerifiedAt": "2026-08-16T09:28:02.651Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:58:41.042Z"
+    "updatedAt": "2026-08-18T09:37:43.341Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872393914-109",
@@ -1132,7 +1627,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:26:33.914Z",
     "lastVerifiedAt": "2026-08-16T09:26:33.914Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872342073-109",
@@ -1156,7 +1653,9 @@
     "createdAt": "2026-08-16T09:25:42.073Z",
     "lastVerifiedAt": "2026-08-16T09:25:42.073Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T11:00:25.749Z"
+    "updatedAt": "2026-08-16T11:00:25.749Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872323503-512",
@@ -1175,12 +1674,14 @@
     "placeId": "0x3bae151cfefa0775:0xff90c44bd16e490f",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Shishir+Dental+Health+Care/data=!4m7!3m6!1s0x3bae151cfefa0775:0xff90c44bd16e490f!8m2!3d12.8898521!4d77.5913124!16s%2Fg%2F11r_wrwqmx!19sChIJdQf6_hwVrjsRD0lu0UvEkP8?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "REJECTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:25:23.503Z",
     "lastVerifiedAt": "2026-08-16T09:25:23.503Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:11:53.925Z"
+    "updatedAt": "2026-08-18T09:41:10.446Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872304878-128",
@@ -1204,7 +1705,9 @@
     "createdAt": "2026-08-16T09:25:04.878Z",
     "lastVerifiedAt": "2026-08-16T09:25:04.878Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:12:45.761Z"
+    "updatedAt": "2026-08-16T10:12:45.761Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872295336-37",
@@ -1228,7 +1731,9 @@
     "createdAt": "2026-08-16T09:24:55.337Z",
     "lastVerifiedAt": "2026-08-16T09:24:55.337Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:13:11.812Z"
+    "updatedAt": "2026-08-16T10:13:11.812Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872286221-663",
@@ -1252,7 +1757,9 @@
     "createdAt": "2026-08-16T09:24:46.221Z",
     "lastVerifiedAt": "2026-08-16T09:24:46.221Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T11:17:38.776Z"
+    "updatedAt": "2026-08-16T11:17:38.776Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872243412-532",
@@ -1275,7 +1782,9 @@
     "notes": "Verified Live Lead: Only https://www.practo.com/bangalore/clinics/dental-clinics/bannerghatta-road listed.",
     "createdAt": "2026-08-16T09:24:03.412Z",
     "lastVerifiedAt": "2026-08-16T09:24:03.412Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872204917-125",
@@ -1299,7 +1808,9 @@
     "createdAt": "2026-08-16T09:23:24.917Z",
     "lastVerifiedAt": "2026-08-16T09:23:24.917Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:15:01.816Z"
+    "updatedAt": "2026-08-16T10:15:01.816Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872134887-797",
@@ -1323,7 +1834,9 @@
     "createdAt": "2026-08-16T09:22:14.887Z",
     "lastVerifiedAt": "2026-08-16T09:22:14.887Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:15:22.555Z"
+    "updatedAt": "2026-08-16T10:15:22.555Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872128869-468",
@@ -1342,12 +1855,14 @@
     "placeId": "0x3bae159bee6e2d39:0x51c513676b904945",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/Miswaak+Dental+and+Implant+Centre/data=!4m7!3m6!1s0x3bae159bee6e2d39:0x51c513676b904945!8m2!3d12.9195643!4d77.6050362!16s%2Fg%2F11y55rm3ll!19sChIJOS1u7psVrjsRRUmQa2cTxVE?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "CONTACTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:22:08.869Z",
     "lastVerifiedAt": "2026-08-16T09:22:08.869Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:15:45.062Z"
+    "updatedAt": "2026-08-18T09:51:17.221Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872122792-604",
@@ -1366,12 +1881,14 @@
     "placeId": "0x3bae159ffb120ed3:0x7e283923a12aeb72",
     "socialSnippet": null,
     "googleMapsUrl": "https://www.google.com/maps/place/PRODENTIST+Dental+Clinic/data=!4m7!3m6!1s0x3bae159ffb120ed3:0x7e283923a12aeb72!8m2!3d12.920347!4d77.606707!16s%2Fg%2F11f6ks40h1!19sChIJ0w4S-58VrjsRcusqoSM5KH4?authuser=0&hl=en&rclk=1",
-    "crmStatus": "PITCH_SENT",
+    "crmStatus": "CONTACTED",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T09:22:02.792Z",
     "lastVerifiedAt": "2026-08-16T09:22:02.792Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:15:58.486Z"
+    "updatedAt": "2026-08-18T09:56:05.521Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872116784-280",
@@ -1395,7 +1912,9 @@
     "createdAt": "2026-08-16T09:21:56.784Z",
     "lastVerifiedAt": "2026-08-16T09:21:56.784Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:16:13.072Z"
+    "updatedAt": "2026-08-16T10:16:13.072Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786872105306-541",
@@ -1419,7 +1938,9 @@
     "createdAt": "2026-08-16T09:21:45.306Z",
     "lastVerifiedAt": "2026-08-16T09:21:45.306Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:16:39.803Z"
+    "updatedAt": "2026-08-16T10:16:39.803Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868482852-860",
@@ -1442,7 +1963,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:21:22.852Z",
     "lastVerifiedAt": "2026-08-16T08:21:22.852Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868480175-526",
@@ -1465,7 +1988,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:21:20.175Z",
     "lastVerifiedAt": "2026-08-16T08:21:20.175Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868474880-117",
@@ -1489,7 +2014,9 @@
     "createdAt": "2026-08-16T08:21:14.880Z",
     "lastVerifiedAt": "2026-08-16T08:21:14.880Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:17:01.167Z"
+    "updatedAt": "2026-08-16T10:17:01.167Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868472240-739",
@@ -1513,7 +2040,9 @@
     "createdAt": "2026-08-16T08:21:12.240Z",
     "lastVerifiedAt": "2026-08-16T08:21:12.241Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:17:12.657Z"
+    "updatedAt": "2026-08-16T10:17:12.657Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868469593-37",
@@ -1536,7 +2065,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:21:09.593Z",
     "lastVerifiedAt": "2026-08-16T08:21:09.593Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868464194-529",
@@ -1559,7 +2090,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:21:04.194Z",
     "lastVerifiedAt": "2026-08-16T08:21:04.194Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868456245-395",
@@ -1582,7 +2115,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:20:56.245Z",
     "lastVerifiedAt": "2026-08-16T08:20:56.245Z",
-    "opportunityScore": 75
+    "opportunityScore": 75,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868453357-302",
@@ -1605,7 +2140,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:20:53.357Z",
     "lastVerifiedAt": "2026-08-16T08:20:53.357Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868439703-299",
@@ -1628,7 +2165,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:20:39.703Z",
     "lastVerifiedAt": "2026-08-16T08:20:39.703Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868425994-81",
@@ -1652,7 +2191,9 @@
     "createdAt": "2026-08-16T08:20:25.994Z",
     "lastVerifiedAt": "2026-08-16T08:20:25.994Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:17:31.681Z"
+    "updatedAt": "2026-08-16T10:17:31.681Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868423324-791",
@@ -1676,7 +2217,9 @@
     "createdAt": "2026-08-16T08:20:23.324Z",
     "lastVerifiedAt": "2026-08-16T08:20:23.324Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:18:21.961Z"
+    "updatedAt": "2026-08-16T10:18:21.961Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868420655-180",
@@ -1700,7 +2243,9 @@
     "createdAt": "2026-08-16T08:20:20.655Z",
     "lastVerifiedAt": "2026-08-16T08:20:20.655Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:18:43.590Z"
+    "updatedAt": "2026-08-16T10:18:43.590Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868393794-585",
@@ -1724,7 +2269,9 @@
     "createdAt": "2026-08-16T08:19:53.794Z",
     "lastVerifiedAt": "2026-08-16T08:19:53.794Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:19:02.353Z"
+    "updatedAt": "2026-08-16T10:19:02.353Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868380222-837",
@@ -1748,7 +2295,9 @@
     "createdAt": "2026-08-16T08:19:40.222Z",
     "lastVerifiedAt": "2026-08-16T08:19:40.222Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:19:17.271Z"
+    "updatedAt": "2026-08-16T10:19:17.271Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868377450-961",
@@ -1772,7 +2321,9 @@
     "createdAt": "2026-08-16T08:19:37.450Z",
     "lastVerifiedAt": "2026-08-16T08:19:37.450Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:19:31.110Z"
+    "updatedAt": "2026-08-16T10:19:31.110Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868201919-80",
@@ -1796,7 +2347,9 @@
     "createdAt": "2026-08-16T08:16:41.919Z",
     "lastVerifiedAt": "2026-08-16T08:16:41.919Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:19:44.437Z"
+    "updatedAt": "2026-08-16T10:19:44.437Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868199170-975",
@@ -1820,7 +2373,9 @@
     "createdAt": "2026-08-16T08:16:39.170Z",
     "lastVerifiedAt": "2026-08-16T08:16:39.170Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:20:07.459Z"
+    "updatedAt": "2026-08-16T10:20:07.459Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868147964-543",
@@ -1843,7 +2398,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:15:47.964Z",
     "lastVerifiedAt": "2026-08-16T08:15:47.964Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786868139889-214",
@@ -1867,7 +2424,9 @@
     "createdAt": "2026-08-16T08:15:39.889Z",
     "lastVerifiedAt": "2026-08-16T08:15:39.889Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:20:38.211Z"
+    "updatedAt": "2026-08-16T10:20:38.211Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867993854-658",
@@ -1891,7 +2450,9 @@
     "createdAt": "2026-08-16T08:13:13.855Z",
     "lastVerifiedAt": "2026-08-16T08:13:13.855Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:20:52.774Z"
+    "updatedAt": "2026-08-16T10:20:52.774Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867967446-796",
@@ -1915,7 +2476,9 @@
     "createdAt": "2026-08-16T08:12:47.446Z",
     "lastVerifiedAt": "2026-08-16T08:12:47.446Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:21:11.659Z"
+    "updatedAt": "2026-08-16T10:21:11.659Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867959726-322",
@@ -1939,7 +2502,9 @@
     "createdAt": "2026-08-16T08:12:39.726Z",
     "lastVerifiedAt": "2026-08-16T08:12:39.726Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:21:24.239Z"
+    "updatedAt": "2026-08-16T10:21:24.239Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867949301-106",
@@ -1963,7 +2528,9 @@
     "createdAt": "2026-08-16T08:12:29.301Z",
     "lastVerifiedAt": "2026-08-16T08:12:29.301Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:21:44.759Z"
+    "updatedAt": "2026-08-16T10:21:44.759Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867933893-397",
@@ -1987,7 +2554,9 @@
     "createdAt": "2026-08-16T08:12:13.893Z",
     "lastVerifiedAt": "2026-08-16T08:12:13.893Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:22:02.228Z"
+    "updatedAt": "2026-08-16T10:22:02.228Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867910447-284",
@@ -2011,7 +2580,9 @@
     "createdAt": "2026-08-16T08:11:50.447Z",
     "lastVerifiedAt": "2026-08-16T08:11:50.447Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:22:15.259Z"
+    "updatedAt": "2026-08-16T10:22:15.259Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867900131-827",
@@ -2035,7 +2606,9 @@
     "createdAt": "2026-08-16T08:11:40.131Z",
     "lastVerifiedAt": "2026-08-16T08:11:40.131Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T10:22:40.755Z"
+    "updatedAt": "2026-08-16T10:22:40.755Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867892427-372",
@@ -2058,7 +2631,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:11:32.427Z",
     "lastVerifiedAt": "2026-08-16T08:11:32.427Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867879492-964",
@@ -2081,7 +2656,9 @@
     "notes": "Verified Live Lead: Only http://www.facebook.com/shadentalcare listed.",
     "createdAt": "2026-08-16T08:11:19.492Z",
     "lastVerifiedAt": "2026-08-16T08:11:19.492Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867872446-267",
@@ -2104,7 +2681,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:11:12.446Z",
     "lastVerifiedAt": "2026-08-16T08:11:12.446Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867802063-684",
@@ -2127,7 +2706,9 @@
     "notes": "Verified Live Lead: Only https://www.instagram.com/reel/Cxc6LmXM2e5/?igshid=MzRlODBiNWFlZA== listed.",
     "createdAt": "2026-08-16T08:10:02.063Z",
     "lastVerifiedAt": "2026-08-16T08:10:02.063Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867788689-506",
@@ -2150,7 +2731,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:09:48.689Z",
     "lastVerifiedAt": "2026-08-16T08:09:48.689Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867586866-817",
@@ -2173,7 +2756,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:06:26.866Z",
     "lastVerifiedAt": "2026-08-16T08:06:26.866Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867568714-55",
@@ -2196,7 +2781,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:06:08.714Z",
     "lastVerifiedAt": "2026-08-16T08:06:08.714Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867509042-21",
@@ -2219,7 +2806,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:05:09.042Z",
     "lastVerifiedAt": "2026-08-16T08:05:09.042Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867501272-880",
@@ -2242,7 +2831,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:05:01.272Z",
     "lastVerifiedAt": "2026-08-16T08:05:01.272Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786867496059-646",
@@ -2265,7 +2856,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T08:04:56.059Z",
     "lastVerifiedAt": "2026-08-16T08:04:56.059Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866852308-527",
@@ -2288,7 +2881,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:54:12.309Z",
     "lastVerifiedAt": "2026-08-16T07:54:12.309Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866697020-566",
@@ -2311,7 +2906,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:51:37.021Z",
     "lastVerifiedAt": "2026-08-16T07:51:37.021Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866694561-192",
@@ -2334,7 +2931,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:51:34.561Z",
     "lastVerifiedAt": "2026-08-16T07:51:34.561Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472824-87",
@@ -2357,7 +2956,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.824Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.824Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472823-896",
@@ -2380,7 +2981,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.823Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.823Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472819-13",
@@ -2403,7 +3006,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.819Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.819Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472817-525",
@@ -2426,7 +3031,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.818Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.818Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472815-480",
@@ -2449,7 +3056,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.815Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.815Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472813-486",
@@ -2472,7 +3081,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.813Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.813Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472812-416",
@@ -2495,7 +3106,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.812Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.812Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472811-667",
@@ -2518,7 +3131,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.811Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.811Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472808-619",
@@ -2541,7 +3156,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.808Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.808Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472808-384",
@@ -2564,7 +3181,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.808Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.808Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472806-560",
@@ -2587,7 +3206,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.806Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.806Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472804-778",
@@ -2610,7 +3231,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.804Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.804Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472802-793",
@@ -2633,7 +3256,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.802Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.802Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472801-40",
@@ -2656,7 +3281,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.801Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.802Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472789-471",
@@ -2679,7 +3306,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.789Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.789Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472776-152",
@@ -2702,7 +3331,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.776Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.776Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472774-821",
@@ -2725,7 +3356,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.774Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.774Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472773-612",
@@ -2748,7 +3381,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.773Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.773Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472771-449",
@@ -2771,7 +3406,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.771Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.771Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472769-649",
@@ -2794,7 +3431,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.769Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.769Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472767-494",
@@ -2817,7 +3456,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.767Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.767Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472765-237",
@@ -2840,7 +3481,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.765Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.765Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866472738-616",
@@ -2863,7 +3506,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:47:52.738Z",
     "lastVerifiedAt": "2026-08-16T07:47:52.738Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866339923-741",
@@ -2886,7 +3531,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:45:39.923Z",
     "lastVerifiedAt": "2026-08-16T07:45:39.923Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866339917-256",
@@ -2909,7 +3556,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:45:39.917Z",
     "lastVerifiedAt": "2026-08-16T07:45:39.917Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866294637-790",
@@ -2932,7 +3581,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:44:54.637Z",
     "lastVerifiedAt": "2026-08-16T07:44:54.637Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866291736-179",
@@ -2955,7 +3606,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:44:51.736Z",
     "lastVerifiedAt": "2026-08-16T07:44:51.736Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866286182-424",
@@ -2978,7 +3631,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:44:46.182Z",
     "lastVerifiedAt": "2026-08-16T07:44:46.182Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866280664-865",
@@ -3001,7 +3656,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:44:40.664Z",
     "lastVerifiedAt": "2026-08-16T07:44:40.664Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866269707-272",
@@ -3024,7 +3681,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:44:29.707Z",
     "lastVerifiedAt": "2026-08-16T07:44:29.707Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786866234412-732",
@@ -3047,7 +3706,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:43:54.412Z",
     "lastVerifiedAt": "2026-08-16T07:43:54.412Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867359-115",
@@ -3070,7 +3731,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.359Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.359Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867359-69",
@@ -3093,7 +3756,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.359Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.359Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867359-459",
@@ -3116,7 +3781,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.359Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.359Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867359-63",
@@ -3139,7 +3806,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.359Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.359Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867359-669",
@@ -3162,7 +3831,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.359Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.359Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867359-395",
@@ -3185,7 +3856,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.359Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.359Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867359-454",
@@ -3208,7 +3881,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.359Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.359Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867358-289",
@@ -3231,7 +3906,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.358Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.358Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867358-511",
@@ -3254,7 +3931,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.358Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.358Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867358-849",
@@ -3277,7 +3956,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.358Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.358Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867358-376",
@@ -3300,7 +3981,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.358Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.358Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867358-906",
@@ -3323,7 +4006,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.358Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.358Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867358-678",
@@ -3346,7 +4031,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.358Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.358Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867357-483",
@@ -3369,7 +4056,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.357Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.357Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867357-525",
@@ -3392,7 +4081,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.357Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.357Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867357-294",
@@ -3415,7 +4106,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.357Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.357Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867357-236",
@@ -3438,7 +4131,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.357Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.357Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867357-127",
@@ -3461,7 +4156,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.357Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.357Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867357-65",
@@ -3484,7 +4181,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.357Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.357Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867357-842",
@@ -3507,7 +4206,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.357Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.357Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867357-450",
@@ -3530,7 +4231,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.357Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.357Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867356-517",
@@ -3553,7 +4256,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.356Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.356Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867356-914",
@@ -3576,7 +4281,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.356Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.356Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867356-266",
@@ -3599,7 +4306,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.356Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.356Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867356-82",
@@ -3622,7 +4331,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.356Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.356Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867356-910",
@@ -3645,7 +4356,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.356Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.356Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867356-259",
@@ -3668,7 +4381,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.356Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.356Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867355-432",
@@ -3691,7 +4406,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.355Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.355Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867355-58",
@@ -3714,7 +4431,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.355Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.355Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867355-305",
@@ -3737,7 +4456,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.355Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.355Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867355-849",
@@ -3760,7 +4481,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.355Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.355Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867355-237",
@@ -3783,7 +4506,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.355Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.355Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867354-670",
@@ -3806,7 +4531,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.354Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.354Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867354-52",
@@ -3829,7 +4556,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.354Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.354Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867354-289",
@@ -3852,7 +4581,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.354Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.354Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867354-32",
@@ -3875,7 +4606,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.354Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.354Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867353-981",
@@ -3898,7 +4631,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.353Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.353Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867353-475",
@@ -3921,7 +4656,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.353Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.353Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867353-60",
@@ -3944,7 +4681,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.353Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.353Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867353-116",
@@ -3967,7 +4706,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.353Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.353Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867349-418",
@@ -3990,7 +4731,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.349Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.349Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867344-53",
@@ -4013,7 +4756,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.344Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.344Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864867339-734",
@@ -4036,7 +4781,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:21:07.339Z",
     "lastVerifiedAt": "2026-08-16T07:21:07.339Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864613380-765",
@@ -4059,7 +4806,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:16:53.380Z",
     "lastVerifiedAt": "2026-08-16T07:16:53.380Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864602734-782",
@@ -4082,7 +4831,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:16:42.734Z",
     "lastVerifiedAt": "2026-08-16T07:16:42.734Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864565778-347",
@@ -4105,7 +4856,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:16:05.778Z",
     "lastVerifiedAt": "2026-08-16T07:16:05.778Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864547444-132",
@@ -4128,7 +4881,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:15:47.444Z",
     "lastVerifiedAt": "2026-08-16T07:15:47.444Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864521325-94",
@@ -4151,7 +4906,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:15:21.325Z",
     "lastVerifiedAt": "2026-08-16T07:15:21.325Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864502684-32",
@@ -4174,7 +4931,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:15:02.684Z",
     "lastVerifiedAt": "2026-08-16T07:15:02.684Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864494799-274",
@@ -4197,7 +4956,9 @@
     "notes": "Verified Live Lead: Only https://www.instagram.com/dentist_near.me?igsh=cGNtdzI3NnExYzZm listed.",
     "createdAt": "2026-08-16T07:14:54.799Z",
     "lastVerifiedAt": "2026-08-16T07:14:54.799Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864418849-481",
@@ -4220,7 +4981,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:13:38.849Z",
     "lastVerifiedAt": "2026-08-16T07:13:38.849Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864201744-765",
@@ -4243,7 +5006,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:10:01.744Z",
     "lastVerifiedAt": "2026-08-16T07:10:01.744Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786864007405-779",
@@ -4266,7 +5031,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:06:47.405Z",
     "lastVerifiedAt": "2026-08-16T07:06:47.405Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786863992957-340",
@@ -4289,7 +5056,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:06:32.957Z",
     "lastVerifiedAt": "2026-08-16T07:06:32.957Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786863990086-228",
@@ -4312,7 +5081,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:06:30.086Z",
     "lastVerifiedAt": "2026-08-16T07:06:30.086Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786863959380-46",
@@ -4335,7 +5106,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:05:59.380Z",
     "lastVerifiedAt": "2026-08-16T07:05:59.380Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786863956427-554",
@@ -4358,7 +5131,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:05:56.427Z",
     "lastVerifiedAt": "2026-08-16T07:05:56.427Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786863939226-852",
@@ -4381,7 +5156,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:05:39.226Z",
     "lastVerifiedAt": "2026-08-16T07:05:39.226Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786863903550-379",
@@ -4404,7 +5181,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:05:03.550Z",
     "lastVerifiedAt": "2026-08-16T07:05:03.550Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786863892938-929",
@@ -4427,7 +5206,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:04:52.938Z",
     "lastVerifiedAt": "2026-08-16T07:04:52.938Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786863887587-435",
@@ -4450,7 +5231,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:04:47.587Z",
     "lastVerifiedAt": "2026-08-16T07:04:47.587Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786863715641-21",
@@ -4473,7 +5256,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-16T07:01:55.641Z",
     "lastVerifiedAt": "2026-08-16T07:01:55.641Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702233325-951",
@@ -4494,7 +5279,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:10:33.325Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T09:41:51.846Z"
+    "updatedAt": "2026-08-16T09:41:51.846Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702230326-444",
@@ -4515,7 +5302,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:10:30.326Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T09:41:54.171Z"
+    "updatedAt": "2026-08-16T09:41:54.171Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702219376-793",
@@ -4536,7 +5325,9 @@
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:10:19.376Z",
     "opportunityScore": 100,
-    "updatedAt": "2026-08-16T09:41:56.456Z"
+    "updatedAt": "2026-08-16T09:41:56.456Z",
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702207905-255",
@@ -4556,7 +5347,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:10:07.905Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702204712-61",
@@ -4576,7 +5369,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:10:04.712Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702107129-34",
@@ -4596,7 +5391,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:08:27.129Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702100509-892",
@@ -4616,7 +5413,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:08:20.509Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702091064-930",
@@ -4636,7 +5435,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:08:11.064Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702080914-941",
@@ -4656,7 +5457,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:08:00.914Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702040421-990",
@@ -4676,7 +5479,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:07:20.421Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702023378-396",
@@ -4696,7 +5501,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:07:03.378Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702020286-996",
@@ -4716,7 +5523,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:07:00.286Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702013482-311",
@@ -4736,7 +5545,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:06:53.482Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786702000286-958",
@@ -4756,7 +5567,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:06:40.286Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701977517-888",
@@ -4776,7 +5589,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:06:17.517Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701974341-644",
@@ -4796,7 +5611,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only https://www.instagram.com/vansh_dental?igsh=MW1leW1jcDg1c3l5Ng== listed.",
     "createdAt": "2026-08-14T10:06:14.341Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701968425-81",
@@ -4816,7 +5633,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only https://instagram.com/dr.smilechanger?igshid=YmMyMTA2M2Y= listed.",
     "createdAt": "2026-08-14T10:06:08.425Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701962540-801",
@@ -4836,7 +5655,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:06:02.540Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701959252-400",
@@ -4856,7 +5677,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:05:59.252Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701950038-890",
@@ -4876,7 +5699,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:05:50.038Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701917736-210",
@@ -4896,7 +5721,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:05:17.736Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701914797-211",
@@ -4916,7 +5743,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:05:14.797Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701891888-221",
@@ -4936,7 +5765,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only https://skydentalclinicbengaluru.zoca.com/?utm_source=googlemaps&utm_medium=googlemaps&utm_campaign=googlemaps listed.",
     "createdAt": "2026-08-14T10:04:51.889Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701855764-178",
@@ -4956,7 +5787,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:04:15.764Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701851848-463",
@@ -4976,7 +5809,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:04:11.848Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701843689-37",
@@ -4996,7 +5831,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:04:03.689Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701837388-50",
@@ -5016,7 +5853,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:03:57.388Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701834397-750",
@@ -5036,7 +5875,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:03:54.397Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701831523-812",
@@ -5056,7 +5897,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:03:51.523Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701823238-639",
@@ -5076,7 +5919,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:03:43.238Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701817440-918",
@@ -5096,7 +5941,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:03:37.440Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701798651-325",
@@ -5116,7 +5963,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:03:18.651Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701793186-212",
@@ -5136,7 +5985,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:03:13.186Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701787500-145",
@@ -5156,7 +6007,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:03:07.500Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701781551-573",
@@ -5176,7 +6029,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:03:01.551Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701778826-500",
@@ -5196,7 +6051,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:02:58.826Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701776044-47",
@@ -5216,7 +6073,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only https://www.instagram.com/healthysmiles__dentalcare?igsh=eDY2c3gxM2I2MnI3 listed.",
     "createdAt": "2026-08-14T10:02:56.044Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701734365-274",
@@ -5236,7 +6095,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:02:14.365Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701730911-411",
@@ -5256,7 +6117,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:02:10.911Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701727584-489",
@@ -5276,7 +6139,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:02:07.584Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701723992-702",
@@ -5296,7 +6161,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:02:03.992Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701706017-519",
@@ -5316,7 +6183,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:01:46.017Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701702676-140",
@@ -5336,7 +6205,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:01:42.676Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701699308-322",
@@ -5356,7 +6227,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:01:39.308Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701695247-399",
@@ -5376,7 +6249,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:01:35.247Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701678799-628",
@@ -5396,7 +6271,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:01:18.799Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701668128-147",
@@ -5416,7 +6293,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:01:08.128Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701659844-860",
@@ -5436,7 +6315,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only https://book-appointment.healthplix.com/dr-tarana-dembla-dental-surgeon-vasanth-nagar-bangalore listed.",
     "createdAt": "2026-08-14T10:00:59.844Z",
-    "opportunityScore": 90
+    "opportunityScore": 90,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701655593-586",
@@ -5456,7 +6337,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:00:55.593Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701651264-570",
@@ -5476,7 +6359,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T10:00:51.264Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701589878-590",
@@ -5496,7 +6381,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:59:49.878Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701585596-665",
@@ -5516,7 +6403,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:59:45.596Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701546693-716",
@@ -5536,7 +6425,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:59:06.693Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701542839-912",
@@ -5556,7 +6447,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only http://www.practo.com/ listed.",
     "createdAt": "2026-08-14T09:59:02.839Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701539723-759",
@@ -5576,7 +6469,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:58:59.723Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701536625-473",
@@ -5596,7 +6491,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:58:56.625Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701530419-381",
@@ -5616,7 +6513,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:58:50.419Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701524114-134",
@@ -5636,7 +6535,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:58:44.115Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701518301-279",
@@ -5656,7 +6557,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:58:38.301Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701505639-654",
@@ -5676,7 +6579,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:58:25.639Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701480400-619",
@@ -5696,7 +6601,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:58:00.400Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701477252-794",
@@ -5716,7 +6623,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:57:57.252Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701465931-843",
@@ -5736,7 +6645,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:57:45.931Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701462726-128",
@@ -5756,7 +6667,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:57:42.726Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701452796-70",
@@ -5776,7 +6689,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:57:32.797Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701443897-680",
@@ -5796,7 +6711,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:57:23.897Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701424389-213",
@@ -5816,7 +6733,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:57:04.389Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701401575-716",
@@ -5836,7 +6755,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:56:41.575Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701397617-941",
@@ -5856,7 +6777,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:56:37.617Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701386353-700",
@@ -5876,7 +6799,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:56:26.353Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701373174-88",
@@ -5896,7 +6821,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:56:13.174Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701369511-710",
@@ -5916,7 +6843,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:56:09.511Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701314612-335",
@@ -5936,7 +6865,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only https://www.practo.com/bangalore/doctor/dr-mallayya-pujari-dentist listed.",
     "createdAt": "2026-08-14T09:55:14.612Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701188136-934",
@@ -5956,7 +6887,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:53:08.136Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701185131-16",
@@ -5976,7 +6909,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:53:05.131Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701181935-699",
@@ -5996,7 +6931,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:53:01.935Z",
-    "opportunityScore": 85
+    "opportunityScore": 85,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701168018-650",
@@ -6016,7 +6953,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:52:48.018Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701140695-425",
@@ -6036,7 +6975,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:52:20.695Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701137401-897",
@@ -6056,7 +6997,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:52:17.401Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701124349-758",
@@ -6076,7 +7019,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:52:04.349Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701113983-70",
@@ -6096,7 +7041,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:51:53.983Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701079872-700",
@@ -6116,7 +7063,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:51:19.872Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701070360-23",
@@ -6136,7 +7085,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:51:10.360Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701041606-955",
@@ -6156,7 +7107,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:50:41.606Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786701017121-385",
@@ -6176,7 +7129,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:50:17.121Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700954360-484",
@@ -6196,7 +7151,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:49:14.360Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700950995-747",
@@ -6216,7 +7173,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:49:10.995Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700947716-372",
@@ -6236,7 +7195,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:49:07.716Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700937782-235",
@@ -6256,7 +7217,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:48:57.782Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700892323-768",
@@ -6276,7 +7239,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:48:12.323Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700880267-308",
@@ -6296,7 +7261,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:48:00.267Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700858999-537",
@@ -6316,7 +7283,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:47:38.999Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700816333-864",
@@ -6336,7 +7305,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only https://www.instagram.com/ listed.",
     "createdAt": "2026-08-14T09:46:56.333Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700764554-106",
@@ -6356,7 +7327,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:46:04.554Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700714862-881",
@@ -6376,7 +7349,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:45:14.862Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700708874-410",
@@ -6396,7 +7371,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:45:08.874Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700705869-993",
@@ -6416,7 +7393,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:45:05.869Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700699678-620",
@@ -6436,7 +7415,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:44:59.678Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700693253-890",
@@ -6456,7 +7437,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:44:53.253Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700648663-392",
@@ -6476,7 +7459,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:44:08.663Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700626407-581",
@@ -6496,7 +7481,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:43:46.407Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700585109-710",
@@ -6516,7 +7503,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:43:05.109Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700570154-464",
@@ -6536,7 +7525,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:42:50.154Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700534361-440",
@@ -6556,7 +7547,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:42:14.361Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700525564-140",
@@ -6576,7 +7569,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:42:05.564Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700501479-970",
@@ -6596,7 +7591,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:41:41.479Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700480932-498",
@@ -6616,7 +7613,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:41:20.932Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700469079-845",
@@ -6636,7 +7635,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:41:09.079Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700462987-658",
@@ -6656,7 +7657,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only https://www.instagram.com/evergleamdentalclinic?igsh=MTUwdWltc3cwcGdkdQ== listed.",
     "createdAt": "2026-08-14T09:41:02.987Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700364469-511",
@@ -6676,7 +7679,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only https://www.practo.com/bangalore/clinic/dental-alliance-koramangala-koramangala-7-block/amp listed.",
     "createdAt": "2026-08-14T09:39:24.469Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700355489-788",
@@ -6696,7 +7701,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:39:15.489Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700346519-809",
@@ -6716,7 +7723,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:39:06.519Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700343467-539",
@@ -6736,7 +7745,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:39:03.467Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700337437-746",
@@ -6756,7 +7767,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Zero website listed on Google Maps.",
     "createdAt": "2026-08-14T09:38:57.438Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786700328656-477",
@@ -6776,7 +7789,9 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only https://skydentalbengaluru.zoca.com/?utm_source=googlemaps&utm_medium=googlemaps&utm_campaign=googlemaps listed.",
     "createdAt": "2026-08-14T09:38:48.656Z",
-    "opportunityScore": 100
+    "opportunityScore": 100,
+    "city": "Bangalore",
+    "state": "Karnataka"
   },
   {
     "id": "blr-1786699198582-174",
@@ -6796,6 +7811,8 @@
     "crmStatus": "NEW",
     "notes": "Verified Live Lead: Only https://wa.me/918217814080?text=Hey,%20Spandana%20Architects listed.",
     "createdAt": "2026-08-14T09:19:58.582Z",
-    "opportunityScore": 95
+    "opportunityScore": 95,
+    "city": "Bangalore",
+    "state": "Karnataka"
   }
 ]
